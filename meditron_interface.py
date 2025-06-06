@@ -1,5 +1,7 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 
+model_pipeline = None
+
 def load_model():
     global model_pipeline
     if model_pipeline is None:
