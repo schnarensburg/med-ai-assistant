@@ -1,0 +1,34 @@
+# 👉 Virtuelle Python-Umgebungen
+.venv/
+venv/
+ENV/
+env/
+
+# 👉 Python Bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+
+# 👉 Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# 👉 Log- und temporäre Dateien
+*.log
+*.tmp
+*.bak
+
+# 👉 VS Code Editor-Einstellungen
+.vscode/
+
+# 👉 Betriebssystem-Spezifisches
+.DS_Store        # macOS
+Thumbs.db        # Windows
+
+# 👉 Python Packaging (falls du mal ein Paket baust)
+build/
+dist/
+*.egg-info/
+
+# 👉 Sonstiges
+*.sqlite3
+*.db
