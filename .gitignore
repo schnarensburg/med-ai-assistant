@@ -4,6 +4,9 @@ venv/
 ENV/
 env/
 
+# 👉 Umgebungsvariablen
+.env
+
 # 👉 Python Bytecode
 __pycache__/
 *.py[cod]
