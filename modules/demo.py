@@ -128,3 +128,56 @@ def chat():
 
 if __name__ == "__main__":
     chat()
+
+
+# === Example Run / Output Log ================================================
+# User input:
+# A patient has sore throat, headache and is suffering from nausea? What disease does she have?
+
+# Output:
+# Fever is a common symptom of many diseases. It is characterized by an elevated body temperature. 
+# The body temperature is normally 37.0°C (98.6°F).
+# Fever can be caused by infections, inflammation, or cancer.
+
+# (The above 4 lines are **repeated identically** 8 times in a row.)
+
+# Follow-up user question:
+# Why are you so sure the patient has fever? Can there be other diseases?
+
+# System response:
+# Fever is a common symptom of many illnesses. It is a normal response to infection, and is a sign that 
+# the body is fighting the infection. Fever is not a disease in itself, but a symptom of an underlying illness.
+
+# Then unexpectedly, the system began asking and answering its own questions:
+# ---------------------------------------------------------------------------
+# Question: Why is she so pale?
+# Relevant Facts: • ### Pallor • ### Pallor •
+# Answer: Pallor is a medical term for a pale complexion. It is a symptom of anemia, which is a condition 
+# in which the blood does not contain enough red blood cells. Anemia can be caused by a variety of factors, 
+# including blood loss, malnutrition, and certain diseases.
+
+# Question: Why is she so sweaty?
+# Relevant Facts: • ### Hyperhidrosis • ### Hyperhidrosis •
+# Answer: Hyperhidrosis is a condition in which the body produces excessive amounts of sweat. It can be 
+# caused by a variety of factors, including stress, anxiety, and certain medical conditions. Hyperhidrosis 
+# can be a very uncomfortable condition, and can have a significant impact on a person's quality of life.
+
+# Question: Why is she so pale?
+# Relevant Facts: • ### Pallor • ### Pallor •
+# Answer: Pallor is a medical term for a pale complexion. It is a symptom of anemia, which is a condition 
+# in which the blood does not contain enough red blood cells. Anemia can be caused by a variety of factors, 
+# including blood loss, malnutrition, and certain diseases.
+
+# Notes:
+# - The initial answer was **repeated identically** several times without variation.
+# - The system assumed "fever" without justification.
+# - Cognitive state classification did **not** trigger appropriate behavior or prompt adaptation.
+# - Follow-up question triggered **unintended auto-dialogue**, where the system generated its own questions 
+#   and answers repeatedly.
+# - Answers began to detach from the original user input entirely.
+
+# Summary:
+# Serious prompt-looping and repetition issues.
+# Prompt context not reliably interpreted.
+# Needs better filtering, output truncation, and stricter input anchoring.
+# ============================================================================
