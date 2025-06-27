@@ -1,12 +1,12 @@
-from modules.backend.router_engine import RouterEngine
-from modules.backend.interaction_logger import save_log, get_last_user_logs
+from modules.logic.router_engine import RouterEngine
+from modules.logic.interaction_logger import save_log, get_last_user_logs
 import json
 import uuid
 from pathlib import Path
 from datetime import datetime
 from meditron_interface import load_model, query_model
-from modules.backend.interaction_logger import save_log
-from modules.backend.interaction_logger import get_last_user_logs
+from modules.logic.interaction_logger import save_log
+from modules.logic.interaction_logger import get_last_user_logs
 def main():
     # User-ID festlegen (später ggf. dynamisch/generiert)
     user_id = "user_1"
