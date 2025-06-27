@@ -3,8 +3,9 @@ import uuid
 from pathlib import Path
 from datetime import datetime
 from meditron_interface import load_model, query_model
-from modules.interaction_logger import save_log
-from modules.cognitive_state_analyzer import classify_interaction_type
+from modules.backend.interaction_logger import save_log
+from modules.backend.interaction_logger import get_last_user_logs
+from modules.backend.cognitive_state_analyzer import classify_interaction_type
 
 def load_prompt(file_path=None):
     if file_path is None:
@@ -18,6 +19,9 @@ def load_prompt(file_path=None):
 
 
 if __name__ == "__main__":
+    # bei bedarf kann man hier noch UI zur erstellung der user_id einbauen
+    user_id = "user_1" 
+    logs = get_last_user_logs(user_id, n=1000)  # oder ein anderes n, das alle bisherigen lädt
     print("🚀 Meditron Diagnostic Assistant – CLI\n")
 
     prompt = load_prompt()
@@ -37,6 +41,12 @@ if __name__ == "__main__":
     # Manuelle Bewertung der Interaktion
     decision = input("👉 Was hast du danach gemacht? (weitergefragt / übernommen / ignoriert): ")
     # interaction_type = input("👉 Interaktionstyp (explorativ / exploitativ / konstruktiv / schädlich): ")
-
-    save_log(prompt, response, decision, interaction_type)
+    # Man kann entscheiden ob hier die log gespeichert wird oder in dem router_engine.py
+    save_log(
+            prompt=prompt,
+            response=response,
+            decision=decision,  # oder eine echte Entscheidung, falls vorhanden
+            interaction_type=interaction_type,
+            number_of_prompts=len(logs),
+            user_id=user_id)
     print("✅ Interaktion gespeichert.")

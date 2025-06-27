@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 # --- Load Hugging Face token ---
 load_dotenv()
-
+HF_TOKEN = os.getenv("HF_TOKEN")
 # --- 1. FLAN-T5 based Cognitive State Analyzer ---
 
 SYSTEM_PROMPT_CSA = """
@@ -18,7 +18,12 @@ You are a Cognitive State Analyzer. Classify the user's input into one of these 
 
 Only respond with one of these four labels exactly as above.
 """
-
+# Alternative Prompts aktuell klassifiziert das System nur auf Basis der 4 Begriffsarten ohne weitere Kontextualisierung.
+# 1) Creative Flow: wenn man dem System sagt dass es kreativ sein soll neigt es vermultich dazu Sachen zu erfinden => Halluszinationen
+# 1) Explorative reflected and broad minded interaction: user considers alternatives and reflects your answers or ask for more information or provides medical expertise in the prompt. 
+# 2) Explorative diagnostic approach: user recognized alternative diagnoses but does not continue with the differentialdiagnostic process, does not provide further details or does neither provide more data nor ask for more information.
+# 3) Exploitative diagnostic approach: user continues with the differentialdiagnostic process provides medical expertise or reviews your answer, but solely focused on one diagnosis and does not consider alternatives.
+# 4) Exploitative overreliance: user relies on your input an just follows your suggestions without any request inspite of you continuing in the system, no feedback, or information given by the user. 
 MODEL_NAME_CSA = "google/flan-t5-small"
 
 tokenizer_csa = AutoTokenizer.from_pretrained(MODEL_NAME_CSA, use_auth_token=HF_TOKEN)
@@ -32,7 +37,7 @@ generator_csa = pipeline(
     max_new_tokens=16,
     clean_up_tokenization_spaces=True,
 )
-
+#Hier müsste man dann entspechend noch die valid labels anpassen
 def classify_prompt_flan_t5(prompt: str) -> str:
     input_text = SYSTEM_PROMPT_CSA.strip() + "\n\nUser input: " + prompt + "\nCognitive State:"
     outputs = generator_csa(input_text)
@@ -71,12 +76,17 @@ class RouterEngine:
         print(f"[CSA] Detected cognitive state: {state}")
 
         # 2. System prompt selection (your original English prompts)
+
         if state == "Creative Flow":
+            #Hier müsste auch dringend das creative raus um Halluzinationen zu vermeiden    
+            #Alternative Prompt: You are a medical consultant for a doctor to support with differential diagnostic. If you provide answers follow these steps by evaluation:
             system_prompt = (
                 "You are a creative and open-minded medical assistant. "
                 "The user is currently in a state of creative flow — they are exploring ideas in an imaginative and constructive way. "
                 "Encourage brainstorming, offer unconventional ideas, and support lateral thinking. "
                 "Don't be too rigid or judgmental. Explore even unorthodox medical angles if relevant."
+            
+        
             )
         elif state == "Aimless Exploration":
             system_prompt = (
