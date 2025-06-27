@@ -6,7 +6,6 @@ from dotenv import load_dotenv
 
 # --- Load Hugging Face token ---
 load_dotenv()
-HF_TOKEN = os.getenv("HF_TOKEN")
 
 # --- 1. FLAN-T5 based Cognitive State Analyzer ---
 
