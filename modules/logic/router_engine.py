@@ -3,9 +3,9 @@ import numpy as np
 from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM, AutoModelForSeq2SeqLM
 import torch
 from dotenv import load_dotenv
-from modules.backend.cognitive_state_analyzer import classify_prompt_flan_t5
-from modules.backend.interaction_logger import get_last_user_logs
-from modules.backend.interaction_logger import save_log
+from modules.logic.cognitive_state_analyzer import classify_prompt_flan_t5
+from modules.logic.interaction_logger import get_last_user_logs
+from modules.logic.interaction_logger import save_log
 
 
 class RouterEngine:

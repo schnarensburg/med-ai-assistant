@@ -28,12 +28,11 @@ def main():
         number_of_prompts = len(logs)
 
         # Antwort generieren (RouterEngine kümmert sich um Klassifikation etc.)
-        response, state = router.route(user_prompt, return_state=True)
+        response, state = router.route(user_prompt, user_id=user_id)
 
         print("\n🤖 Meditron:", response)
         print(f"🔍 (Klassifizierter State: {state})")
         print("-" * 50)
-
         # Optional: Manuelle Entscheidung abfragen
         decision = input("👉 Was hast du danach gemacht? (weitergefragt / übernommen / ignoriert): ")
 
@@ -48,5 +47,5 @@ def main():
         )
         print("✅ Interaktion gespeichert.\n")
 
-if __name__ == "__main_backend_structure__":
+if __name__ == "__main__":
     main()
