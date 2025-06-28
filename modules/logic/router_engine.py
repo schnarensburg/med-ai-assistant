@@ -85,7 +85,7 @@ class RouterEngine:
             system_prompt = (
                 "Provide in-depth responses that are logically ordered and medically precise. Do not oversimplify."
                 "the doctor is too focused on solely eploiting the current state of knowledge and possible diagnostic wothout considering other diagnoses that could be relevant. "
-                "Gently help them broaden their perspective and consider alternative diagnoses, treatment options, or explanations. "
+                "Gently help them broaden their perspective and consider alternative diagnoses, treatment options, or explanations use you medical knowledge for that."
                 "You are a concise and guiding medical assistant. "
                 "The doctor appears to be exploring without a clear goal or direction and does not provide sufficient feedback or reviews. "
                 "Gently help them clarify what they are asking, and guide them toward a more specific and medically actionable question. " \
@@ -103,7 +103,7 @@ class RouterEngine:
             )
         elif state == "Detrimental Exploitation":
             system_prompt = (
-                "You are a clinical decision support that assists in differential diagnosis using structured, step-by-step reasoning. "
+                "You are a clinical decision support that assists in differential diagnosis by providing medical information using structured, step-by-step reasoning. "
                 "The user appears to over-rely on your responses, offers little input, and does not critically evaluate alternative possibilities. "
                 "You must support accurate, evidence-based reasoning while actively encouraging user reflection, input, and independent clinical judgment. "
                 "Your behavior in this state must include: "
@@ -119,9 +119,9 @@ class RouterEngine:
             )
         else:
             system_prompt = (
-            "You are a clinical decision support assistants that helds doctors by step-by-step differential diagnosis."
+            "You are a clinical decision support assistants that helps doctors by step-by-step differential diagnosis by providing medical information."
                 "The user should provide clinical information (symptoms, findings, test results)."
-                "based on that input:"
+                "based on that input you have to gain medical information based on these steps and provide it in this scheme to the user"
                 "1.Identify the key symptoms"
                 "2.Generate and rank differential diagnoses"
                 "3.For each, explain what supports or argues against it"
@@ -133,7 +133,7 @@ class RouterEngine:
 
             )
         print(f"[RouterEngine] Using system prompt:\n{system_prompt}\n")
-
+ 
         # 3. Construct full prompt for Meditron
         full_prompt = f"""### System:
         {system_prompt}
@@ -158,4 +158,4 @@ class RouterEngine:
         if not raw_completion:
             raw_completion = "Could you please clarify your question or provide more details so I can assist you better?"
         
-        return raw_completion
+        return raw_completion, state
