@@ -136,12 +136,12 @@ class RouterEngine:
 
         # 3. Construct full prompt for Meditron
         full_prompt = f"""### System:
-{system_prompt}
+        {system_prompt}
 
-### User:
-{user_input}
+        ### User:
+         {user_input}
 
-### Assistant:"""
+        ### Assistant:"""
 
         # 4. Generate response
         output = self.generator(full_prompt)[0]["generated_text"]
