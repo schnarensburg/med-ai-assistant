@@ -90,7 +90,7 @@ with tab1:
 
 # Container
 with st.container(border=True):
-    st.write(patient)
+    st.write("patient")
 
 st.set_page_config(layout="wide")
 st.title("Doctor Assistant")
@@ -98,9 +98,8 @@ st.title("Doctor Assistant")
 #Expander
 
 #Caching: for when connecting to APIs and not rerun everything all the time. So we don't rerun constantly simple operations
-@st.cache_data(ttl=60) #@st.cache_data this is indefinite cache
-def fetch_data():
-    #Simulate a s
+ #@st.cache_data this is indefinite cache
+
 
 # Initialize session state
 if "messages" not in st.session_state:
