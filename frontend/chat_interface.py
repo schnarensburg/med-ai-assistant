@@ -3,6 +3,8 @@ from datetime import datetime
 import requests
 import os
 
+## STREAMLIT CRASH COURSE ##
+
 min_date = datetime(1974, 3, 11) 
 max_date = datetime.now()
 # st.write() --> To write simple things
@@ -99,6 +101,11 @@ st.title("Doctor Assistant")
 
 #Caching: for when connecting to APIs and not rerun everything all the time. So we don't rerun constantly simple operations
  #@st.cache_data this is indefinite cache
+
+
+## STREAMLIT CRASH COURSE ##
+
+
 
 
 # Initialize session state
