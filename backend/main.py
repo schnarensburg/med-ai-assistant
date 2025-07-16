@@ -4,7 +4,7 @@ from pathlib import Path
 from fastapi import FastAPI
 from pydantic import BaseModel
 from backend.logic.router_engine import RouterEngine
-from backend.logic.interaction_logger import get_last_user_logs
+from backend.logic.interaction_logger import get_last_user_logs, save_log
 
 # Projekt-Root hinzufügen, falls nicht enthalten
 project_root = str(Path(__file__).resolve().parents[1])
@@ -30,5 +30,15 @@ async def chat_endpoint(req: ChatRequest):
     logs = get_last_user_logs(req.user_id, n=1000)
     number_of_prompts = len(logs)
     response, state = router.route(req.prompt, user_id=req.user_id)
-    # Optionally: save_log(...) here if you want to log every interaction
+    
+    # Log the interaction
+    save_log(
+        prompt=req.prompt,
+        response=response,
+        decision=state,
+        interaction_type="chat_endpoint",
+        number_of_prompts=number_of_prompts,
+        user_id=req.user_id
+    )
+    
     return ChatResponse(response=response, state=state, number_of_prompts=number_of_prompts)
