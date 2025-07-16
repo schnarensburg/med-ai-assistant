@@ -1,4 +1,4 @@
-# modules/kognitive_state_analyzer.py
+# tests/kognitive_state_analyzer.py
 import os
 import json
 import numpy as np
