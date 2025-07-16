@@ -20,15 +20,22 @@ with col1:
 
     with tabs[0]:
         with st.container(border=True):
-            col1, col22 = st.columns(2)
+            col1, col22, col33 = st.columns(3)
 
-        with col1:
-            st.markdown("**Name:** Pepito Perez")
-            st.markdown("**Sex:** M")
+            with col1:
+                st.image(os.path.join(os.getcwd(), "static", "Smith.png"), width = 200)
 
-        with col22:
-            st.markdown("**Patient ID:** 8")
-            st.markdown("**Chronic:** No")
+            with col22:
+                st.markdown("**Patient ID:** 8")
+                st.markdown("**Sex:** F")
+                st.markdown("**Age:** 67")
+                st.markdown("**Height:** 152cm")
+
+            with col33:
+                st.markdown("**Name:** Brenda Smith")
+                st.markdown("**DOB:** 14/03/1947")
+                st.markdown("**Weight:** 56Kg")
+                st.markdown("**Chronic:** No")
 
         # Horizontal line (optional)
         st.markdown("<hr>", unsafe_allow_html=True)
@@ -189,5 +196,15 @@ assistant_ui()
 #Caching: for when connecting to APIs and not rerun everything all the time. So we don't rerun constantly simple operations
  #@st.cache_data this is indefinite cache
 
+
+# Isolate effects: being on the quadrnt gives little information. The message should be more important and it could be actionable. 
+
+# Message + matrix + steering are 3 effects, but we cannot isolate them 
+
+# Having a figure of how we evaluated the system and how we evaluated the effects
+# Make it really formal. Confidence, cognitive load, intention to use later 
+# Overview of the study and variables that we want to ask to the participants. 
+# WHat factors are interesting? How many messages do they need to come out with the correct conclusion? 
+# How likely are they to come up with a solution? 
 
 ## STREAMLIT CRASH COURSE ##
