@@ -14,13 +14,13 @@ def main():
     # RouterEngine initialisieren (ggf. Token übergeben)
     router = RouterEngine(hf_token=None, user_id=user_id)
 
-    print("\n🚀 Meditron Diagnostic Assistant – CLI")
-    print("💬 Type your medical questions. Type 'exit' to stop.\n")
+    print("\n Meditron Diagnostic Assistant – CLI")
+    print(" Type your medical questions. Type 'exit' to stop.\n")
 
     while True:
-        user_prompt = input("🧑‍⚕️ You: ").strip()
+        user_prompt = input(" You: ").strip()
         if user_prompt.lower() == "exit":
-            print("👋 Exiting Meditron chat.")
+            print(" Exiting Meditron chat.")
             break
 
         # Lade bisherige Logs für diesen User
@@ -30,11 +30,11 @@ def main():
         # Antwort generieren (RouterEngine kümmert sich um Klassifikation etc.)
         response, state = router.route(user_prompt, user_id=user_id)
 
-        print("\n🤖 Meditron:", response)
-        print(f"🔍 (Klassifizierter State: {state})")
+        print("\n Meditron:", response)
+        print(f" (Klassifizierter State: {state})")
         print("-" * 50)
         # Optional: Manuelle Entscheidung abfragen
-        decision = input("👉 Was hast du danach gemacht? (weitergefragt / übernommen / ignoriert): ")
+        decision = input(" Was hast du danach gemacht? (weitergefragt / übernommen / ignoriert): ")
 
         # Interaktion speichern
         save_log(
@@ -45,7 +45,7 @@ def main():
             number_of_prompts=number_of_prompts,
             user_id=user_id
         )
-        print("✅ Interaktion gespeichert.\n")
+        print("Interaktion gespeichert.\n")
 
 if __name__ == "__main__":
     main()
