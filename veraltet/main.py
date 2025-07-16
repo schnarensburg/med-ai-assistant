@@ -1,8 +1,5 @@
-import json
-import uuid
 from pathlib import Path
-from datetime import datetime
-from meditron_interface import load_model, query_model
+from backend.core.meditron_interface import load_model, query_model
 from modules.backend.interaction_logger import save_log
 from modules.backend.interaction_logger import get_last_user_logs
 from modules.backend.cognitive_state_analyzer import classify_interaction_type
