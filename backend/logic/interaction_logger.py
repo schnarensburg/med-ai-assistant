@@ -35,4 +35,4 @@ def get_last_user_logs(user_id, n=1):
                 logs.append(entry)
             if len(logs) == n:
                 break
-    return logs[::-1] 
+    return logs[::-1]
