@@ -10,32 +10,68 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
+# Patient Data 
+
+# Brenda Smith
+
+data = {
+    "Medication": ["Metformin", "Amlodipine", "Promethazine", "Cetirizine", "Tolterodine", "Paracetamol"],
+    "Route": ["PO"] * 6,
+    "Dose": ["500mg", "5mg", "20mg", "10mg", "2mg", "1g"],
+    "Frequency": ["BD", "OD", "OD", "OD", "BD", "QDS"],
+    "Duration": ["regular", "regular", "PRN", "Regular", "Regular", "PRN"]
+}
+
+df = pd.DataFrame(data)
+
+
+
 # Create columns
 col1, col2 = st.columns([3,1])
 
 # Place tabs inside the first column
 with col1:
-    st.markdown("### Patient Act")
+    st.header("Patient Act")
     tabs = st.tabs(["Case 1", "Case 2", "Case 3"])
 
     with tabs[0]:
+        st.subheader("Patient ID: 8  -  Brenda Smith")
         with st.container(border=True):
-            col1, col22, col33 = st.columns(3)
+            col01_1, col02_1, col03_1 = st.columns(3)
 
-            with col1:
-                st.image(os.path.join(os.getcwd(), "static", "Smith.png"), width = 200)
+            with col01_1:
+                st.image(os.path.join(os.getcwd(), "static", "Smith.png"), width = 180)
 
-            with col22:
-                st.markdown("**Patient ID:** 8")
-                st.markdown("**Sex:** F")
+            with col02_1:
                 st.markdown("**Age:** 67")
+                st.markdown("**Sex:** Female")
                 st.markdown("**Height:** 152cm")
+                st.markdown("**GP:** Dr. Med. M. Müller")
 
-            with col33:
-                st.markdown("**Name:** Brenda Smith")
+            with col03_1:
                 st.markdown("**DOB:** 14/03/1947")
                 st.markdown("**Weight:** 56Kg")
+                st.markdown("**BMI:** 36,8")
                 st.markdown("**Chronic:** No")
+
+        with st.container(border=True):
+            st.markdown("#### Discharge Letter")
+
+            st.markdown('''**Clinical treatment summary:**  
+            Brenda was brought in by ambulance to hospital with sepsis. Few day history of dysuria, strong smelling dark urine. \
+                         Likely source urine, which isolated E. Coli. Treated with gentamicin and recovered rapidly.  
+                        Noted to have urge incontinence which patient tells us has been present for a few months now.  
+                        Keen to \
+                        try a tablet. Invstigations and discharge bloods otherwise unremarkable. 
+            ''')
+            st.markdown('''**Notes for GP:** nil''')
+            st.markdown("**Medication changes:** Tolterodine commenced for overactive bladder")
+            st.markdown("**Follow-up arrangements:** nil")
+
+        with st.container(border=True):
+            st.markdown("#### Medications")
+            st.dataframe(df, use_container_width=True)
+
 
         # Horizontal line (optional)
         st.markdown("<hr>", unsafe_allow_html=True)
@@ -43,7 +79,28 @@ with col1:
         st.markdown("More detailed sections below...")
 
     with tabs[1]:
-        st.line_chart([1, 2, 3])
+        with st.container(border=True):
+            col11, col12, col13 = st.columns(3)
+
+            with col11:
+                st.image(os.path.join(os.getcwd(), "static", "Smith.png"), width = 200)
+
+            with col12:
+                st.markdown("**Patient ID:** 9")
+                st.markdown("**Sex:** F")
+                st.markdown("**Age:** 68")
+                st.markdown("**Height:** 167cm")
+
+            with col13:
+                st.markdown("**Name:** Jane Eyre")
+                st.markdown("**DOB:** 20/01/1955")
+                st.markdown("**Weight:** 105Kg")
+                st.markdown("**Chronic:** Yes")
+
+        # Horizontal line (optional)
+        st.markdown("<hr>", unsafe_allow_html=True)
+
+        st.markdown("More detailed sections below...")
 
     with tabs[2]:
         st.text_area("Notes", "Write something...")
@@ -77,6 +134,8 @@ def assistant_ui():
                 for msg in st.session_state.messages:
                     with st.chat_message(msg["role"]):
                         st.markdown(msg["content"])
+
+            
 
             # User input
             prompt = st.chat_input("Ask something...")
@@ -208,3 +267,7 @@ assistant_ui()
 # How likely are they to come up with a solution? 
 
 ## STREAMLIT CRASH COURSE ##
+ 
+
+
+
