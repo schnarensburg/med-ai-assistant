@@ -24,7 +24,15 @@ data = {
 
 df = pd.DataFrame(data)
 
+# Initialize session state
+if "consultation_notes" not in st.session_state:
+    st.session_state.consultation_notes = []
 
+if "new_note" not in st.session_state:
+    st.session_state.new_note = ""
+
+if "reset_note" not in st.session_state:
+    st.session_state.reset_note = False
 
 # Create columns
 col1, col2 = st.columns([2,1])
@@ -72,12 +80,33 @@ with col1:
             st.markdown("#### Medications")
             st.dataframe(df, use_container_width=True)
 
-
         # Horizontal line (optional)
         st.markdown("<hr>", unsafe_allow_html=True)
 
-        st.markdown("More detailed sections below...")
+        st.header("Consultation Notes")
+        with st.container(border=True):
+            st.markdown("#### New Consultation Entry")
 
+            # Use a placeholder key if reset is triggered
+            if st.session_state.reset_note:
+                st.session_state.reset_note = False
+                st.experimental_rerun()
+
+            st.text_area("Write your consultation note here...", height=150, key="new_note")
+
+            if st.button("Finish Consultation"):
+                if st.session_state.new_note.strip():
+                    st.session_state.consultation_notes.append(st.session_state.new_note.strip())
+                    st.session_state.reset_note = True  # Trigger rerun without setting new_note directly
+
+        if st.session_state.consultation_notes:
+            st.markdown("### Previous Consultations")
+            for i, note in enumerate(st.session_state.consultation_notes[::-1], 1):
+                with st.container(border=True):
+                    st.markdown(f"**Entry #{len(st.session_state.consultation_notes) - i + 1}:**")
+                    st.markdown(f"> {note}")  
+   
+   
     with tabs[1]:
         with st.container(border=True):
             col11, col12, col13 = st.columns(3)
@@ -100,7 +129,9 @@ with col1:
         # Horizontal line (optional)
         st.markdown("<hr>", unsafe_allow_html=True)
 
-        st.markdown("More detailed sections below...")
+      
+
+
 
     with tabs[2]:
         st.text_area("Notes", "Write something...")
