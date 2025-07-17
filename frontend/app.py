@@ -6,30 +6,72 @@ import os
 
 st.set_page_config(
     page_title="Patient Dashboard",
-    page_icon="💊",
-    layout="wide",          # <<< makes the page full-width
+    layout="wide",         
     initial_sidebar_state="collapsed"
 )
 
+# Patient Data 
+
+# Brenda Smith
+
+data = {
+    "Medication": ["Metformin", "Amlodipine", "Promethazine", "Cetirizine", "Tolterodine", "Paracetamol"],
+    "Route": ["PO"] * 6,
+    "Dose": ["500mg", "5mg", "20mg", "10mg", "2mg", "1g"],
+    "Frequency": ["BD", "OD", "OD", "OD", "BD", "QDS"],
+    "Duration": ["regular", "regular", "PRN", "Regular", "Regular", "PRN"]
+}
+
+df = pd.DataFrame(data)
+
+
+
 # Create columns
-col1, col2 = st.columns([3,1])
+col1, col2 = st.columns([2,1])
 
 # Place tabs inside the first column
 with col1:
-    st.markdown("### Patient Act")
+    st.header("Patient Act")
     tabs = st.tabs(["Case 1", "Case 2", "Case 3"])
 
     with tabs[0]:
+        st.subheader("Patient ID: 8  -  Brenda Smith")
         with st.container(border=True):
-            col1, col22 = st.columns(2)
+            col01_1, col02_1, col03_1 = st.columns(3)
 
-        with col1:
-            st.markdown("**Name:** Pepito Perez")
-            st.markdown("**Sex:** M")
+            with col01_1:
+                st.image(os.path.join(os.getcwd(), "static", "Smith.png"), width = 180)
 
-        with col22:
-            st.markdown("**Patient ID:** 8")
-            st.markdown("**Chronic:** No")
+            with col02_1:
+                st.markdown("**Age:** 67")
+                st.markdown("**Sex:** Female")
+                st.markdown("**Height:** 152cm")
+                st.markdown("**GP:** Dr. Med. M. Müller")
+
+            with col03_1:
+                st.markdown("**DOB:** 14/03/1947")
+                st.markdown("**Weight:** 56Kg")
+                st.markdown("**BMI:** 36,8")
+                st.markdown("**Chronic:** No")
+
+        with st.container(border=True):
+            st.markdown("#### Discharge Letter")
+
+            st.markdown('''**Clinical treatment summary:**  
+            Brenda was brought in by ambulance to hospital with sepsis. Few day history of dysuria, strong smelling dark urine. \
+                         Likely source urine, which isolated E. Coli. Treated with gentamicin and recovered rapidly.  
+                        Noted to have urge incontinence which patient tells us has been present for a few months now.  
+                        Keen to \
+                        try a tablet. Invstigations and discharge bloods otherwise unremarkable. 
+            ''')
+            st.markdown('''**Notes for GP:** nil''')
+            st.markdown("**Medication changes:** Tolterodine commenced for overactive bladder")
+            st.markdown("**Follow-up arrangements:** nil")
+
+        with st.container(border=True):
+            st.markdown("#### Medications")
+            st.dataframe(df, use_container_width=True)
+
 
         # Horizontal line (optional)
         st.markdown("<hr>", unsafe_allow_html=True)
@@ -37,7 +79,28 @@ with col1:
         st.markdown("More detailed sections below...")
 
     with tabs[1]:
-        st.line_chart([1, 2, 3])
+        with st.container(border=True):
+            col11, col12, col13 = st.columns(3)
+
+            with col11:
+                st.image(os.path.join(os.getcwd(), "static", "Smith.png"), width = 200)
+
+            with col12:
+                st.markdown("**Patient ID:** 9")
+                st.markdown("**Sex:** F")
+                st.markdown("**Age:** 68")
+                st.markdown("**Height:** 167cm")
+
+            with col13:
+                st.markdown("**Name:** Jane Eyre")
+                st.markdown("**DOB:** 20/01/1955")
+                st.markdown("**Weight:** 105Kg")
+                st.markdown("**Chronic:** Yes")
+
+        # Horizontal line (optional)
+        st.markdown("<hr>", unsafe_allow_html=True)
+
+        st.markdown("More detailed sections below...")
 
     with tabs[2]:
         st.text_area("Notes", "Write something...")
@@ -45,14 +108,14 @@ with col1:
 # --- Assistant Functionality with Backend Integration ---
 
 def ask_ai(user_prompt):
-    url = "http://localhost:8000/chat"
+    url = "http://127.0.0.1:8000/chat"
     payload = {"prompt": user_prompt, "user_id": "user_1"}
     try:
-        response = requests.post(url, json=payload, timeout=10)
+        response = requests.post(url, json=payload)
         response.raise_for_status()
-        return response.json().get("answer", "⚠️ No answer returned.")
+        return response.json().get("response", "⚠️ No answer returned.")
     except requests.exceptions.RequestException as e:
-        return f"❌ Error contacting backend: {e}"
+        return f"Error contacting backend: {e}"
 
 def assistant_ui():
     if "messages" not in st.session_state:
@@ -71,6 +134,8 @@ def assistant_ui():
                 for msg in st.session_state.messages:
                     with st.chat_message(msg["role"]):
                         st.markdown(msg["content"])
+
+            
 
             # User input
             prompt = st.chat_input("Ask something...")
@@ -191,4 +256,15 @@ assistant_ui()
  #@st.cache_data this is indefinite cache
 
 
+# Isolate effects: being on the quadrnt gives little information. The message should be more important and it could be actionable. 
+
+# Message + matrix + steering are 3 effects, but we cannot isolate them 
+
+# Having a figure of how we evaluated the system and how we evaluated the effects
+# Make it really formal. Confidence, cognitive load, intention to use later 
+# Overview of the study and variables that we want to ask to the participants. 
+# WHat factors are interesting? How many messages do they need to come out with the correct conclusion? 
+# How likely are they to come up with a solution? 
+
 ## STREAMLIT CRASH COURSE ##
+ 
