@@ -4,10 +4,9 @@ import logging
 
 from fastapi import FastAPI
 from pydantic import BaseModel
-from backend.logic.router_engine_simple import RouterEngine
-from backend.logic.interaction_logger import get_last_user_logs, save_log
-from backend.logging_config import setup_logger
-
+from logic.router_engine_simple import RouterEngine
+from logic.interaction_logger import get_last_user_logs, save_log
+from logging_config import setup_logger
 
 setup_logger()
 
