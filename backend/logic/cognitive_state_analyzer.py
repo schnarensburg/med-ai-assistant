@@ -47,7 +47,7 @@ def classify_prompt_flan_t5(current_prompt: str, prev_states=None, prev_prompts=
     label = raw.splitlines()[0]
     valid_labels = {
     "Explorative Constructive",
-    "Explotative Detrimental",
+    "Exploitative Detrimental",
     "Exploitative Constructive",
     "Exploitative Detrimental"
 }

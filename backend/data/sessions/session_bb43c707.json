@@ -1,0 +1,10 @@
+{
+  "session_id": "bb43c707-0216-4471-9297-b98952dc7a07",
+  "timestamp": "2025-07-24T09:07:22.435276",
+  "prompt": "A 62-year-old male presents with chest pain during physical exertion. The pain subsides with rest. He has a history of hypertension and high cholesterol. What could be the cause?\n",
+  "response": "The possible cause of the chest pain during physical exertion in a 62-year-old male with a history of hypertension and high cholesterol is atherosclerosis.",
+  "user_decision": "basic",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 7,
+  "user_id": "user_1"
+}

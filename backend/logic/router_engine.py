@@ -2,10 +2,13 @@ from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
 import torch
 from backend.logic.cognitive_state_analyzer import classify_prompt_flan_t5
 from backend.logic.interaction_logger import get_last_user_logs
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 class RouterEngine:
-    def __init__(self, model_id="epfl-llm/meditron-7b", hf_token=None, use_gpu=False, user_id="User_123"):
+    def __init__(self, model_id="aaditya/OpenBioLLM-Llama3-8B", hf_token=None, use_gpu=False, user_id="User_123"):
         device = 0 if use_gpu and torch.cuda.is_available() else -1
 
         print("[RouterEngine] Loading Meditron model...")
@@ -17,7 +20,7 @@ class RouterEngine:
             model=model,
             tokenizer=self.tokenizer,
             device=device,
-            max_new_tokens=300,
+            max_new_tokens=50,
             do_sample=True,         # Allow some sampling for varied responses
             temperature=0.7,
             eos_token_id=self.tokenizer.eos_token_id
@@ -173,8 +176,10 @@ class RouterEngine:
         ### Assistant:"""
 
         # 4. Generate response
+        logger.debug(f"Generiere Antwort...")
         output = self.generator(full_prompt)[0]["generated_text"]
         raw_completion = output[len(full_prompt):].strip()
+        logger.debug(f"raw_completion:")
         print(f"[RouterEngine] Raw completion:\n{raw_completion}\n")
 
         # 5. Stop at role markers to avoid repetition

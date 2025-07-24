@@ -22,8 +22,10 @@ def save_log(prompt, response, decision, interaction_type, number_of_prompts, us
     }
 
     SESSIONS_DIR.mkdir(parents=True, exist_ok=True)
+    timestamp_str = datetime.now().strftime("%Y-%m-%dT%H-%M-%S")
+    filename = f"{timestamp_str}_session_{log['session_id'][:8]}.json"
 
-    with open(SESSIONS_DIR / f"session_{log['session_id'][:8]}.json", "w") as f:
+    with open(SESSIONS_DIR / filename, "w") as f:
         json.dump(log, f, indent=2)
 
 def get_last_user_logs(user_id, n=1):

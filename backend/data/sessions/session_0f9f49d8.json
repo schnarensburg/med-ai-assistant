@@ -1,0 +1,10 @@
+{
+  "session_id": "0f9f49d8-eb08-4315-97fd-ac06704c0ff1",
+  "timestamp": "2025-07-21T09:11:32.686493",
+  "prompt": "hey",
+  "response": "**1. Identify the key symptoms**\n         **Hin: starker Durst**\n         **2. Generate and rank differential diagnoses**\n         **Differentialdiagnosen:**\n         **3. For each, explain what supports or argues against it**\n         **4. Recommend the most informative next diagnostic steps**\n         **5. Conclude with the most likely or working diagnosis**\n         **Explain each step you took leading to your next step concisely to the doctor**\n\n\n    <br>\n    <br>\n    <br><br>\n    <br>\n    <br><br>\n    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 1,
+  "user_id": "user_1"
+}

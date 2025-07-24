@@ -1,10 +1,16 @@
 import sys
 from pathlib import Path
+import logging
 
 from fastapi import FastAPI
 from pydantic import BaseModel
-from backend.logic.router_engine import RouterEngine
+from backend.logic.router_engine_simple import RouterEngine
 from backend.logic.interaction_logger import get_last_user_logs, save_log
+from backend.logging_config import setup_logger
+
+
+setup_logger()
+
 
 # Projekt-Root hinzufügen, falls nicht enthalten
 project_root = str(Path(__file__).resolve().parents[1])
@@ -26,7 +32,8 @@ class ChatResponse(BaseModel):
 
 @app.post("/chat", response_model=ChatResponse)
 async def chat_endpoint(req: ChatRequest):
-    router = RouterEngine(hf_token=None, user_id=req.user_id)
+    # mode: "basic", "routing", "warning"
+    router = RouterEngine(mode ="basic", hf_token=None) # , user_id=req.user_id
     logs = get_last_user_logs(req.user_id, n=1000)
     number_of_prompts = len(logs)
     response, state = router.route(req.prompt, user_id=req.user_id)

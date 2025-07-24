@@ -1,0 +1,10 @@
+{
+  "session_id": "170c5929-aea2-4d95-9e88-09369a0ed8f3",
+  "timestamp": "2025-07-24T08:59:40.089623",
+  "prompt": "A 62-year-old male presents with chest pain during physical exertion. The pain subsides with rest. He has a history of hypertension and high cholesterol. What could be the cause?",
+  "response": "The most likely cause of the chest pain in this 62-year-old male with a history of hypertension and high cholesterol is angina pectoris. Angina is chest pain or discomfort that occurs when the heart muscle does not receive enough oxygen-rich blood. It often occurs during physical exertion or emotional stress when the heart needs more oxygen than it is getting. The pain usually subsides with rest because the heart doesn't have to work as hard. However, further evaluation and testing are necessary to confirm the diagnosis and determine the appropriate treatment plan.",
+  "user_decision": "basic",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 5,
+  "user_id": "user_1"
+}
