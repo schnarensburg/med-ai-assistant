@@ -9,7 +9,7 @@ bnb_config = BitsAndBytesConfig(load_in_8bit=True, llm_int8_enable_fp32_cpu_offl
 from backend.logic.cognitive_state_analyzer import classify_prompt_flan_t5
 logger = logging.getLogger(__name__)
 
-from backend.logic.cognitive_state_analyzer import get_last_user_logs
+from backend.logic.interaction_logger import get_last_user_logs
 
 # model_id="epfl-llm/meditron-7b" # meditron, 29 sec but bullshit answer
 # model_id="openbiollm/med42-mistral-7b" # 64 sec
