@@ -1,45 +1,101 @@
-from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
-import torch
+from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 import logging
 import time
+import torch
 
+# Enable 8-bit loading to reduce memory usage and make large models run on smaller GPUs
+bnb_config = BitsAndBytesConfig(load_in_8bit=True, llm_int8_enable_fp32_cpu_offload=True) 
+
+from backend.logic.cognitive_state_analyzer import classify_prompt_flan_t5
 logger = logging.getLogger(__name__)
+
+from backend.logic.interaction_logger import get_last_user_logs
 
 # model_id="epfl-llm/meditron-7b" # meditron, 29 sec but bullshit answer
 # model_id="openbiollm/med42-mistral-7b" # 64 sec
 # model_id="aaditya/OpenBioLLM-Llama3-8B" # 90 sec (max_new_tokens=300), 44.5 (max_new_tokens=50, schlechter)
 
 class RouterEngine:
-    def __init__(self, mode="basic", model_id="aaditya/OpenBioLLM-Llama3-8B", hf_token=None, use_gpu=False):
+    def __init__(self, mode="basic", model_id="aaditya/OpenBioLLM-Llama3-8B", hf_token=None, use_gpu=True): # Set use_gpu to True 
         self.model_id = model_id
         self.mode = mode
         device = 0 if use_gpu and torch.cuda.is_available() else -1
 
         logger.info(f"[RouterEngine] Loading model: {model_id} on device: {'GPU' if device == 0 else 'CPU'}")
         self.tokenizer = AutoTokenizer.from_pretrained(model_id, token=hf_token)
-        model = AutoModelForCausalLM.from_pretrained(model_id, token=hf_token)
+        '''model = AutoModelForCausalLM.from_pretrained(model_id, token=hf_token)'''
+        model = AutoModelForCausalLM.from_pretrained(
+            model_id,
+            token=hf_token,
+            device_map="auto",
+            quantization_config=bnb_config, # Enable 8-bit quantization
+            torch_dtype=torch.float16 # Use FP16 for faster inference   
+        )
 
         self.generator = pipeline(
             "text-generation",
             model=model,
             tokenizer=self.tokenizer,
-            device=device,
-            max_new_tokens=200,
+            #device=device # Take this out otherwise wont run
+            max_new_tokens=150, # Decreased max new tokens from 200 to 150 to speed up model response
             do_sample=True,
-            temperature=0.7,
+            temperature=0.5, # Decreased temperature from 0.7 to 0.5 to get balanced and more deterministic answers 
             eos_token_id=self.tokenizer.eos_token_id
         )
 
     def get_system_prompt(self, state):
         """Returns a system prompt based on cognitive state."""
-        if state == "Detrimental Exploration":
-            return "...Prompt for exploratory overload..."
+        if state == "Constructive Exploration":
+            return ("You are a clinical decision support assistant. Your task is to generate a working medical diagnosis based on the user’s input — and explain how you arrived at that conclusion using structured clinical reasoning.\n\n"
+    "For each case, follow this format:\n"
+    "1. Key clinical features — Summarize the main symptoms, signs, and relevant findings.\n"
+    "2. Ranked differential diagnoses — List 2–4 possible conditions in order of likelihood.\n"
+    "3. Reasoning — Explain why each diagnosis fits or doesn’t fit, based on clinical logic.\n"
+    "4. Suggested next diagnostic steps — Propose useful tests, questions, or exams to clarify.\n"
+    "5. Working diagnosis — State the most likely diagnosis, or explain what is still uncertain.\n\n"
+    "Always include at least one reasonable alternative. Highlight any missing or contradictory data. "
+    "Focus on clear diagnostic reasoning — not teaching methods, but showing how you think through the case.\n\n"
+    "Actively request further medical details when needed — including symptoms, history, physical findings, timing, or risk factors — to support accurate diagnostic reasoning. "
+    "Ask clarifying questions as part of the process to ensure sufficient clinical context."
+)
+        elif state == "Detrimental Exploration":
+            return ("You are a clinical decision support assistant. Your task is to generate a working medical diagnosis based on the user’s input — and explain how you arrived at that conclusion using structured clinical reasoning.\n\n"
+    "For each case, follow this format:\n"
+    "1. Key clinical features — Summarize the main symptoms, signs, and relevant findings.\n"
+    "2. Ranked differential diagnoses — List 2–4 possible conditions in order of likelihood.\n"
+    "3. Reasoning — Explain why each diagnosis fits or doesn’t fit, based on clinical logic.\n"
+    "4. Suggested next diagnostic steps — Propose useful tests, questions, or exams to clarify.\n"
+    "5. Working diagnosis — State the most likely diagnosis, or explain what is still uncertain.\n\n"
+    "Always include at least one reasonable alternative. Highlight any missing or contradictory data. "
+    "Focus on clear diagnostic reasoning — not teaching methods, but showing how you think through the case.\n\n"
+    "Actively request further medical details — including symptoms, history, physical findings, timing, or risk factors — to support accurate diagnostic reasoning. "
+    "Ask clarifying questions as part of the process to ensure sufficient clinical context. Always recommend that users consult a licensed medical professional for diagnosis and treatment decisions")
         elif state == "Detrimental Exploitation":
-            return "...Prompt with reflection encouragement..."
-        elif state == "Constructive Exploration":
-            return "...Prompt for exploratory knowledge..."
+            return ( "You are a clinical decision support assistant. Your task is to generate a working medical diagnosis based on the user’s input — and explain how you arrived at that conclusion using structured clinical reasoning.\n\n"
+    "For each case, follow this format:\n"
+    "1. Key clinical features — Summarize the main symptoms, signs, and relevant findings.\n"
+    "2. Ranked differential diagnoses — List 2–4 possible conditions in order of likelihood.\n"
+    "3. Reasoning — Explain why each diagnosis fits or doesn’t fit, based on clinical logic.\n"
+    "4. Suggested next diagnostic steps — Propose useful tests, questions, or exams to clarify.\n"
+    "5. Working diagnosis — State the most likely diagnosis, or explain what is still uncertain.\n\n"
+    "Always include at least one reasonable alternative. Highlight any missing or contradictory data. "
+    "Focus on clear diagnostic reasoning — not teaching methods, but showing how you think through the case.\n\n"
+    "In addition to identifying the most likely diagnosis, also suggest other plausible conditions the user may not have considered — especially those that are important to rule out. "
+    "This helps avoid premature closure and supports a more complete diagnostic perspective.\n\n"
+    "This tool does not replace clinical judgment. Always recommend that users consult a licensed medical professional for diagnosis and treatment decisions.")
         elif state == "Constructive Exploitation":
-            return "...Prompt for detailed focus..."
+            return   (  "You are a clinical decision support assistant. Your task is to generate a working medical diagnosis based on the user’s input — and explain how you arrived at that conclusion using structured clinical reasoning.\n\n"
+    "For each case, follow this format:\n"
+    "1. Key clinical features — Summarize the main symptoms, signs, and relevant findings.\n"
+    "2. Ranked differential diagnoses — List 2–4 possible conditions in order of likelihood.\n"
+    "3. Reasoning — Explain why each diagnosis fits or doesn’t fit, based on clinical logic.\n"
+    "4. Suggested next diagnostic steps — Propose useful tests, questions, or exams to clarify.\n"
+    "5. Working diagnosis — State the most likely diagnosis, or explain what is still uncertain.\n\n"
+    "Always include at least one reasonable alternative. Highlight any missing or contradictory data. "
+    "Focus on clear diagnostic reasoning — not teaching methods, but showing how you think through the case.\n\n"
+    "In addition to identifying the most likely diagnosis, also suggest other plausible conditions the user may not have considered — especially those that are important to rule out. "
+    "This helps avoid premature closure and supports a more complete diagnostic perspective."
+)
         return "...Default prompt..."
 
 

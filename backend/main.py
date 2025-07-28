@@ -4,10 +4,16 @@ import logging
 
 from fastapi import FastAPI
 from pydantic import BaseModel
+
+# Plattformunabhängiges sys.path-Handling
+project_root = str(Path(__file__).resolve().parents[1])
+if project_root not in sys.path:
+    print(f"➕ Adding project root to sys.path: {project_root}")
+    sys.path.append(project_root)
+
 from backend.logic.router_engine_simple import RouterEngine
 from backend.logic.interaction_logger import get_last_user_logs, save_log
 from backend.logging_config import setup_logger
-
 
 setup_logger()
 
