@@ -1,0 +1,10 @@
+{
+  "session_id": "7fe20c99-38ed-440c-beb3-f06b00528a0f",
+  "timestamp": "2025-07-24T09:59:20.909324",
+  "prompt": "A 62-year-old male presents with chest pain during physical exertion. The pain subsides with rest. He has a history of hypertension and high cholesterol. What could be the cause?\n",
+  "response": "There are several possible causes for chest pain that subsides with rest. One possibility is angina, which is chest pain or discomfort caused by reduced blood flow to the heart muscle. It often occurs in people with underlying heart disease, such as coronary artery disease, and can be triggered by physical exertion or emotional stress.",
+  "user_decision": "basic",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 14,
+  "user_id": "user_1"
+}
