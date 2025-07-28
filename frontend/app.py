@@ -14,17 +14,29 @@ st.set_page_config(
 
 # Brenda Smith
 
-data = {
+data_brendas = {
     "Medication": ["Metformin", "Amlodipine", "Promethazine", "Cetirizine", "Tolterodine", "Paracetamol"],
     "Route": ["PO"] * 6,
     "Dose": ["500mg", "5mg", "20mg", "10mg", "2mg", "1g"],
     "Frequency": ["BD", "OD", "OD", "OD", "BD", "QDS"],
-    "Duration": ["regular", "regular", "PRN", "Regular", "Regular", "PRN"]
+    "Duration": ["regular", "regular", "PRN", "regular", "regular", "PRN"]
 }
 
-df = pd.DataFrame(data)
+df_brendas = pd.DataFrame(data_brendas)
 
-# Initialize session state
+# Matt Jones
+
+data_mattj = {
+    "Medication": ["Metformin", "Ramipril", "Bisoprolol", "Dapagliflozin", "Atorvastatin", "Furosemide", "Paracetamol", "Colchine"],
+    "Route": ["PO"] * 8,
+    "Dose": ["500mg", "10mg", "5mg", "10mg", "20mg", "40mg", "1g", "500 microgram"],
+    "Frequency": ["BD", "OD", "OD", "OD", "OD", "BD", "QDS", "BD"],
+    "Duration": ["regular", "regular", "regular", "regular", "regular", "regular", "PRN", "regular for 6 days"]
+}
+
+df_mattj = pd.DataFrame(data_mattj)
+
+# Initialize session state for patient 1
 if "consultation_notes" not in st.session_state:
     st.session_state.consultation_notes = []
 
@@ -33,6 +45,18 @@ if "new_note" not in st.session_state:
 
 if "reset_note" not in st.session_state:
     st.session_state.reset_note = False
+
+
+# Initialize session state for patient 2
+if "consultation_notes_2" not in st.session_state:
+    st.session_state.consultation_notes = []
+
+if "new_note_2" not in st.session_state:
+    st.session_state.new_note = ""
+
+if "reset_note_2" not in st.session_state:
+    st.session_state.reset_note = False 
+
 
 # Create columns
 col1, col2 = st.columns([2,1])
@@ -55,9 +79,10 @@ with col1:
                 st.markdown("**Sex:** Female")
                 st.markdown("**Height:** 152cm")
                 st.markdown("**GP:** Dr. Med. M. Müller")
+                st.markdown("**Past Medical History:** COPD, ILD, OA knee, hypertension, depression, new T2DM")
 
             with col03_1:
-                st.markdown("**DOB:** 14/03/1947")
+                st.markdown("**DOB:** 14/03/1958")
                 st.markdown("**Weight:** 56Kg")
                 st.markdown("**BMI:** 36,8")
                 st.markdown("**Chronic:** No")
@@ -65,12 +90,15 @@ with col1:
         with st.container(border=True):
             st.markdown("#### Discharge Letter")
 
+            st.markdown('''**Admitted** 05/06/2025''')
+            st.markdown('''**Discharged:** 12/06/2025''')
+
             st.markdown('''**Clinical treatment summary:**  
             Brenda was brought in by ambulance to hospital with sepsis. Few day history of dysuria, strong smelling dark urine. \
                          Likely source urine, which isolated E. Coli. Treated with gentamicin and recovered rapidly.  
                         Noted to have urge incontinence which patient tells us has been present for a few months now.  
                         Keen to \
-                        try a tablet. Invstigations and discharge bloods otherwise unremarkable. 
+                        try a tablet. Investigations and discharge bloods otherwise unremarkable. 
             ''')
             st.markdown('''**Notes for GP:** nil''')
             st.markdown("**Medication changes:** Tolterodine commenced for overactive bladder")
@@ -78,11 +106,12 @@ with col1:
 
         with st.container(border=True):
             st.markdown("#### Medications")
-            st.dataframe(df, use_container_width=True)
+            st.dataframe(df_brendas, use_container_width=True)
 
-        # Horizontal line (optional)
+        # Horizontal line 
         st.markdown("<hr>", unsafe_allow_html=True)
 
+        # Consultation notes area    
         st.header("Consultation Notes")
         with st.container(border=True):
             st.markdown("#### New Consultation Entry")
@@ -108,27 +137,46 @@ with col1:
    
    
     with tabs[1]:
+        st.subheader("Patient ID: 99  -  Matt Jones")
         with st.container(border=True):
             col11, col12, col13 = st.columns(3)
 
             with col11:
-                st.image(os.path.join(os.getcwd(), "static", "Smith.png"), width = 200)
+                st.image(os.path.join(os.getcwd(), "static", "Jones.png"), width = 200)
 
             with col12:
-                st.markdown("**Patient ID:** 9")
-                st.markdown("**Sex:** F")
-                st.markdown("**Age:** 68")
-                st.markdown("**Height:** 167cm")
-
+                st.markdown("**Age:** 52")
+                st.markdown("**Sex:** M")
+                st.markdown("**Height:** 162cm")
+                st.markdown("**GP:** Dr. Med. M. Acosta")
+                st.markdown("**Past Medical History:** Asthma, congestive cardiac failure, CKD 1, hyperthension, diabetes")
+            
             with col13:
-                st.markdown("**Name:** Jane Eyre")
-                st.markdown("**DOB:** 20/01/1955")
-                st.markdown("**Weight:** 105Kg")
+                st.markdown("**DOB:** 10/01/1973")
+                st.markdown("**Weight:** 76Kg")
+                st.markdown("**BMI:** 28.95")
                 st.markdown("**Chronic:** Yes")
 
-        # Horizontal line (optional)
-        st.markdown("<hr>", unsafe_allow_html=True)
+        with st.container(border=True):
+            st.markdown("#### Discharge Letter")
 
+            st.markdown('''**Admitted** 05/06/2025''')
+            st.markdown('''**Discharged:** 08/06/2025''')
+
+            st.markdown('''**Clinical treatment summary:**  
+            Matt a 50 year old presented to A&E with R knee swelling and pain of 5 days duration. 
+                        No history of trauma. Joint examination revealed a painful red hot swelling which developed gradually. 
+                        Joint aspirated and septic arthritis ruled out with lab analysis.  
+                        Crystal microscopy identified negatively birefringent crystals consistent with gout. 
+                        Commenced on  colchicine and discharged with colchicine to take home.
+            ''')
+            st.markdown('''**Notes for GP:** Please note new diagnosis of gout''')
+            st.markdown("**Medication changes:** colchicine commenced for gout")
+            st.markdown("**Follow-up arrangements:** nil")
+
+        with st.container(border=True):
+            st.markdown("#### Medications")
+            st.dataframe(df_mattj, use_container_width=True)
       
 
 
@@ -144,7 +192,7 @@ def ask_ai(user_prompt):
     try:
         response = requests.post(url, json=payload)
         response.raise_for_status()
-        return response.json().get("response", "⚠️ No answer returned.")
+        return response.json().get("response", "No answer returned.")
     except requests.exceptions.RequestException as e:
         return f"Error contacting backend: {e}"
 
@@ -185,6 +233,8 @@ def assistant_ui():
 
 # --- Call the Assistant UI ---
 assistant_ui()
+
+
 
 
 ## STREAMLIT CRASH COURSE ##
