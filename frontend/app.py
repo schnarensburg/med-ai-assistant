@@ -184,8 +184,9 @@ with col1:
     with tabs[2]:
         st.text_area("Notes", "Write something...")
 
-# --- Assistant Functionality with Backend Integration ---
 
+
+# --- Backend Communication ---
 def ask_ai(user_prompt):
     url = "http://127.0.0.1:8000/chat"
     payload = {"prompt": user_prompt, "user_id": "user_1"}
@@ -196,46 +197,88 @@ def ask_ai(user_prompt):
     except requests.exceptions.RequestException as e:
         return f"Error contacting backend: {e}"
 
+# --- Chat Assistant UI ---
 def assistant_ui():
     if "messages" not in st.session_state:
         st.session_state.messages = []
 
     if "show_chat" not in st.session_state:
-        st.session_state.show_chat = True 
+        st.session_state.show_chat = True
 
-    if st.session_state.show_chat:
-        with col2:
+    if "last_prompt" not in st.session_state:
+        st.session_state.last_prompt = ""
+
+    with col2:
+        if st.session_state.show_chat:
             st.markdown("### Assistant (powered by Meditron)")
-            chat_container = st.container()
 
-            # Display chat history
-            with chat_container:
+            # CSS + Scroll logic
+            st.markdown("""
+                <style>
+                    .chat-box {
+                        height: 500px;
+                        overflow-y: auto;
+                        padding: 1rem;
+                        border: 1px solid #ddd;
+                        background-color: #f9f9f9;
+                        border-radius: 10px;
+                        margin-bottom: 1rem;
+                    }
+                    .user-msg {
+                        background-color: #DCF8C6;
+                        padding: 10px 15px;
+                        border-radius: 10px;
+                        margin: 5px 0;
+                        text-align: right;
+                        color: black;
+                    }
+                    .assistant-msg {
+                        background-color: #e5e5ea;
+                        padding: 10px 15px;
+                        border-radius: 10px;
+                        margin: 5px 0;
+                        text-align: left;
+                        color: black;
+                    }
+                </style>
+                <script>
+                    function scrollChatToBottom(){
+                        const chatDiv = window.parent.document.getElementById("chat-box");
+                        if(chatDiv){
+                            chatDiv.scrollTop = chatDiv.scrollHeight;
+                        }
+                    }
+                    window.addEventListener("load", scrollChatToBottom);
+                    setTimeout(scrollChatToBottom, 100);
+                </script>
+            """, unsafe_allow_html=True)
+
+            # Chat message box
+            with st.container():
+                chat_html = '<div class="chat-box" id="chat-box">'
                 for msg in st.session_state.messages:
-                    with st.chat_message(msg["role"]):
-                        st.markdown(msg["content"])
+                    role = msg["role"]
+                    content = msg["content"]
+                    css_class = "user-msg" if role == "user" else "assistant-msg"
+                    chat_html += f'<div class="{css_class}">{content}</div>'
+                chat_html += '</div>'
+                st.markdown(chat_html, unsafe_allow_html=True)
 
-            
-
-            # User input
+            # Chat input
             prompt = st.chat_input("Ask something...")
 
-            if prompt:
+            if prompt and prompt != st.session_state.last_prompt:
+                st.session_state.last_prompt = prompt
                 st.session_state.messages.append({"role": "user", "content": prompt})
-                with chat_container:
-                    with st.chat_message("user"):
-                        st.markdown(prompt)
 
-                    with st.chat_message("assistant"):
-                        msg = st.empty()
-                        answer = ask_ai(prompt)
-                        msg.markdown(answer)
-                        st.session_state.messages.append({"role": "assistant", "content": answer})
+                response = ask_ai(prompt)
+                st.session_state.messages.append({"role": "assistant", "content": response})
 
-# --- Call the Assistant UI ---
+                # Force scroll after new message
+                st.experimental_rerun()
+
+# --- Run App ---
 assistant_ui()
-
-
-
 
 ## STREAMLIT CRASH COURSE ##
 
