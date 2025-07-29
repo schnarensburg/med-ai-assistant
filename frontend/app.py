@@ -58,6 +58,38 @@ data_patient2 = {
 
 df_patient2 = pd.DataFrame(data_patient2)
 
+# Matt Jones
+
+data_mattj = {
+    "Medication": ["Metformin", "Ramipril", "Bisoprolol", "Dapagliflozin", "Atorvastatin", "Furosemide", "Paracetamol", "Colchine"],
+    "Route": ["PO"] * 8,
+    "Dose": ["500mg", "10mg", "5mg", "10mg", "20mg", "40mg", "1g", "500 microgram"],
+    "Frequency": ["BD", "OD", "OD", "OD", "OD", "BD", "QDS", "BD"],
+    "Duration": ["regular", "regular", "regular", "regular", "regular", "regular", "PRN", "regular for 6 days"]
+}
+
+df_mattj = pd.DataFrame(data_mattj)
+
+# Initialize session state for patient 1
+if "consultation_notes" not in st.session_state:
+    st.session_state.consultation_notes = []
+
+if "new_note" not in st.session_state:
+    st.session_state.new_note = ""
+
+if "reset_note" not in st.session_state:
+    st.session_state.reset_note = False
+
+
+# Initialize session state for patient 2
+if "consultation_notes_2" not in st.session_state:
+    st.session_state.consultation_notes = []
+
+if "new_note_2" not in st.session_state:
+    st.session_state.new_note = ""
+
+if "reset_note_2" not in st.session_state:
+    st.session_state.reset_note = False 
 
 # Patient 3
 
@@ -375,6 +407,7 @@ def ask_ai(user_prompt):
     except requests.exceptions.RequestException as e:
         return f"Error contacting backend: {e}"
 
+# --- Chat Assistant UI ---
 def assistant_ui():
     # Session State Init
     if "messages" not in st.session_state:
