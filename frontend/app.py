@@ -193,7 +193,7 @@ with col1:
             col01_1, col02_1, col03_1 = st.columns(3)
 
             with col01_1:
-                st.image(os.path.join(os.getcwd(), "static", "Smith.png"), width = 180)
+                st.image(os.path.join(os.getcwd(), "static", "patient1.png"), width = 180)
 
             with col02_1:
                 st.markdown("**Age:** 67")
@@ -263,7 +263,7 @@ with col1:
             col11, col12, col13 = st.columns(3)
 
             with col11:
-                st.image(os.path.join(os.getcwd(), "static", "Jones.png"), width = 200)
+                st.image(os.path.join(os.getcwd(), "static", "patient2.png"), width = 200)
 
             with col12:
                 st.markdown("**Age:** 52")
@@ -330,7 +330,7 @@ with col1:
             col21, col22, col23 = st.columns(3)
 
             with col21:
-                st.image(os.path.join(os.getcwd(), "static", "Jones.png"), width = 200)
+                st.image(os.path.join(os.getcwd(), "static", "patient3.png"), width = 200)
 
             with col22:
                 st.markdown("**Age:** 68")
