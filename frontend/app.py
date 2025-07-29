@@ -13,7 +13,6 @@ st.set_page_config(
 # Patient Data 
 
 # Brenda Smith
-
 data_brendas = {
     "Medication": ["Metformin", "Amlodipine", "Promethazine", "Cetirizine", "Tolterodine", "Paracetamol"],
     "Route": ["PO"] * 6,
@@ -25,7 +24,6 @@ data_brendas = {
 df_brendas = pd.DataFrame(data_brendas)
 
 # Matt Jones
-
 data_mattj = {
     "Medication": ["Metformin", "Ramipril", "Bisoprolol", "Dapagliflozin", "Atorvastatin", "Furosemide", "Paracetamol", "Colchine"],
     "Route": ["PO"] * 8,
