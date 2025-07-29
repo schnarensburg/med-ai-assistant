@@ -13,26 +13,6 @@ st.set_page_config(
 # Patient Data 
 
 # Brenda Smith
-data_brendas = {
-    "Medication": ["Metformin", "Amlodipine", "Promethazine", "Cetirizine", "Tolterodine", "Paracetamol"],
-    "Route": ["PO"] * 6,
-    "Dose": ["500mg", "5mg", "20mg", "10mg", "2mg", "1g"],
-    "Frequency": ["BD", "OD", "OD", "OD", "BD", "QDS"],
-    "Duration": ["regular", "regular", "PRN", "regular", "regular", "PRN"]
-}
-
-df_brendas = pd.DataFrame(data_brendas)
-
-# Matt Jones
-data_mattj = {
-    "Medication": ["Metformin", "Ramipril", "Bisoprolol", "Dapagliflozin", "Atorvastatin", "Furosemide", "Paracetamol", "Colchine"],
-    "Route": ["PO"] * 8,
-    "Dose": ["500mg", "10mg", "5mg", "10mg", "20mg", "40mg", "1g", "500 microgram"],
-    "Frequency": ["BD", "OD", "OD", "OD", "OD", "BD", "QDS", "BD"],
-    "Duration": ["regular", "regular", "regular", "regular", "regular", "regular", "PRN", "regular for 6 days"]
-}
-
-df_mattj = pd.DataFrame(data_mattj)
 
 # Initialize session state for patient 1
 if "consultation_notes" not in st.session_state:
@@ -44,6 +24,19 @@ if "new_note" not in st.session_state:
 if "reset_note" not in st.session_state:
     st.session_state.reset_note = False
 
+# Data
+data_brendas = {
+    "Medication": ["Metformin", "Amlodipine", "Promethazine", "Cetirizine", "Tolterodine", "Paracetamol"],
+    "Route": ["PO"] * 6,
+    "Dose": ["500mg", "5mg", "20mg", "10mg", "2mg", "1g"],
+    "Frequency": ["BD", "OD", "OD", "OD", "BD", "QDS"],
+    "Duration": ["regular", "regular", "PRN", "regular", "regular", "PRN"]
+}
+
+df_brendas = pd.DataFrame(data_brendas)
+
+# Matt Jones
+
 # Initialize session state for patient 2
 if "consultation_notes_2" not in st.session_state:
     st.session_state.consultation_notes_2 = []
@@ -54,6 +47,105 @@ if "new_note_2" not in st.session_state:
 if "reset_note_2" not in st.session_state:
     st.session_state.reset_note_2 = False
 
+# Data
+data_mattj = {
+    "Medication": ["Metformin", "Ramipril", "Bisoprolol", "Dapagliflozin", "Atorvastatin", "Furosemide", "Paracetamol", "Colchine"],
+    "Route": ["PO"] * 8,
+    "Dose": ["500mg", "10mg", "5mg", "10mg", "20mg", "40mg", "1g", "500 microgram"],
+    "Frequency": ["BD", "OD", "OD", "OD", "OD", "BD", "QDS", "BD"],
+    "Duration": ["regular", "regular", "regular", "regular", "regular", "regular", "PRN", "regular for 6 days"]
+}
+
+df_mattj = pd.DataFrame(data_mattj)
+
+
+# Jane Smith
+
+# Initialize session state for patient 3
+if "consultation_notes_3" not in st.session_state:
+    st.session_state.consultation_notes_3 = []
+
+if "new_note_3" not in st.session_state:
+    st.session_state.new_note_3 = ""
+
+if "reset_note_3" not in st.session_state:
+    st.session_state.reset_note_3 = False
+
+# Data
+data_janes = {
+    "Medication": [
+        "Salbutamol inhaler",
+        "Trimbow inhaler (beclometasone dipropionate, formoterol fumarate dihydrate, glycopyrronium bromide)",
+        "Azathioprine",
+        "Amlodipine",
+        "Metformin",
+        "Linagliptin",
+        "Atorvastatin",
+        "Ibuprofen",
+        "Naproxen",
+        "Paracetamol",
+        "Sertraline",
+        "Prednisolone"
+    ],
+    "Route": [
+        "Inhalation of aerosol",
+        "Inhalation of aerosol",
+        "PO",
+        "PO",
+        "PO",
+        "PO",
+        "PO",
+        "PO",
+        "PO",
+        "PO",
+        "PO",
+        "PO"
+    ],
+    "Dose": [
+        "2 puffs",
+        "2 puffs",
+        "100mg",
+        "10mg",
+        "1g",
+        "5mg",
+        "20 mg",
+        "400mg",
+        "500mg",
+        "1g",
+        "50mg",
+        "Weaning regime (40mg–0mg)"
+    ],
+    "Frequency": [
+        "QDS",
+        "BD",
+        "Every morning",
+        "Every morning",
+        "BD",
+        "Every morning",
+        "Every night",
+        "QDS",
+        "BD",
+        "QDS",
+        "Every night",
+        "Every morning"
+    ],
+    "Duration": [
+        "PRN",
+        "Regular",
+        "Regular",
+        "Regular",
+        "Regular",
+        "Regular",
+        "Regular",
+        "Regular",
+        "Regular",
+        "Regular",
+        "Regular",
+        "4 weeks. Reduce by 5mg/5 days. Discharged on Day 2 of 35mg"
+    ]
+}
+
+df_janes = pd.DataFrame(data_janes)
 
 # Create columns
 col1, col2 = st.columns([2,1])
@@ -216,8 +308,8 @@ with col1:
                 st.markdown("**Past Medical History:** COPD, ILD, OA knee, hypertension, depression, new T2DM")
             
             with col23:
-                st.markdown("**DOB:** 10/01/1973")
-                st.markdown("**Weight:** 76Kg")
+                st.markdown("**DOB:** 10/01/1955")
+                st.markdown("**Weight:** 105Kg")
                 st.markdown("**BMI:** 28.95")
                 st.markdown("**Chronic:** Yes")
 
@@ -225,18 +317,22 @@ with col1:
             st.markdown("#### Discharge Letter")
 
             st.markdown('''**Admitted** 05/06/2025''')
-            st.markdown('''**Discharged:** 08/06/2025''')
+            st.markdown('''**Discharged:** 12/06/2025''')
 
             st.markdown('''**Clinical treatment summary:**  
-            Matt a 50 year old presented to A&E with R knee swelling and pain of 5 days duration. 
-                        No history of trauma. Joint examination revealed a painful red hot swelling which developed gradually. 
-                        Joint aspirated and septic arthritis ruled out with lab analysis.  
-                        Crystal microscopy identified negatively birefringent crystals consistent with gout. 
-                        Commenced on  colchicine and discharged with colchicine to take home.
+            Jane a 68-year-old female was brought in by ambulance for shortness of breath. 
+            She is a known recurrent attender for COPD exacerbations, last attendance 9 weeks prior.  
+            Presented after rescue pack failed to resolve symptoms after 3 days use. Desaturations at home to 84%
+            breathing room air. Chest X-ray demonstrated chronic fibrotic changes with overlying right lower zone consolidation.
+            Producing green sputum with a severe cough responsive to nebulisers, chest physiotherapy and escalated antibiotic 
+            and steroid treatment.  
+            Discovered to have raised BMs on this admission and diagnosed with T2DM.  
+            Jane is not a candidate for LTOT, due to being a current smoker.
             ''')
-            st.markdown('''**Notes for GP:** Please note new diagnosis of gout''')
-            st.markdown("**Medication changes:** colchicine commenced for gout")
-            st.markdown("**Follow-up arrangements:** nil")
+            st.markdown('''**Notes for GP:** Please note new diagnosis T2DM''')
+            st.markdown("**Medication changes:**  weaning steroid regime, commenced on metformin and linagliptin")
+            st.markdown('''**Follow-up arrangements:**  Follow up CXR in 6 weeks time.  
+            DSN review 2-4 weeks post discharge in community ''')
 
         with st.container(border=True):
             st.markdown("#### Medications")
