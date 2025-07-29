@@ -44,16 +44,15 @@ if "new_note" not in st.session_state:
 if "reset_note" not in st.session_state:
     st.session_state.reset_note = False
 
-
 # Initialize session state for patient 2
 if "consultation_notes_2" not in st.session_state:
-    st.session_state.consultation_notes = []
+    st.session_state.consultation_notes_2 = []
 
 if "new_note_2" not in st.session_state:
-    st.session_state.new_note = ""
+    st.session_state.new_note_2 = ""
 
 if "reset_note_2" not in st.session_state:
-    st.session_state.reset_note = False 
+    st.session_state.reset_note_2 = False
 
 
 # Create columns
@@ -77,7 +76,7 @@ with col1:
                 st.markdown("**Sex:** Female")
                 st.markdown("**Height:** 152cm")
                 st.markdown("**GP:** Dr. Med. M. Müller")
-                st.markdown("**Past Medical History:** COPD, ILD, OA knee, hypertension, depression, new T2DM")
+                st.markdown("**Past Medical History:** Diabetes, hypertension, Meniere’s, overactive bladder, hay fever")
 
             with col03_1:
                 st.markdown("**DOB:** 14/03/1958")
@@ -117,11 +116,11 @@ with col1:
             # Use a placeholder key if reset is triggered
             if st.session_state.reset_note:
                 st.session_state.reset_note = False
-                st.experimental_rerun()
+                st.rerun()
 
             st.text_area("Write your consultation note here...", height=150, key="new_note")
 
-            if st.button("Finish Consultation"):
+            if st.button("Finish Consultation", key="Finish_consultation_1"):
                 if st.session_state.new_note.strip():
                     st.session_state.consultation_notes.append(st.session_state.new_note.strip())
                     st.session_state.reset_note = True  # Trigger rerun without setting new_note directly
@@ -175,12 +174,97 @@ with col1:
         with st.container(border=True):
             st.markdown("#### Medications")
             st.dataframe(df_mattj, use_container_width=True)
-      
+  
+        # Consultation notes area
+        st.header("Consultation Notes")
+        with st.container(border=True):
+            st.markdown("#### New Consultation Entry")
+
+            if st.session_state.reset_note:
+                st.session_state.reset_note = False
+                st.rerun()
+
+            st.text_area("Write your consultation note here...", height=150, key="new_note_2")
+
+            if st.button("Finish Consultation", key="Finish_consultation_2"):
+                if st.session_state.new_note_2.strip():
+                    st.session_state.consultation_notes_2.append(st.session_state.new_note_2.strip())
+                    st.session_state.reset_note = True  # Trigger rerun without setting new_note directly
+
+        if st.session_state.consultation_notes_2:
+            st.markdown("### Previous Consultations")
+            for i, note in enumerate(st.session_state.consultation_notes_2[::-1], 1):
+                with st.container(border=True):
+                    st.markdown(f"**Entry #{len(st.session_state.consultation_notes_2) - i + 1}:**")
+                    st.markdown(f"> {note}")       
 
 
 
     with tabs[2]:
-        st.text_area("Notes", "Write something...")
+        st.subheader("Patient ID: 15  -  Jane Smith")
+        with st.container(border=True):
+            col21, col22, col23 = st.columns(3)
+
+            with col21:
+                st.image(os.path.join(os.getcwd(), "static", "Jones.png"), width = 200)
+
+            with col22:
+                st.markdown("**Age:** 68")
+                st.markdown("**Sex:** F")
+                st.markdown("**Height:** 167cm")
+                st.markdown("**GP:** Dr. Med. M. Ruiz")
+                st.markdown("**Past Medical History:** COPD, ILD, OA knee, hypertension, depression, new T2DM")
+            
+            with col23:
+                st.markdown("**DOB:** 10/01/1973")
+                st.markdown("**Weight:** 76Kg")
+                st.markdown("**BMI:** 28.95")
+                st.markdown("**Chronic:** Yes")
+
+        with st.container(border=True):
+            st.markdown("#### Discharge Letter")
+
+            st.markdown('''**Admitted** 05/06/2025''')
+            st.markdown('''**Discharged:** 08/06/2025''')
+
+            st.markdown('''**Clinical treatment summary:**  
+            Matt a 50 year old presented to A&E with R knee swelling and pain of 5 days duration. 
+                        No history of trauma. Joint examination revealed a painful red hot swelling which developed gradually. 
+                        Joint aspirated and septic arthritis ruled out with lab analysis.  
+                        Crystal microscopy identified negatively birefringent crystals consistent with gout. 
+                        Commenced on  colchicine and discharged with colchicine to take home.
+            ''')
+            st.markdown('''**Notes for GP:** Please note new diagnosis of gout''')
+            st.markdown("**Medication changes:** colchicine commenced for gout")
+            st.markdown("**Follow-up arrangements:** nil")
+
+        with st.container(border=True):
+            st.markdown("#### Medications")
+            st.dataframe(df_mattj, use_container_width=True)
+  
+        # Consultation notes area
+        st.header("Consultation Notes")
+        with st.container(border=True):
+            st.markdown("#### New Consultation Entry")
+
+            if st.session_state.reset_note:
+                st.session_state.reset_note = False
+                st.rerun()
+
+            st.text_area("Write your consultation note here...", height=150, key="new_note_2")
+
+            if st.button("Finish Consultation", key="Finish_consultation_2"):
+                if st.session_state.new_note_2.strip():
+                    st.session_state.consultation_notes_2.append(st.session_state.new_note_2.strip())
+                    st.session_state.reset_note = True  # Trigger rerun without setting new_note directly
+
+        if st.session_state.consultation_notes_2:
+            st.markdown("### Previous Consultations")
+            for i, note in enumerate(st.session_state.consultation_notes_2[::-1], 1):
+                with st.container(border=True):
+                    st.markdown(f"**Entry #{len(st.session_state.consultation_notes_2) - i + 1}:**")
+                    st.markdown(f"> {note}")       
+
 
 
 
