@@ -12,7 +12,7 @@ st.set_page_config(
 
 # Patient Data 
 
-# Brenda Smith
+# Patient 1
 
 # Initialize session state for patient 1
 if "consultation_notes" not in st.session_state:
@@ -25,7 +25,7 @@ if "reset_note" not in st.session_state:
     st.session_state.reset_note = False
 
 # Data
-data_brendas = {
+data_patient1 = {
     "Medication": ["Metformin", "Amlodipine", "Promethazine", "Cetirizine", "Tolterodine", "Paracetamol"],
     "Route": ["PO"] * 6,
     "Dose": ["500mg", "5mg", "20mg", "10mg", "2mg", "1g"],
@@ -33,9 +33,9 @@ data_brendas = {
     "Duration": ["regular", "regular", "PRN", "regular", "regular", "PRN"]
 }
 
-df_brendas = pd.DataFrame(data_brendas)
+df_patient1 = pd.DataFrame(data_patient1)
 
-# Matt Jones
+# Patient 2
 
 # Initialize session state for patient 2
 if "consultation_notes_2" not in st.session_state:
@@ -48,7 +48,7 @@ if "reset_note_2" not in st.session_state:
     st.session_state.reset_note_2 = False
 
 # Data
-data_mattj = {
+data_patient2 = {
     "Medication": ["Metformin", "Ramipril", "Bisoprolol", "Dapagliflozin", "Atorvastatin", "Furosemide", "Paracetamol", "Colchine"],
     "Route": ["PO"] * 8,
     "Dose": ["500mg", "10mg", "5mg", "10mg", "20mg", "40mg", "1g", "500 microgram"],
@@ -56,10 +56,10 @@ data_mattj = {
     "Duration": ["regular", "regular", "regular", "regular", "regular", "regular", "PRN", "regular for 6 days"]
 }
 
-df_mattj = pd.DataFrame(data_mattj)
+df_patient2 = pd.DataFrame(data_patient2)
 
 
-# Jane Smith
+# Patient 3
 
 # Initialize session state for patient 3
 if "consultation_notes_3" not in st.session_state:
@@ -72,7 +72,7 @@ if "reset_note_3" not in st.session_state:
     st.session_state.reset_note_3 = False
 
 # Data
-data_janes = {
+data_patient3 = {
     "Medication": [
         "Salbutamol inhaler",
         "Trimbow inhaler (beclometasone dipropionate, formoterol fumarate dihydrate, glycopyrronium bromide)",
@@ -145,7 +145,7 @@ data_janes = {
     ]
 }
 
-df_janes = pd.DataFrame(data_janes)
+df_patient3 = pd.DataFrame(data_patient3)
 
 # Create columns
 col1, col2 = st.columns([2,1])
@@ -195,7 +195,7 @@ with col1:
 
         with st.container(border=True):
             st.markdown("#### Medications")
-            st.dataframe(df_brendas, use_container_width=True)
+            st.dataframe(df_patient1, use_container_width=True)
 
         # Horizontal line 
         st.markdown("<hr>", unsafe_allow_html=True)
@@ -265,7 +265,7 @@ with col1:
 
         with st.container(border=True):
             st.markdown("#### Medications")
-            st.dataframe(df_mattj, use_container_width=True)
+            st.dataframe(df_patient2, use_container_width=True)
   
         # Consultation notes area
         st.header("Consultation Notes")
@@ -336,7 +336,7 @@ with col1:
 
         with st.container(border=True):
             st.markdown("#### Medications")
-            st.dataframe(df_mattj, use_container_width=True)
+            st.dataframe(df_patient3, use_container_width=True)
   
         # Consultation notes area
         st.header("Consultation Notes")
@@ -347,18 +347,18 @@ with col1:
                 st.session_state.reset_note = False
                 st.rerun()
 
-            st.text_area("Write your consultation note here...", height=150, key="new_note_2")
+            st.text_area("Write your consultation note here...", height=150, key="new_note_3")
 
-            if st.button("Finish Consultation", key="Finish_consultation_2"):
-                if st.session_state.new_note_2.strip():
-                    st.session_state.consultation_notes_2.append(st.session_state.new_note_2.strip())
+            if st.button("Finish Consultation", key="Finish_consultation_3"):
+                if st.session_state.new_note_3.strip():
+                    st.session_state.consultation_notes_3.append(st.session_state.new_note_3.strip())
                     st.session_state.reset_note = True  # Trigger rerun without setting new_note directly
 
-        if st.session_state.consultation_notes_2:
+        if st.session_state.consultation_notes_3:
             st.markdown("### Previous Consultations")
-            for i, note in enumerate(st.session_state.consultation_notes_2[::-1], 1):
+            for i, note in enumerate(st.session_state.consultation_notes_3[::-1], 1):
                 with st.container(border=True):
-                    st.markdown(f"**Entry #{len(st.session_state.consultation_notes_2) - i + 1}:**")
+                    st.markdown(f"**Entry #{len(st.session_state.consultation_notes_3) - i + 1}:**")
                     st.markdown(f"> {note}")       
 
 
