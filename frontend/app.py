@@ -18,7 +18,7 @@ st.set_page_config(
 if "consultation_notes" not in st.session_state:
     st.session_state.consultation_notes = []
 
-if "new_note" not in st.session_state:
+if "new_note" not in st.session_state: 
     st.session_state.new_note = ""
 
 if "reset_note" not in st.session_state:
@@ -58,6 +58,38 @@ data_patient2 = {
 
 df_patient2 = pd.DataFrame(data_patient2)
 
+# Matt Jones
+
+data_mattj = {
+    "Medication": ["Metformin", "Ramipril", "Bisoprolol", "Dapagliflozin", "Atorvastatin", "Furosemide", "Paracetamol", "Colchine"],
+    "Route": ["PO"] * 8,
+    "Dose": ["500mg", "10mg", "5mg", "10mg", "20mg", "40mg", "1g", "500 microgram"],
+    "Frequency": ["BD", "OD", "OD", "OD", "OD", "BD", "QDS", "BD"],
+    "Duration": ["regular", "regular", "regular", "regular", "regular", "regular", "PRN", "regular for 6 days"]
+}
+
+df_mattj = pd.DataFrame(data_mattj)
+
+# Initialize session state for patient 1
+if "consultation_notes" not in st.session_state:
+    st.session_state.consultation_notes = []
+
+if "new_note" not in st.session_state:
+    st.session_state.new_note = ""
+
+if "reset_note" not in st.session_state:
+    st.session_state.reset_note = False
+
+
+# Initialize session state for patient 2
+if "consultation_notes_2" not in st.session_state:
+    st.session_state.consultation_notes = []
+
+if "new_note_2" not in st.session_state:
+    st.session_state.new_note = ""
+
+if "reset_note_2" not in st.session_state:
+    st.session_state.reset_note = False 
 
 # Patient 3
 
@@ -140,7 +172,7 @@ data_patient3 = {
         "Regular",
         "Regular",
         "Regular",
-        "Regular",
+        "Regular_ ",
         "4 weeks. Reduce by 5mg/5 days. Discharged on Day 2 of 35mg"
     ]
 }
@@ -161,7 +193,7 @@ with col1:
             col01_1, col02_1, col03_1 = st.columns(3)
 
             with col01_1:
-                st.image(os.path.join(os.getcwd(), "static", "Smith.png"), width = 180)
+                st.image(os.path.join(os.getcwd(), "static", "patient1.png"), width = 180)
 
             with col02_1:
                 st.markdown("**Age:** 67")
@@ -231,7 +263,7 @@ with col1:
             col11, col12, col13 = st.columns(3)
 
             with col11:
-                st.image(os.path.join(os.getcwd(), "static", "Jones.png"), width = 200)
+                st.image(os.path.join(os.getcwd(), "static", "patient2.png"), width = 200)
 
             with col12:
                 st.markdown("**Age:** 52")
@@ -298,7 +330,7 @@ with col1:
             col21, col22, col23 = st.columns(3)
 
             with col21:
-                st.image(os.path.join(os.getcwd(), "static", "Jones.png"), width = 200)
+                st.image(os.path.join(os.getcwd(), "static", "patient3.png"), width = 200)
 
             with col22:
                 st.markdown("**Age:** 68")
@@ -375,6 +407,7 @@ def ask_ai(user_prompt):
     except requests.exceptions.RequestException as e:
         return f"Error contacting backend: {e}"
 
+# --- Chat Assistant UI ---
 def assistant_ui():
     # Session State Init
     if "messages" not in st.session_state:
