@@ -18,7 +18,7 @@ st.set_page_config(
 if "consultation_notes" not in st.session_state:
     st.session_state.consultation_notes = []
 
-if "new_note" not in st.session_state:
+if "new_note" not in st.session_state: 
     st.session_state.new_note = ""
 
 if "reset_note" not in st.session_state:
@@ -172,7 +172,7 @@ data_patient3 = {
         "Regular",
         "Regular",
         "Regular",
-        "Regular",
+        "Regular_ ",
         "4 weeks. Reduce by 5mg/5 days. Discharged on Day 2 of 35mg"
     ]
 }
