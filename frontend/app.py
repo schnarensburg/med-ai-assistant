@@ -197,8 +197,8 @@ def ask_ai(user_prompt):
     except requests.exceptions.RequestException as e:
         return f"Error contacting backend: {e}"
 
-# --- Chat Assistant UI ---
 def assistant_ui():
+    # Session State Init
     if "messages" not in st.session_state:
         st.session_state.messages = []
 
@@ -209,10 +209,23 @@ def assistant_ui():
         st.session_state.last_prompt = ""
 
     with col2:
+        # STEP 1: Handle input FIRST
+        user_prompt = st.session_state.get("pending_prompt")
+        if user_prompt and user_prompt != st.session_state.last_prompt:
+            st.session_state.last_prompt = user_prompt
+            st.session_state.messages.append({"role": "user", "content": user_prompt})
+
+            response = ask_ai(user_prompt)
+            st.session_state.messages.append({"role": "assistant", "content": response})
+
+            # Clear pending input after processing
+            st.session_state.pending_prompt = ""
+            st.rerun()
+
+        # STEP 2: Display Chat
         if st.session_state.show_chat:
             st.markdown("### Assistant (powered by Meditron)")
 
-            # CSS + Scroll logic
             st.markdown("""
                 <style>
                     .chat-box {
@@ -253,7 +266,6 @@ def assistant_ui():
                 </script>
             """, unsafe_allow_html=True)
 
-            # Chat message box
             with st.container():
                 chat_html = '<div class="chat-box" id="chat-box">'
                 for msg in st.session_state.messages:
@@ -264,18 +276,11 @@ def assistant_ui():
                 chat_html += '</div>'
                 st.markdown(chat_html, unsafe_allow_html=True)
 
-            # Chat input
-            prompt = st.chat_input("Ask something...")
-
-            if prompt and prompt != st.session_state.last_prompt:
-                st.session_state.last_prompt = prompt
-                st.session_state.messages.append({"role": "user", "content": prompt})
-
-                response = ask_ai(prompt)
-                st.session_state.messages.append({"role": "assistant", "content": response})
-
-                # Force scroll after new message
-                st.experimental_rerun()
+        # STEP 3: Show chat input at bottom, logic is decoupled
+        new_prompt = st.chat_input("Ask something...")
+        if new_prompt:
+            st.session_state.pending_prompt = new_prompt
+            st.rerun()
 
 # --- Run App ---
 assistant_ui()
