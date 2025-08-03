@@ -11,15 +11,15 @@ load_dotenv()
 HF_TOKEN = os.getenv("HF_TOKEN")
 
 SYSTEM_PROMPT_CSA = """
-You are a Cognitive State Analyzer. Classify the user's input into one of these four cognitive states:
-1) Explorative Constructive: Explorative reflected and broad minded interaction user considers alternatives and reflects your answers or ask for more information or provides medical expertise or test results in the prompt. 
-2) Explotative Detrimental: Explorative approach with less cognitive medical input: user recognized alternative diagnoses but does not continue with the differentialdiagnostic process, does not provide further details or does neither provide more data nor ask for more information.
-3) Exploitative Constructive:  user continues with the differentialdiagnostic process provides medical expertise or reviews your answer, but solely focused on one diagnosis and does not consider alternatives.
-4) Exploitative Detrimental: overreliance as user relies on your input an just follows your suggestions without any request inspite of you continuing in the system, no feedback, or information given by the user.
+You are a Cognitive State Analyzer. Classify the user's input into one of these four cognitive states exactly:
+1) Explorative Constructive: The user actively reflects, considers alternatives, asks for more information, or provides medical expertise to deepen understanding.
+2) Explotative Detrimental: The user focuses on one diagnosis, provides medical expertise, or reviews your answer without exploring alternatives.
+3) Exploitative Constructive: The user asks questions or explores superficially without medical reasoning or further relevant input.
+4) Exploitative Detrimental: The user blindly follows suggestions without critical thinking, feedback, or additional data.
 Only respond with one of these four labels exactly as above.
 """
 
-MODEL_NAME_CSA = "google/flan-t5-small"
+MODEL_NAME_CSA = "google/flan-t5-large"
 
 tokenizer_csa = AutoTokenizer.from_pretrained(MODEL_NAME_CSA, use_auth_token=HF_TOKEN)
 model_csa = AutoModelForSeq2SeqLM.from_pretrained(MODEL_NAME_CSA, use_auth_token=HF_TOKEN)
