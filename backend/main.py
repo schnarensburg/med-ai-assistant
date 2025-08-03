@@ -26,7 +26,7 @@ if project_root not in sys.path:
 # Add project root to sys.path
 # sys.path.append(str(Path(__file__).resolve().parents[1]))
 app = FastAPI()
-router = RouterEngine(mode ="routing", hf_token=None) # Load globally and reuse for every question
+router = RouterEngine(mode ="warning", hf_token=None) # Load globally and reuse for every question
 
 class ChatRequest(BaseModel):
     prompt: str
