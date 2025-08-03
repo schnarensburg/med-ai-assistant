@@ -1,0 +1,10 @@
+{
+  "session_id": "228bedf2-4d84-428f-b2b0-bc748adfc161",
+  "timestamp": "2025-07-30T09:21:53.283524",
+  "prompt": "A 30 year old woman reports shortness of breath, chest pain, and nausea. What are possible differential diagnosis?",
+  "response": "Possible differential diagnoses include pulmonary embolism, acute pericarditis, and myocardial infarction.",
+  "user_decision": "basic",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 26,
+  "user_id": "user_1"
+}

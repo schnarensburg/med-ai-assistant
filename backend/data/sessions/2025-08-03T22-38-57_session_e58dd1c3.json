@@ -1,0 +1,10 @@
+{
+  "session_id": "e58dd1c3-59b8-4067-8e62-dcddc65f4e6d",
+  "timestamp": "2025-08-03T22:38:57.079207",
+  "prompt": "xxx",
+  "response": "Hello! I'm here to assist you with your medical inquiries. How can I help today?",
+  "user_decision": "No previous state",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 0,
+  "user_id": "test_xxx_001"
+}

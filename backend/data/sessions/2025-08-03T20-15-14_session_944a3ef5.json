@@ -1,0 +1,10 @@
+{
+  "session_id": "944a3ef5-0004-4786-83f3-a57478e91ad4",
+  "timestamp": "2025-08-03T20:15:14.901086",
+  "prompt": "I focus on one diagnosis. I review your answers without exploring alternatives.",
+  "response": "It's important to not only consider the primary diagnosis but also explore potential alternative explanations. This will help you avoid missing any potential health issues.",
+  "user_decision": "Exploitative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 50,
+  "user_id": "user_1"
+}

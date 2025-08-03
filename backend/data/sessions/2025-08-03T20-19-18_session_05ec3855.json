@@ -1,0 +1,10 @@
+{
+  "session_id": "05ec3855-c1f4-4f93-ae99-7fb66e454266",
+  "timestamp": "2025-08-03T20:19:18.815814",
+  "prompt": "Explorative Detrimental: The user focuses on one diagnosis, provides medical expertise, or reviews your answer without exploring alternatives.",
+  "response": "Default prompt...",
+  "user_decision": "Exploitative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 54,
+  "user_id": "user_1"
+}

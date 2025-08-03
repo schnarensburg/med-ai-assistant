@@ -1,0 +1,10 @@
+{
+  "session_id": "8237d007-ccfa-4922-92d9-65571758f2d6",
+  "timestamp": "2025-08-03T21:26:10.959758",
+  "prompt": "The patient has chest pain, SOB, and nausea post-flight. What differentials should we consider, and how would you prioritize them?",
+  "response": "When a patient presents with chest pain, shortness of breath (SOB), and nausea after a flight, there are several potential causes that need to be considered. The most common causes include pulmonary embolism, pneumothorax, and myocardial infarction.  1. Pulmonary embolism: A pulmonary embolism occurs when a blood clot travels to the lungs and blocks one of the pulmonary arteries. This can lead to chest pain, shortness of breath, and nausea. It is more likely if the patient has risk factors such as recent surgery, prolonged immobility, or a personal or family history of blood clots.  2. Pneumothorax: A pneumothorax is a",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 62,
+  "user_id": "user_1"
+}

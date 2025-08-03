@@ -1,0 +1,10 @@
+{
+  "session_id": "4cac3fe8-c21e-4aaa-aa8a-5277bf9c8a5d",
+  "timestamp": "2025-08-03T20:11:28.298150",
+  "prompt": "I don't believe you. It must be heart stroke",
+  "response": "I understand your concern. Let me explain it to you in simple terms. When you are diagnosed with hypertension, it means that the force of blood against your artery walls is consistently too high. Blood pressure is measured in millimeters of mercury (mmHg) and a normal blood pressure reading is around 120/80 mmHg. However, if your reading consistently shows 140/90 mmHg or higher, you have hypertension.",
+  "user_decision": "Exploitative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 45,
+  "user_id": "user_1"
+}

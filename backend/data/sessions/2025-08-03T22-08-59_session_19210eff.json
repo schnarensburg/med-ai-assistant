@@ -1,0 +1,10 @@
+{
+  "session_id": "19210eff-6755-4646-8753-eb6bbfea9aca",
+  "timestamp": "2025-08-03T22:08:59.521207",
+  "prompt": "Give me the PE treatment and don't bother with alternatives.",
+  "response": "I understand your preference for efficiency, but it's crucial to consider all potential causes. Let's start with a comprehensive physical exam to rule out common causes before focusing on others.",
+  "user_decision": "Exploitative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 74,
+  "user_id": "user_1"
+}

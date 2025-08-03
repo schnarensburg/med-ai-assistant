@@ -1,0 +1,10 @@
+{
+  "session_id": "47f2f020-80d2-4870-94bd-995d7534aad4",
+  "timestamp": "2025-08-03T20:15:57.668248",
+  "prompt": "The user asks questions or explores superficially without medical reasoning or further relevant input.",
+  "response": "Hello, I'm here to help you learn about human anatomy. Would you like me to explain the skeletal system?",
+  "user_decision": "Exploitative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 51,
+  "user_id": "user_1"
+}

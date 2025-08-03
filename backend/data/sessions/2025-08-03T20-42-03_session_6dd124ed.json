@@ -1,0 +1,10 @@
+{
+  "session_id": "6dd124ed-bd6c-405d-b159-ef0ac26b4854",
+  "timestamp": "2025-08-03T20:42:03.031408",
+  "prompt": "What could be the diagnosis for the following symptoms: thirst, dizzyness, shortness of breath, cramps?",
+  "response": "There could be several possible causes for these symptoms. One possibility is dehydration, which can lead to increased thirst and can cause dizziness and shortness of breath. Another possibility is electrolyte imbalance, such as low levels of potassium in the blood, which can cause muscle cramps and symptoms like dizziness. Additionally, certain medical conditions like diabetes or kidney disease can also lead to these symptoms. It is important to consult with a healthcare professional for an accurate diagnosis based on your specific situation.",
+  "user_decision": "Exploitative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 58,
+  "user_id": "user_1"
+}

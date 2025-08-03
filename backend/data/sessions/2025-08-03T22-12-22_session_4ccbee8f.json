@@ -1,0 +1,10 @@
+{
+  "session_id": "4ccbee8f-785a-4d58-9edf-ddca2cc89f97",
+  "timestamp": "2025-08-03T22:12:22.149880",
+  "prompt": "Patient presents with strong thirst, dizziness, cramps, and shortness of breath. What could this be?",
+  "response": "These symptoms can be indicative of hypernatremia, which is an abnormally high level of sodium in the blood. It can cause severe thirst, dehydration, and electrolyte imbalances that can lead to dizziness, muscle cramps, and shortness of breath. However, it is important to consider other potential causes as well. One possibility could be diabetes insipidus, which is characterized by excessive thirst and urination due to insufficient antidiuretic hormone (ADH) production or ineffective response to it. Another potential cause could be heat stroke, especially in a patient with prolonged physical exertion in high temperatures. Other conditions such as adrenal insufficiency or certain medications can also cause similar symptoms. To confirm the diagnosis, further medical",
+  "user_decision": "Exploitative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 2,
+  "user_id": "clinician_1"
+}

@@ -1,0 +1,10 @@
+{
+  "session_id": "69f3dbb3-b76a-4a96-bec1-994637fbbc3b",
+  "timestamp": "2025-07-29T14:43:06.881110",
+  "prompt": "The patient has also headache and says he is weak",
+  "response": "Weakness can be a symptom of various conditions. To discuss further, may I know if the headache is accompanied by any other symptoms like fever, vomiting, or visual disturbances?",
+  "user_decision": "basic",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 19,
+  "user_id": "user_1"
+}

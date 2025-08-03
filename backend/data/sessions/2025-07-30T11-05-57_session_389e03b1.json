@@ -1,0 +1,10 @@
+{
+  "session_id": "389e03b1-669c-4c1d-a2d4-6bd84af13e38",
+  "timestamp": "2025-07-30T11:05:57.228891",
+  "prompt": "Why?",
+  "response": "Because it is a good practice to do so in order to ensure that all potential threats are addressed appropriately.",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 34,
+  "user_id": "user_1"
+}

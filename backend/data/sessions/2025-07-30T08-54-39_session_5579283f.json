@@ -1,0 +1,10 @@
+{
+  "session_id": "5579283f-de39-480d-8219-95c4d4798a77",
+  "timestamp": "2025-07-30T08:54:39.571907",
+  "prompt": "A 30 year old patient reports symptoms of short of breath, chest pain, and nausea. The patient is physically fit. What are possible diagnosis? Argue your reasoning.",
+  "response": "There are several possible diagnoses that could explain these symptoms. It is important to consider the patient's age and fitness level. One possible diagnosis is a pulmonary embolism, which occurs when a blood clot travels to the lungs and blocks blood flow. This can cause shortness of breath, chest pain, and even nausea. Another possibility is a myocardial infarction, commonly known as a heart attack, which can also present with similar symptoms. Other potential causes include anxiety or panic attacks, which can also manifest with breathlessness and chest pain. It is crucial to conduct a thorough medical evaluation to determine the exact cause of these symptoms.",
+  "user_decision": "basic",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 24,
+  "user_id": "user_1"
+}

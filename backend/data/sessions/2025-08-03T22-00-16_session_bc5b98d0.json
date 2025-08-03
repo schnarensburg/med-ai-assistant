@@ -1,0 +1,10 @@
+{
+  "session_id": "bc5b98d0-91e1-4272-9942-350248185250",
+  "timestamp": "2025-08-03T22:00:16.976597",
+  "prompt": "This is clearly a pulmonary embolism. Tell me the treatment protocol.",
+  "response": "While I understand your reasoning, it's important to consider alternative explanations like electrolyte imbalances or renal pathology. Can you explain why these conditions are less likely in this case?",
+  "user_decision": "Exploitative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 68,
+  "user_id": "user_1"
+}

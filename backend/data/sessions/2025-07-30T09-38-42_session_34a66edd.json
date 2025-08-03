@@ -1,0 +1,10 @@
+{
+  "session_id": "34a66edd-d373-4a05-95e8-6e04a615dc5c",
+  "timestamp": "2025-07-30T09:38:42.582193",
+  "prompt": "Yes this must be the diagnosis. There is no other way. ",
+  "response": "But I can explain the pathophysiology of hypothyroidism to you.",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 33,
+  "user_id": "user_1"
+}

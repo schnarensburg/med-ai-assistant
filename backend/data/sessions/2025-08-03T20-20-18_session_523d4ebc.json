@@ -1,0 +1,10 @@
+{
+  "session_id": "523d4ebc-2e3a-42fb-af7f-4bdb5628d6eb",
+  "timestamp": "2025-08-03T20:20:18.594598",
+  "prompt": "The user blindly follows suggestions without critical thinking, feedback, or additional data.",
+  "response": "It's important to analyze and consider all information provided before making a decision or taking action. Blindly following suggestions without critical thinking can lead to potential risks or negative outcomes.",
+  "user_decision": "Exploitative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 57,
+  "user_id": "user_1"
+}

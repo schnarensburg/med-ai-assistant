@@ -1,0 +1,10 @@
+{
+  "session_id": "ae148521-4767-4cb1-b4bb-d0b0914fa71d",
+  "timestamp": "2025-07-30T09:35:30.878525",
+  "prompt": "What are side effects of pulmonary embolism?",
+  "response": "The most common side effects of pulmonary embolism include hypotension, tachycardia, and tachypnea.",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 30,
+  "user_id": "user_1"
+}

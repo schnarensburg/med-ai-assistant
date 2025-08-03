@@ -1,0 +1,10 @@
+{
+  "session_id": "492650dc-fed4-4378-a64c-819773891605",
+  "timestamp": "2025-07-30T11:31:44.473362",
+  "prompt": "Thank you.  will go with the diagnosis you gave me and won\u2019t consider other diagnosis.",
+  "response": "You're welcome. If you have any further questions, feel free to ask.",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 37,
+  "user_id": "user_1"
+}

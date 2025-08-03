@@ -1,0 +1,10 @@
+{
+  "session_id": "9cf25de2-89ee-47c5-a7c8-c125a65c4790",
+  "timestamp": "2025-08-03T20:19:41.719472",
+  "prompt": "Exploitative Constructive: The user asks questions or explores superficially without medical reasoning or further relevant input.",
+  "response": "Exploitative Constructive: I'm sorry, but I cannot provide a diagnosis or treatment plan without more information about your specific condition and symptoms. It is important to consult with a healthcare professional who can evaluate your situation in detail and provide appropriate guidance.",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 55,
+  "user_id": "user_1"
+}

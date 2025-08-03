@@ -1,0 +1,10 @@
+{
+  "session_id": "411c7328-2aee-40d5-9251-b17288c9975b",
+  "timestamp": "2025-07-29T14:24:47.407130",
+  "prompt": "The patient is a 30 year old woman who reports strong headache, nausea and fatigue. What are differential diagnosis?",
+  "response": "Based on the symptoms you described, there are several potential causes for the patient's symptoms. One possibility is a migraine headache, which can cause severe throbbing pain on one side of the head, along with nausea and fatigue. Another potential cause is a tension headache, which also presents with pain on both sides of the head but is typically described as a dull ache rather than throbbing pain. Other conditions that could be considered include sinusitis, meningitis, or even a viral infection such as the flu. However, it is important to further evaluate the patient's symptoms and medical history to make a more accurate diagnosis.",
+  "user_decision": "basic",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 16,
+  "user_id": "user_1"
+}

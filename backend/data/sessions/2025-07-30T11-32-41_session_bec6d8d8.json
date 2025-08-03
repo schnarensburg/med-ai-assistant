@@ -1,0 +1,10 @@
+{
+  "session_id": "bec6d8d8-108e-4a2b-9aea-1805c926f67b",
+  "timestamp": "2025-07-30T11:32:41.396627",
+  "prompt": "You said it could be pneumonia. I have checked for fever and crackles on auscultation and both are present. That confirms it for me.",
+  "response": "Yes, that does confirm it for me as well. However, I am not able to proceed further without knowing the grade of severity of the pneumonia, which can be mild, moderate, or severe. This information is crucial for determining the appropriate treatment plan. Can you please provide the grade of severity for the pneumonia?",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 38,
+  "user_id": "user_1"
+}

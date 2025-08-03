@@ -1,0 +1,10 @@
+{
+  "session_id": "875f369e-6128-455b-a798-40c0de72509f",
+  "timestamp": "2025-08-03T22:29:26.299073",
+  "prompt": "I have a 22-year-old female patient presenting with fatigue, weight loss, and frequent urination over the past 3 weeks. She mentions being constantly thirsty and drinking large amounts of water. No family history of diabetes. What should be my initial diagnostic approach?",
+  "response": "Given the symptoms of fatigue, weight loss, frequent urination, and excessive thirst, a possible diagnosis to consider is diabetes mellitus. To confirm this, the initial diagnostic approach should include measuring her blood glucose levels. This can be done through a fasting plasma glucose test or a random plasma glucose test with symptoms consistent with diabetes. Additionally, testing for glycated hemoglobin (HbA1c) can provide information about her average blood glucose levels over the past 2-3 months.",
+  "user_decision": "No previous state",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 0,
+  "user_id": "dr_smith_001"
+}

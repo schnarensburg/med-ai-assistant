@@ -1,0 +1,10 @@
+{
+  "session_id": "d98b98a6-f656-4361-a8e2-6331d7400b61",
+  "timestamp": "2025-08-03T22:07:45.144862",
+  "prompt": "This is clearly a pulmonary embolism. Tell me the treatment protocol.",
+  "response": "I understand your reasoning, but before we jump to that conclusion, have you considered other serious conditions that could present similarly? One possibility to consider is acute respiratory distress syndrome (ARDS). ARDS can also lead to hypoxemia and respiratory distress. To be sure, we need to look at the patient's clinical presentation and lab results.",
+  "user_decision": "Exploitative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 72,
+  "user_id": "user_1"
+}

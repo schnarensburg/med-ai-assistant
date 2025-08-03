@@ -1,0 +1,10 @@
+{
+  "session_id": "dc8f8053-cfab-43d0-96fe-c296c2a77d9f",
+  "timestamp": "2025-08-03T21:27:42.727726",
+  "prompt": "What are the key tests for pulmonary embolism?",
+  "response": "The key tests for pulmonary embolism include ventilation-perfusion (V-P) lung scanning, chest X-ray, and pulmonary angiography.",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 64,
+  "user_id": "user_1"
+}

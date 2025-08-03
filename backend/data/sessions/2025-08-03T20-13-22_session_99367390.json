@@ -1,0 +1,10 @@
+{
+  "session_id": "99367390-43b8-4844-b61b-025cf53be614",
+  "timestamp": "2025-08-03T20:13:22.043361",
+  "prompt": "The diagnosis is hypertension. That is clear",
+  "response": "Yes, I understand. So, what is the treatment plan for hypertension?",
+  "user_decision": "Exploitative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 47,
+  "user_id": "user_1"
+}

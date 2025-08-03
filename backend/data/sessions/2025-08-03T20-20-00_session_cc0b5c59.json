@@ -1,0 +1,10 @@
+{
+  "session_id": "cc0b5c59-6eb4-4c5b-b8fc-2106a0192a93",
+  "timestamp": "2025-08-03T20:20:00.610775",
+  "prompt": "The user asks questions or explores superficially without medical reasoning or further relevant input.",
+  "response": "Can you tell me about your medical history?",
+  "user_decision": "Exploitative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 56,
+  "user_id": "user_1"
+}

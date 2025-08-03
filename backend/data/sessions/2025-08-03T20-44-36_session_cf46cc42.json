@@ -1,0 +1,10 @@
+{
+  "session_id": "cf46cc42-6482-4578-9990-8acb2dc602f8",
+  "timestamp": "2025-08-03T20:44:36.454663",
+  "prompt": "i am convinced it it diabetes. what do I have to do now?",
+  "response": "I understand that this is a new diagnosis for you. The first step is to schedule an appointment with your primary care doctor or endocrinologist. They will be able to provide you with further guidance on managing your condition. In the meantime, it's important to focus on making healthy lifestyle changes such as eating a balanced diet, exercising regularly, monitoring your blood sugar levels, and taking any prescribed medications as directed. Remember, you're not alone in this journey, and there are resources available to help support you every step of the way.",
+  "user_decision": "Exploitative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 60,
+  "user_id": "user_1"
+}

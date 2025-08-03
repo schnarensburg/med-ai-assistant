@@ -1,0 +1,10 @@
+{
+  "session_id": "ca6d11b3-9b75-4f30-83c4-2257383e3cce",
+  "timestamp": "2025-07-29T14:43:53.879444",
+  "prompt": "Yes he has an increased temperature, likely fever",
+  "response": "Alright, let's continue with the interview to gather more information. When did you first notice this fever?",
+  "user_decision": "basic",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 20,
+  "user_id": "user_1"
+}

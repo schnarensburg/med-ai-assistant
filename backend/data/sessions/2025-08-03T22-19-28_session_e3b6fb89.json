@@ -1,0 +1,10 @@
+{
+  "session_id": "e3b6fb89-04dd-4a0d-9bff-ca94b2c2f3db",
+  "timestamp": "2025-08-03T22:19:28.049739",
+  "prompt": "Looking at this 19-year-old athletic patient with polydipsia, dizziness, muscle cramps, and dyspnea - the age fits classic Type 1 diabetes onset. The thirst and polyuria suggest glucose-induced osmotic diuresis with secondary electrolyte losses. The cramps could indicate hyponatremia and hypokalemia from renal wasting. Most concerning is the dyspnea in an athletic individual - this could signal developing ketoacidosis with compensatory Kussmaul respirations. What additional clinical findings would you expect to see? Should we be considering immediate ABG and comprehensive metabolic panel to assess acid-base status and electrolyte derangements? How would you differentiate this from other causes of similar presentation in this age group?",
+  "response": "Based on your clinical presentation, it is important to further evaluate for signs of diabetic ketoacidosis (DKA). In addition to the symptoms mentioned, you would expect to see weight loss, dehydration, and possible Kussmaul respirations. Immediate laboratory investigations such as arterial blood gas (ABG) and comprehensive metabolic panel (CMP) are essential to confirm the diagnosis of DKA and identify any electrolyte imbalances. To differentiate from other causes, a thorough physical examination and further diagnostic tests may be required.",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 4,
+  "user_id": "clinician_1"
+}

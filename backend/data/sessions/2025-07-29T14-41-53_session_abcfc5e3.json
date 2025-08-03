@@ -1,0 +1,10 @@
+{
+  "session_id": "abcfc5e3-b1cd-4587-87d3-dd88c5006d3e",
+  "timestamp": "2025-07-29T14:41:53.074387",
+  "prompt": "A 60 year old man reports symptoms of chest pain, coughing and nausea. He smokes regularly cigarettes. What are first hand possible diagnosis?",
+  "response": "The first hand possible diagnosis for a 60 year old man with symptoms of chest pain, coughing and nausea who smokes regularly cigarettes could be lung cancer.",
+  "user_decision": "basic",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 17,
+  "user_id": "user_1"
+}

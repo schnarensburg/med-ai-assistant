@@ -1,0 +1,10 @@
+{
+  "session_id": "eb4c73fe-a859-476f-ab1e-8204a6a5962b",
+  "timestamp": "2025-08-03T21:40:21.012670",
+  "prompt": "Patient presents with strong thirst, dizziness, cramps, and shortness of breath. What could this be? Please provide differential diagnoses and clinical reasoning.",
+  "response": "Based on the symptoms of strong thirst, dizziness, cramps, and shortness of breath, there are several potential causes that could explain these symptoms. It is important to consider the patient's medical history, medications, and any recent changes in health status.  1. Dehydration: Dehydration can cause intense thirst, dizziness, muscle cramps, and shortness of breath. Other signs may include dry mouth, decreased urine output, dark-colored urine, and rapid heartbeat.  2. Electrolyte imbalance: An imbalance in electrolytes such as potassium, sodium, or calcium can lead to symptoms like muscle cramps, dizziness, and shortness of breath. This may be due to excessive sweating, vomiting, diarrhea,",
+  "user_decision": "No previous state",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 0,
+  "user_id": "clinician_1"
+}

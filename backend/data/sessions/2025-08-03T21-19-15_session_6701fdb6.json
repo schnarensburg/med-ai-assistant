@@ -1,0 +1,10 @@
+{
+  "session_id": "6701fdb6-437e-4ca7-b09b-e596c652f3e3",
+  "timestamp": "2025-08-03T21:19:15.269750",
+  "prompt": "The patient has chest pain, short of breath, and nausea. What differential diagnosis should we consider, and how would you prioritize them?",
+  "response": "In a patient presenting with chest pain, shortness of breath, and nausea, there are several potential causes that need to be considered. Based on the given symptoms, the differential diagnosis list can include myocardial infarction, pulmonary embolism, gastroesophageal reflux disease, and anxiety.  1. Myocardial infarction: This is a medical emergency where there is a blockage in one or more of the coronary arteries, leading to decreased blood flow to the heart muscle. It can present with chest pain that may radiate to other areas of the body, shortness of breath, and nausea.  2. Pulmonary embolism: A blood clot that has traveled to the lungs can cause sudden chest pain",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 61,
+  "user_id": "user_1"
+}

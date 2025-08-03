@@ -1,0 +1,10 @@
+{
+  "session_id": "9c60bc7a-50b8-4663-b074-1520ebc25663",
+  "timestamp": "2025-08-03T22:22:24.968532",
+  "prompt": "Thank you for that comprehensive analysis. You are absolutely right about the Type 1 diabetes presentation. The age, symptoms, and pathophysiology all align perfectly. I agree we need immediate glucose, HbA1c, ketones, and ABG. Given the clear diabetic ketoacidosis picture with the Kussmaul respirations, what is the standard DKA management protocol? Should we start with IV fluids and insulin infusion immediately? What are the typical insulin dosing guidelines for DKA in a 19-year-old? I want to make sure we follow evidence-based DKA treatment algorithms.",
+  "response": "As a medical expert system, I am here to support your clinical decision-making process. In the case of DKA, rapid and appropriate management is crucial. The standard protocol includes initial resuscitation with IV fluids and insulin infusion to correct dehydration and ketoacidosis.  For insulin administration in DKA, the initial dose is typically 0.15 units per kilogram of body weight in adults. This can be adjusted based on blood glucose levels and clinical improvement. Regular monitoring of blood glucose and acid-base status is essential during treatment.  It's important to note that the management of diabetes and DKA requires a multidisciplinary approach, and you should consult with endocrinologists or other specialists if needed. They can provide further guidance and",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 5,
+  "user_id": "clinician_1"
+}

@@ -1,0 +1,10 @@
+{
+  "session_id": "87e980cc-1762-431a-ad1b-889d9f458bdc",
+  "timestamp": "2025-08-03T21:26:52.689504",
+  "prompt": "This is clearly a pulmonary embolism. Tell me the treatment protocol.",
+  "response": "The treatment protocol for a pulmonary embolism involves anticoagulation therapy with low molecular weight heparin or unfractionated heparin, followed by warfarin therapy for at least three to six months to prevent further clot formation. Additionally, pain and symptom management should be provided as needed.",
+  "user_decision": "Exploitative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 63,
+  "user_id": "user_1"
+}

@@ -1,0 +1,10 @@
+{
+  "session_id": "269a3a40-1c5e-4f67-888f-8880b19ca3ec",
+  "timestamp": "2025-07-30T11:24:55.807189",
+  "prompt": "A 30 year old woman who is physically fit reports symptoms of chest pain, shortness of breath, and nausea. What are possible first diagnosis? Argue your reasoning.",
+  "response": "Possible first diagnoses for a 30 year old woman with chest pain, shortness of breath, and nausea could include myocardial infarction, pulmonary embolism, or anxiety. These symptoms can be present in all three conditions. However, to narrow down the possibilities, further information is needed. Did she have any recent trauma or surgery? Does she smoke or have a history of lung disease? Has she ever had similar symptoms in the past?",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 36,
+  "user_id": "user_1"
+}

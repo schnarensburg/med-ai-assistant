@@ -1,0 +1,10 @@
+{
+  "session_id": "9bcdad71-2a96-4528-b2a9-85b6df4117fa",
+  "timestamp": "2025-08-03T21:59:59.446401",
+  "prompt": "The patient has chest pain, SOB, and nausea post-flight. What differentials should we consider, and how would you prioritize them?",
+  "response": "Given the symptoms of chest pain, shortness of breath, and nausea after a flight, we should consider several potential causes. These include pulmonary embolism, myocardial infarction, and pneumothorax. To prioritize them, we need to understand more about the patient's medical history, age, and any other associated symptoms. A detailed physical examination and relevant investigations such as ECG, chest X-ray, and blood tests can help in narrowing down the differentials and determining the likely cause of the symptoms.",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 67,
+  "user_id": "user_1"
+}

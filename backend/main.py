@@ -5,7 +5,7 @@ import logging
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-# Plattformunabhängiges sys.path-Handling
+# Add project root to sys.path (nur einmal!)
 project_root = str(Path(__file__).resolve().parents[1])
 if project_root not in sys.path:
     print(f"➕ Adding project root to sys.path: {project_root}")
@@ -17,16 +17,12 @@ from backend.logging_config import setup_logger
 
 setup_logger()
 
-
-# Projekt-Root hinzufügen, falls nicht enthalten
-project_root = str(Path(__file__).resolve().parents[1])
-if project_root not in sys.path:
-    print(f"➕ Adding project root to sys.path: {project_root}")
-    sys.path.append(project_root)
-# Add project root to sys.path
-# sys.path.append(str(Path(__file__).resolve().parents[1]))
 app = FastAPI()
-router = RouterEngine(mode ="warning", hf_token=None) # Load globally and reuse for every question
+router = RouterEngine(mode="warning", hf_token=None)
+
+@app.get("/")
+async def root():
+    return {"message": "Medical AI Assistant Backend is running!", "status": "OK"}
 
 class ChatRequest(BaseModel):
     prompt: str
@@ -39,14 +35,10 @@ class ChatResponse(BaseModel):
 
 @app.post("/chat", response_model=ChatResponse)
 async def chat_endpoint(req: ChatRequest):
-    # mode: "basic", "routing", "warning"
-    #disable to let system run globally
-    #router = RouterEngine(mode ="basic", hf_token=None) # , user_id=req.user_id
     logs = get_last_user_logs(req.user_id, n=1000)
     number_of_prompts = len(logs)
     response, state = router.route(req.prompt, user_id=req.user_id)
     
-    # Log the interaction
     save_log(
         prompt=req.prompt,
         response=response,

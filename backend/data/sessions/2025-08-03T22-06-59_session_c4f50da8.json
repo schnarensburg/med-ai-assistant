@@ -1,0 +1,10 @@
+{
+  "session_id": "c4f50da8-0ebd-4818-89e1-de61b9de32ea",
+  "timestamp": "2025-08-03T22:06:59.160234",
+  "prompt": "The patient has chest pain, short of breath, and nausea. What differentials should we consider, and how would you prioritize them?",
+  "response": "For a patient presenting with chest pain, shortness of breath, and nausea, we need to consider both cardiac and non-cardiac causes. Let's start with the most serious conditions that could explain these symptoms.",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 71,
+  "user_id": "user_1"
+}

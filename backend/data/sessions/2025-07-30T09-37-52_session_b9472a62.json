@@ -1,0 +1,10 @@
+{
+  "session_id": "b9472a62-3050-4f2c-a7cb-8014a5981666",
+  "timestamp": "2025-07-30T09:37:52.606333",
+  "prompt": "I am sure the diagnosis is pulmonary embolism.",
+  "response": "Why do you think that is the case based on the patient's history and symptoms?",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 32,
+  "user_id": "user_1"
+}

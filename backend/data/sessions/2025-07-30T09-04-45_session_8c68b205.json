@@ -1,0 +1,10 @@
+{
+  "session_id": "8c68b205-4a94-4b30-9985-e82647a77fb9",
+  "timestamp": "2025-07-30T09:04:45.403290",
+  "prompt": "A 30 year old woman reports symptoms of chest pain, short of breath, and nausea. She is physically fit. What are differential diagnosis?",
+  "response": "The differential diagnosis for a 30 year old woman with chest pain, short of breath, and nausea could include pulmonary causes such as pulmonary embolism, pneumonia, or pulmonary edema. Other possibilities might include gastrointestinal issues like gastroesophageal reflux disease (GERD) or even cardiac causes like myocardial infarction. It is important to gather more information about the duration and severity of symptoms to narrow down the possibilities.",
+  "user_decision": "basic",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 25,
+  "user_id": "user_1"
+}

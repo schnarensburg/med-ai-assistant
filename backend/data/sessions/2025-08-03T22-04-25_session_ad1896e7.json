@@ -1,0 +1,10 @@
+{
+  "session_id": "ad1896e7-b97a-4bd6-90ba-757faab7f71e",
+  "timestamp": "2025-08-03T22:04:25.013912",
+  "prompt": "What are the key tests for pulmonary embolism?",
+  "response": "The key tests for pulmonary embolism include a CT angiogram, which is the preferred imaging study, and a ventilation-perfusion scan. Other options include a standard chest x-ray or echocardiography to look for right heart strain. What do you think about these options?",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 69,
+  "user_id": "user_1"
+}

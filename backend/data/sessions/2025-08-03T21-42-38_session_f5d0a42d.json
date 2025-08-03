@@ -1,0 +1,10 @@
+{
+  "session_id": "f5d0a42d-1af1-4328-b0b5-83f3e15083f9",
+  "timestamp": "2025-08-03T21:42:38.858422",
+  "prompt": "I am convinced it is diabetes. What should I do now?",
+  "response": "Well, I can't diagnose you over the internet. However, if you are concerned about diabetes, you should definitely see a healthcare professional for further evaluation. They will be able to perform tests and provide an accurate diagnosis. If you are indeed diagnosed with diabetes, they can also discuss appropriate treatment options with you. Remember, seeking medical advice is important for proper diagnosis and management of any health condition.",
+  "user_decision": "Exploitative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 1,
+  "user_id": "clinician_1"
+}

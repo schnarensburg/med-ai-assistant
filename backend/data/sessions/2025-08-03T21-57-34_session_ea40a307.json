@@ -1,0 +1,10 @@
+{
+  "session_id": "ea40a307-50f4-4de8-87f3-2f00b45ce722",
+  "timestamp": "2025-08-03T21:57:34.311339",
+  "prompt": "The patient has chest pain, SOB, and nausea post-flight. What differentials should we consider, and how would you prioritize them?",
+  "response": "Given the symptoms of chest pain, shortness of breath (SOB), and nausea following a flight, we should consider several potential causes.   The differential diagnoses could include: 1. Pulmonary embolism: This is a blockage of one or more arteries in the lungs, often caused by a blood clot that has traveled from another part of the body. 2. Aortic dissection: This is a tear in the inner layer of the aorta, which can cause severe chest pain and potential life-threatening complications. 3. Pneumonia: An infection in one or both lungs can cause symptoms like chest pain and shortness of breath. 4. Tension pneumothorax: This occurs when air accumulates in",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 66,
+  "user_id": "user_1"
+}

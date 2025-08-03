@@ -1,0 +1,10 @@
+{
+  "session_id": "0b7b0636-978c-420c-98e6-ca15ebd1da3a",
+  "timestamp": "2025-08-03T22:08:35.078003",
+  "prompt": "What are the key tests for PE?",
+  "response": "Key tests for PE include the D-dimer, echocardiography, and clinical assessment. These tests help to confirm or rule out pulmonary embolism.",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 73,
+  "user_id": "user_1"
+}

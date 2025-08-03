@@ -1,0 +1,10 @@
+{
+  "session_id": "648065bf-c6a3-44d4-9436-7b1220f000dd",
+  "timestamp": "2025-08-03T22:13:22.944436",
+  "prompt": "I am convinced it is diabetes. What should I do now?",
+  "response": "Before accepting this diagnosis, consider that hyperthyroidism can also present with increased thirst and frequent urination. What distinguishing clinical features rule out hyperthyroidism in this case, and how do you explain all the clinical findings with diabetes alone?",
+  "user_decision": "Exploitative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 3,
+  "user_id": "clinician_1"
+}

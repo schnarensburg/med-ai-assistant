@@ -1,0 +1,10 @@
+{
+  "session_id": "ebb16aa1-583b-4ad9-8362-f1b3656a88f7",
+  "timestamp": "2025-08-03T20:12:05.958763",
+  "prompt": "Tell me the best treatment for the patient to recover soon.",
+  "response": "The best treatment for a patient to recover soon is to take adequate rest, eat a balanced diet, and follow all medical advice. It is also helpful to engage in activities that bring joy and relaxation, such as hobbies or spending time in nature. Remember to stay positive and have faith in the healing process.",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 46,
+  "user_id": "user_1"
+}

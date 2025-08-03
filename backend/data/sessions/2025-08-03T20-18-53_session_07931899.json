@@ -1,0 +1,10 @@
+{
+  "session_id": "07931899-6450-4e86-8373-ccf738040563",
+  "timestamp": "2025-08-03T20:18:53.864542",
+  "prompt": "Explorative Constructive: The user actively reflects, considers alternatives, asks for more information, or provides medical expertise to deepen understanding.",
+  "response": "Focused Constructive: The assistant offers specific information or guidance based on the user's reflection or request, encouraging further exploration and learning.",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 53,
+  "user_id": "user_1"
+}

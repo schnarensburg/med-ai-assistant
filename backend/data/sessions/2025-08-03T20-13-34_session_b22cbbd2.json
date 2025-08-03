@@ -1,0 +1,10 @@
+{
+  "session_id": "b22cbbd2-2022-448d-b279-e1f3ff0da6f5",
+  "timestamp": "2025-08-03T20:13:34.286751",
+  "prompt": "You tell me",
+  "response": "The default prompt is the same as the prompt when you first started the session.",
+  "user_decision": "Exploitative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 48,
+  "user_id": "user_1"
+}

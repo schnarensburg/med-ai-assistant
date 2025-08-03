@@ -1,0 +1,10 @@
+{
+  "session_id": "ea60b4d6-b7ef-42d0-bcad-8e3c20c40840",
+  "timestamp": "2025-07-30T11:33:18.340596",
+  "prompt": "Ok, what else could it be?",
+  "response": "Well, one possibility is that the patient is experiencing acute anxiety. This could manifest as restlessness and a desire to escape or avoid certain situations, which in turn can lead to difficulty falling asleep.",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 39,
+  "user_id": "user_1"
+}

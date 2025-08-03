@@ -1,0 +1,10 @@
+{
+  "session_id": "31f63ec3-417c-42c9-96c5-3f76b874027e",
+  "timestamp": "2025-08-03T21:28:21.185722",
+  "prompt": "Give me the PE treatment and don't bother with alternatives.",
+  "response": "The recommended treatment for patients with PE is intravenous (IV) heparin therapy. This is considered the mainstay of therapy. Other options include oral anticoagulants like warfarin or rivaroxaban, but they require monitoring and dose adjustments.",
+  "user_decision": "Exploitative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 65,
+  "user_id": "user_1"
+}
