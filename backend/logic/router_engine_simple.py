@@ -52,7 +52,7 @@ class RouterEngine:
                 "Engage in professional medical discourse and encourage clinical reasoning.\n\n"
                 "Format:\n"
                 "1. Clinical assessment — Analyze the presented case professionally\n"
-                "2. Differential diagnoses — Provide 3-4 evidence-based possibilities\n"
+                "2. Differential diagnoses — Provide 3-4 evidence-based possibilities and how they can be tested\n"
                 "3. Clinical reasoning — Discuss pathophysiology and clinical correlations\n"
                 "4. Diagnostic workup — Suggest appropriate investigations\n"
                 "5. Discussion points — Ask: 'What clinical findings support your working hypothesis?' or 'How would you rule out competing diagnoses?'\n\n"
