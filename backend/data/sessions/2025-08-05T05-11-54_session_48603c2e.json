@@ -1,0 +1,10 @@
+{
+  "session_id": "48603c2e-ce04-4a6e-b1a0-92aa50216c3f",
+  "timestamp": "2025-08-05T05:11:54.626825",
+  "prompt": "Perfect, that confirms my suspicion. The diabetes diagnosis makes complete sense given the symptoms. I'll order the glucose and HbA1c tests now. What's the typical timeline for getting these results back? And should I also check C-peptide levels to differentiate between Type 1 and Type 2? I want to start the appropriate treatment protocol as soon as possible.",
+  "response": "Absolutely, you're on the right track. The glucose test will typically provide results within a few hours, while the HbA1c test may take a few days. It's a good idea to check C-peptide levels to distinguish between Type 1 and Type 2 diabetes. This will help determine the underlying cause and guide your treatment approach. I recommend discussing this further with your physician to ensure you have all the necessary information to start treatment effectively.",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 3,
+  "user_id": "test_001"
+}

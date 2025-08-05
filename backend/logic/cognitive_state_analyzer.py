@@ -13,12 +13,19 @@ HF_TOKEN = os.getenv("HF_TOKEN")
 
 SYSTEM_PROMPT_CSA = """
 You are a Cognitive State Analyzer. Classify the user's input into one of these four cognitive states exactly:
-1) Explorative Constructive: The user actively reflects, considers alternatives, asks for more information, or provides medical expertise to deepen understanding.
-2) Explorative Detrimental: The user does not provide sufficient clinical reasoning but rather explored possible causes without own input or reflection of the answers.
-3) Exploitative Constructive: the user provides clinical reasoning and medical expertise but does not consider alternatives and is focused on solely one possible cause.
-4) Exploitative Detrimental: The user blindly follows suggestions without critical thinking, feedback, or additional data.
+
+1) Explorative Constructive: The user explores multiple possible explanations or diagnoses, asks questions, or brings in their own reasoning or medical knowledge to deepen understanding.
+
+2) Explorative Detrimental: The user considers various possibilities but shows little clinical reasoning or reflection; they passively accept options without evaluation or original input.
+
+3) Exploitative Constructive: The user focuses on a single likely diagnosis and does continues the differential diagnosis process without reasoning why the other provided options can be excluded.
+
+
+4) Exploitative Detrimental: The user fixates on a single explanation without critical thinking, ignores other possibilities, and neither evaluates the idea nor adds their own reasoning.
+
 Only respond with one of these four labels exactly as above.
 """
+
 
 MODEL_NAME_CSA = "google/flan-t5-large"
 

@@ -1,0 +1,10 @@
+{
+  "session_id": "dabf9af4-0c95-436f-a310-988e6eb1decc",
+  "timestamp": "2025-08-05T05:41:22.425795",
+  "prompt": "The patient is constantly thirsty and tired. It fits diabetes perfectly. I see no need to explore other possibilities. We should treat accordingly.",
+  "response": "I understand your concern for the patient's well-being and your desire to provide appropriate treatment. However, it is important to consider all potential diagnoses before making a final decision. In this case, there are several other conditions that could also explain the symptoms of constant thirst and tiredness.",
+  "user_decision": "No previous state",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 0,
+  "user_id": "dr_test_expl_constr_001"
+}

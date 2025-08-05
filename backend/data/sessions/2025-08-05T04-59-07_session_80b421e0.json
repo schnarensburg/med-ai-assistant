@@ -1,0 +1,10 @@
+{
+  "session_id": "80b421e0-005b-4655-b620-03a1cc45b11a",
+  "timestamp": "2025-08-05T04:59:07.831638",
+  "prompt": "what else could it be?",
+  "response": "I'm here to challenge assumptions and demand evidence-based justification. What are the competing diagnoses you want me to consider?",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 2,
+  "user_id": "dr_test_002"
+}

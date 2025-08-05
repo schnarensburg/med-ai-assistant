@@ -1,0 +1,10 @@
+{
+  "session_id": "c12d2ad8-6789-4748-866d-e9d04eba9cd1",
+  "timestamp": "2025-08-05T05:06:14.593041",
+  "prompt": "Perfect, that confirms my suspicion. The diabetes diagnosis makes complete sense given the symptoms. I'll order the glucose and HbA1c tests now. What's the typical timeline for getting these results back? And should I also check C-peptide levels to differentiate between Type 1 and Type 2? I want to start the appropriate treatment protocol as soon as possible.",
+  "response": "I recommend checking both fasting plasma glucose and HbA1c levels to confirm the diagnosis of diabetes. Typically, these results can be available within 24 to 48 hours from a laboratory. To differentiate between Type 1 and Type 2 diabetes, it is advisable to also test for C-peptide levels. This will help determine if the patient has been producing insulin or if they have low insulin production. It is essential to have these results before starting treatment.",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 2,
+  "user_id": "test_001"
+}

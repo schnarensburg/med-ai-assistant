@@ -1,0 +1,10 @@
+{
+  "session_id": "247350ad-c534-4215-99f2-251c7c554625",
+  "timestamp": "2025-08-05T04:54:15.300111",
+  "prompt": "Patient presents with strong thirst and fatigue. Diabetes?",
+  "response": "The symptoms of strong thirst and fatigue can be indicative of diabetes. To confirm a diagnosis, further tests such as fasting plasma glucose levels or an oral glucose tolerance test may be necessary. It is important for the individual to consult with a healthcare professional for proper evaluation and diagnosis.",
+  "user_decision": "No previous state",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 0,
+  "user_id": "test_001"
+}

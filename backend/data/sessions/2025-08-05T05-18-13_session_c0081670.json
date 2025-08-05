@@ -1,0 +1,10 @@
+{
+  "session_id": "c0081670-44fe-4445-bffa-3f93a6bd94ad",
+  "timestamp": "2025-08-05T05:18:13.074130",
+  "prompt": "The patient is constantly thirsty and tired. It fits diabetes perfectly. I see no need to explore other possibilities. We should treat accordingly.",
+  "response": "I understand your concern. However, it's important to consider other potential causes as well. Here are a few differential diagnoses that you should explore:  1. Hyperosmolar Hyperglycemic State (HHS): This condition is characterized by severe hyperglycemia with a corresponding increase in serum osmolality and a lack of significant ketoacidosis. It is often precipitated by infection, stroke, myocardial infarction, or other forms of stress.  2. Diabetic Ketoacidosis (DKA): This is a serious complication of diabetes that occurs when there is a relative or absolute lack of insulin in the body, leading to high blood glucose levels and the presence of ketones in the urine. Common triggers",
+  "user_decision": "No previous state",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 0,
+  "user_id": "dr_test_expl_detr_002"
+}

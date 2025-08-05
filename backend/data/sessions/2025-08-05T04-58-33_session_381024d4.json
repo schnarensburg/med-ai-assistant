@@ -1,0 +1,10 @@
+{
+  "session_id": "381024d4-b8df-4d1c-bb14-02490f5f4a34",
+  "timestamp": "2025-08-05T04:58:33.490166",
+  "prompt": "what else could it be?",
+  "response": "I understand your concern. Before confirming this diagnosis, what diagnostic criteria have been met?",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 1,
+  "user_id": "dr_test_002"
+}

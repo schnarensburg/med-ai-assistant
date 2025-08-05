@@ -1,0 +1,10 @@
+{
+  "session_id": "243d3fa6-910f-4866-baa3-c396d4769cb5",
+  "timestamp": "2025-08-05T04:57:58.309258",
+  "prompt": "what else could it be?",
+  "response": "Based on the symptoms provided, there are several potential diagnoses that could explain these symptoms. However, without further information or a detailed patient history, it is difficult to determine the exact cause. Some possible causes include:  1. Viral infection: Many viral infections can cause fatigue, loss of appetite, and a mild fever. 2. Bacterial infection: Certain bacterial infections, such as strep throat or urinary tract infections, can also present with similar symptoms. 3. Autoimmune disorders: Conditions like rheumatoid arthritis or systemic lupus erythematosus can manifest with fatigue and loss of appetite. 4. Chronic fatigue syndrome: This condition is characterized by persistent fatigue that is not alleviated by rest and accompanied by other symptoms",
+  "user_decision": "No previous state",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 0,
+  "user_id": "dr_test_002"
+}

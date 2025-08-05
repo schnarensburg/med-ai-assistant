@@ -1,0 +1,10 @@
+{
+  "session_id": "3ad098fb-79b0-44c3-a147-da50b8339d3a",
+  "timestamp": "2025-08-05T05:16:18.121160",
+  "prompt": "The patient is thirsty and tired \u2013 that must be diabetes. Let\u2019s move ahead with treatment.",
+  "response": "I understand your concern, but it's important to consider other potential causes of thirst and fatigue before jumping to a diagnosis of diabetes. There could be several reasons for these symptoms, including dehydration, certain medications, or even stress. To ensure an accurate diagnosis and appropriate treatment, it is crucial to conduct further investigations and consider all possible explanations for these symptoms.",
+  "user_decision": "No previous state",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 0,
+  "user_id": "dr_test_expl_detr_001"
+}
