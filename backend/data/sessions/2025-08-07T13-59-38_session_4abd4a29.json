@@ -1,0 +1,10 @@
+{
+  "session_id": "4abd4a29-3748-4007-99e3-7507fa6f4ac2",
+  "timestamp": "2025-08-07T13:59:38.476561",
+  "prompt": "Even if it looks like IDA, I\u2019ll do the workup to be sure \u2014 CBC, iron, TIBC, ferritin. I want to avoid missing anything",
+  "response": "That's the right approach. IDA can be caused by many other conditions, so it's crucial to rule them out. You'll need to see if there are any signs of infection, inflammation, or other causes of anemia.",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 120,
+  "user_id": "user_1"
+}

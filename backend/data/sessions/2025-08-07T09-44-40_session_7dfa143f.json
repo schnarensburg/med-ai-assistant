@@ -1,0 +1,10 @@
+{
+  "session_id": "7dfa143f-9911-469a-afca-af43e98d4ea0",
+  "timestamp": "2025-08-07T09:44:40.540558",
+  "prompt": "I agree completely. Lets do that.",
+  "response": "Sure, let's start with challenging their assumption. What objective evidence supports this working diagnosis?",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 7,
+  "user_id": "test_001"
+}

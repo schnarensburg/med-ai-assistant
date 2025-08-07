@@ -1,0 +1,10 @@
+{
+  "session_id": "dec5f1df-1769-42b0-b9cf-cfbb997e1ed8",
+  "timestamp": "2025-08-07T12:48:09.778777",
+  "prompt": "The patient\u2019s tiredness could be from many things \u2014 anemia, thyroid, or just stress. I don\u2019t really know, so tell me what\u2019s likely.",
+  "response": "Based on your clinical presentation, the patient's fatigue could indeed be caused by multiple factors including anemia, thyroid dysfunction, or stress. However, additional information is needed to narrow down the potential causes. To determine the underlying etiology, we should consider specific clinical findings and perform appropriate investigations. What clinical findings would strengthen each hypothesis and how would you suggest we rule out competing diagnoses?",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 98,
+  "user_id": "user_1"
+}

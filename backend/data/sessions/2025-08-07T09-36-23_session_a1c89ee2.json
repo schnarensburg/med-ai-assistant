@@ -1,0 +1,10 @@
+{
+  "session_id": "a1c89ee2-2511-4faf-8c99-ec56cbf567d7",
+  "timestamp": "2025-08-07T09:36:23.144257",
+  "prompt": "I am confinced it is diabetes as a caus",
+  "response": "It's important to consider alternative explanations as well. One possible alternative condition that could present similarly is hyperthyroidism. What specific clinical criteria would support or rule out this diagnosis compared to diabetes?",
+  "user_decision": "Exploitative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 86,
+  "user_id": "user_1"
+}

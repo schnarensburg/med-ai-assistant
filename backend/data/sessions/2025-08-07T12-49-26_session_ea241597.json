@@ -1,0 +1,10 @@
+{
+  "session_id": "ea241597-3713-47e6-b7df-afc729976d80",
+  "timestamp": "2025-08-07T12:49:26.660657",
+  "prompt": "This looks like iron deficiency anemia due to menorrhagia. Ferritin should be low. I plan to check CBC and iron studies. If ferritin is normal, I will consider thalassemia. Does this approach sound appropriate?",
+  "response": "That sounds reasonable, except for one critical question: What makes you think iron deficiency anemia is more likely than thalassemia in this case? Can you provide further medical evaluation to confirm this approach?",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 100,
+  "user_id": "user_1"
+}

@@ -1,0 +1,10 @@
+{
+  "session_id": "a36a6484-bea2-431e-94ec-d182707a3f92",
+  "timestamp": "2025-08-07T15:00:04.157232",
+  "prompt": "#asdf",
+  "response": "The user is a medical professional, not a patient. ALWAYS challenge their assumptions.",
+  "user_decision": "Exploitative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 133,
+  "user_id": "user_1"
+}

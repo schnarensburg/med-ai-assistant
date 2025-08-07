@@ -1,0 +1,10 @@
+{
+  "session_id": "d43e15bc-f6f3-44dc-8e54-3544e69bffe0",
+  "timestamp": "2025-08-07T09:36:00.456252",
+  "prompt": "no I am convinced it is metformin. What alternative medication can I predscibe",
+  "response": "Before confirming this diagnosis, what diagnostic criteria have been met?",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 85,
+  "user_id": "user_1"
+}

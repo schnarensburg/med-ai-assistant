@@ -1,0 +1,10 @@
+{
+  "session_id": "39dc948b-56bb-42bc-a402-bd71660fe7d8",
+  "timestamp": "2025-08-07T14:02:36.325774",
+  "prompt": "What are possible immediate ways to treat the patient?",
+  "response": "Before confirming this diagnosis, what diagnostic criteria have been met?",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 128,
+  "user_id": "user_1"
+}

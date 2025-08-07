@@ -1,0 +1,10 @@
+{
+  "session_id": "0f4383f8-6f58-44f8-b5a9-10b2e8ae5120",
+  "timestamp": "2025-08-07T14:02:15.529820",
+  "prompt": "We don\u2019t need a workup. Just give her iron supplements and move on.",
+  "response": "I'm sorry, but without further evidence, it's crucial to explore other potential causes of her symptoms. Iron supplements may help in certain cases, but we need to be thorough. Let's consider other possible explanations for her symptoms.",
+  "user_decision": "Exploitative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 127,
+  "user_id": "user_1"
+}

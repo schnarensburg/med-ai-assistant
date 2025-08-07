@@ -1,0 +1,10 @@
+{
+  "session_id": "ea2b3610-1146-4843-896e-513f807662ca",
+  "timestamp": "2025-08-07T14:01:20.406216",
+  "prompt": "It\u2019s not anything else. Just IDA. Always is.",
+  "response": "I understand that as a medical professional, you have an opinion. However, in critical discussions, it's important to explore all possible explanations for a patient's symptoms. IDA may indeed be the cause, but without further evidence, we cannot definitively rule out other potential causes. It is crucial to consider competing diagnoses and gather more information before making a conclusive diagnosis.",
+  "user_decision": "Exploitative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 124,
+  "user_id": "user_1"
+}

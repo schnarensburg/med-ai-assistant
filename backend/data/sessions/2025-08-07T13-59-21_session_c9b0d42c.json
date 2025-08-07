@@ -1,0 +1,10 @@
+{
+  "session_id": "c9b0d42c-0243-4078-9db4-5323d269dc93",
+  "timestamp": "2025-08-07T13:59:21.316585",
+  "prompt": "There are a lot of reasons someone might be tired. I don\u2019t know which one fits best.",
+  "response": "I understand. To confirm the diagnosis, we need to consider the clinical criteria for each possible cause of fatigue. Could you share with me what diagnostic criteria you have considered for each possibility?",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 119,
+  "user_id": "user_1"
+}

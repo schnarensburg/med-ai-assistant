@@ -1,0 +1,10 @@
+{
+  "session_id": "d43a1c9d-3256-499a-afa8-9066eed5e1bb",
+  "timestamp": "2025-08-07T12:45:31.051037",
+  "prompt": "She\u2019s tired, so it\u2019s anemia. Just confirm it. I don\u2019t think we need to consider anything else.",
+  "response": "I understand that fatigue is a common symptom of anemia. However, as a diagnostic reasoning partner, I must challenge this assumption. To confirm the diagnosis of anemia, we need to consider other potential causes of fatigue as well. Anemia is just one possibility among many. We should also consider other conditions that could cause similar symptoms. Can you provide more information about her medical history and perform further tests to rule out other potential causes of fatigue?",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 96,
+  "user_id": "user_1"
+}

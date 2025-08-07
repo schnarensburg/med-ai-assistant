@@ -1,0 +1,10 @@
+{
+  "session_id": "67c6fc25-3cf0-494a-8712-7f064717a6e9",
+  "timestamp": "2025-08-07T12:42:42.178544",
+  "prompt": "I tell you it is anemia.",
+  "response": "What objective evidence supports this working diagnosis? What laboratory values, imaging, or physical findings do you need to confirm this diagnosis? Can you present alternative considerations with clinical rationale? What makes you think this approach is correct? Please provide further medical evaluation for me to confirm.",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 94,
+  "user_id": "user_1"
+}

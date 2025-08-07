@@ -1,0 +1,10 @@
+{
+  "session_id": "8fe8dcc0-f946-447d-8bb0-e8b78d287a96",
+  "timestamp": "2025-08-07T14:58:07.414757",
+  "prompt": "What are possible diagnosis for heart ache?",
+  "response": "Possible diagnoses for chest pain include musculoskeletal causes like costochondritis, gastrointestinal issues like gastroesophageal reflux disease, respiratory causes such as pneumonia, cardiac conditions like angina, or anxiety-related disorders. It is important to consider all these possibilities based on the patient's symptoms and medical history.",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 130,
+  "user_id": "user_1"
+}

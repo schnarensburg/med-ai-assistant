@@ -1,0 +1,10 @@
+{
+  "session_id": "d8097d46-50f0-42b5-afa2-16058794f804",
+  "timestamp": "2025-08-07T13:55:34.401374",
+  "prompt": "Iron deficiency anemia makes sense here, but I\u2019ll still rule out malabsorption or dietary issues if no bleeding is found.",
+  "response": "Before confirming this diagnosis, what diagnostic criteria have been met?",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 112,
+  "user_id": "user_1"
+}

@@ -1,0 +1,10 @@
+{
+  "session_id": "0ae6432b-21b1-4a1a-8c6c-ea9eb42a4558",
+  "timestamp": "2025-08-07T13:58:58.769671",
+  "prompt": "Fatigue could mean so many things. Depression, thyroid, anemia... maybe even cancer?",
+  "response": "Yes, fatigue can be caused by various factors including medical conditions such as depression, thyroid disorders, anemia, and even certain types of cancer. However, it's important to remember that fatigue can also be due to non-medical reasons such as lack of sleep, stress, or excessive physical or mental exertion. To narrow down the possible causes, we need more information about your symptoms and medical history. Have you experienced other symptoms, and have you been tested for any of these conditions already?",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 118,
+  "user_id": "user_1"
+}

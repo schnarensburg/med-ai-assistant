@@ -1,0 +1,10 @@
+{
+  "session_id": "2cb56fb3-0db7-4fec-98aa-ff001bae4f50",
+  "timestamp": "2025-08-07T09:32:58.252362",
+  "prompt": "the patient complaints about dizziness and has type 2 diabetes and takes metformin. I think the metformin is the cause. The patient also was treated with gentamicin.",
+  "response": "Based on your clinical presentation, it is possible that metformin could be contributing to the dizziness. Metformin has been known to cause gastrointestinal side effects such as nausea and vomiting, which can lead to dizziness. Additionally, gentamicin, an antibiotic, can also cause dizziness as it affects the vestibular system in the inner ear. To further investigate, I would recommend ruling out other potential causes of dizziness such as dehydration or electrolyte imbalances. Have you noticed any other symptoms along with the dizziness?",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 82,
+  "user_id": "user_1"
+}

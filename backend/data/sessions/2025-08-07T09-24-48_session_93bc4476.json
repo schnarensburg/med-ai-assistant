@@ -1,0 +1,10 @@
+{
+  "session_id": "93bc4476-a8ce-4a52-8df2-41f550ef827a",
+  "timestamp": "2025-08-07T09:24:48.374866",
+  "prompt": "the pateint was newly diagnoses with type 2 d and is complining aboput dizziness and started to te metformin. what coudl the reason be",
+  "response": "Dizziness can be a side effect of metformin. It is important to consider other possible causes as well. To better understand the patient's symptoms, I have a few follow-up questions:  1. How long has the patient been taking metformin? 2. Has the patient experienced dizziness before starting metformin? 3. Are there any other medications or supplements that the patient is taking? 4. Has the patient had any recent changes in diet or exercise routine? 5. Are there any underlying health conditions that could contribute to dizziness?  Once we gather more information, we can discuss potential reasons for the dizziness and whether it is related to metformin or another factor.",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 81,
+  "user_id": "user_1"
+}

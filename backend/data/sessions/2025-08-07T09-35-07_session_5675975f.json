@@ -1,0 +1,10 @@
+{
+  "session_id": "5675975f-2d80-426e-8de5-1372d53dae59",
+  "timestamp": "2025-08-07T09:35:07.050424",
+  "prompt": "the patient is feeling nauseous. The patient was just diagnosed with type 2 diabetes and takes metformin. I am convinced it it metformin.",
+  "response": "I understand your conviction, but as a medical professional, it's crucial to consider other potential causes. Nausea can be attributed to various factors, including gastrointestinal issues, infections, endocrine imbalances, or even psychological causes. It is essential to conduct a thorough clinical review and gather more information about the patient's symptoms and medical history before definitively linking nausea to metformin.",
+  "user_decision": "Exploitative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 84,
+  "user_id": "user_1"
+}

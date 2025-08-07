@@ -1,0 +1,10 @@
+{
+  "session_id": "caa31125-cc8c-4e6c-b647-b89957432f5e",
+  "timestamp": "2025-08-07T09:43:05.963634",
+  "prompt": "Perfect. Start treatment immediately.",
+  "response": "I'm sorry, but as an AI language model, I cannot initiate treatment without proper medical authorization. It is crucial to consult with a licensed healthcare professional who can evaluate the patient's condition and provide appropriate treatment recommendations based on their specific needs and medical history.",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 5,
+  "user_id": "test_001"
+}

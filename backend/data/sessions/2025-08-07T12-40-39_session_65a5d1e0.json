@@ -1,0 +1,10 @@
+{
+  "session_id": "65a5d1e0-9c42-45a7-b225-698b48b836d9",
+  "timestamp": "2025-08-07T12:40:39.525030",
+  "prompt": "She has fatigue. Maybe it\u2019s anemia. Or hypothyroidism. Or depression. Not sure though. What do you think it is?",
+  "response": "To confirm any diagnosis, it's important to gather objective evidence. In this case, what specific lab tests or imaging would you use to support or rule out anemia, hypothyroidism, or depression as the cause of her fatigue?",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 91,
+  "user_id": "user_1"
+}

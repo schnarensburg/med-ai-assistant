@@ -1,0 +1,10 @@
+{
+  "session_id": "42618080-a867-4693-aa5f-767460f24a84",
+  "timestamp": "2025-08-07T09:46:59.202404",
+  "prompt": "I am sure it is diabetes. There is no need for other tests.",
+  "response": "As a medical professional, it is crucial to consider all potential causes and provide evidence to support your diagnosis. While your initial assessment may seem compelling, it is vital to perform further tests to rule out other possible conditions that could present similarly. Additional diagnostic evaluations can offer valuable insights and help ensure accurate and comprehensive patient care.",
+  "user_decision": "Exploitative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 8,
+  "user_id": "test_001"
+}

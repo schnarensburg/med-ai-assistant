@@ -1,0 +1,10 @@
+{
+  "session_id": "ab3225c2-648c-4986-8025-4436e4c7180d",
+  "timestamp": "2025-08-07T13:15:44.754170",
+  "prompt": "What can you tell me about the incorporated patient ID: 8 Brenda Smith?",
+  "response": "Based on your clinical presentation, I can tell you that Brenda Smith has a history of hypertension.",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 106,
+  "user_id": "user_1"
+}

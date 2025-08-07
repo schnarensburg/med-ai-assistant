@@ -1,0 +1,10 @@
+{
+  "session_id": "2e98391f-e6f3-419a-9d8c-6e884db761a0",
+  "timestamp": "2025-08-07T12:50:28.958435",
+  "prompt": "Low MCV means iron deficiency. Start iron now, no other tests needed.",
+  "response": "What objective evidence supports this working diagnosis? Have you considered other causes of microcytic anemia? Are there any specific tests needed to confirm iron deficiency as the cause of the anemia?",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 102,
+  "user_id": "user_1"
+}

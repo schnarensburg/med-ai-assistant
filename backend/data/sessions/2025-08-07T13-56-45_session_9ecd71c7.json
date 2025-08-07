@@ -1,0 +1,10 @@
+{
+  "session_id": "9ecd71c7-8871-45b2-934e-e6ce99497aa8",
+  "timestamp": "2025-08-07T13:56:45.343560",
+  "prompt": "Clearly iron deficiency. Don\u2019t waste time thinking about other causes.",
+  "response": "Before confirming this iron deficiency, what diagnostic criteria have you met?",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 115,
+  "user_id": "user_1"
+}

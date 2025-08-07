@@ -1,0 +1,10 @@
+{
+  "session_id": "6e3d4bb5-695f-43bd-ab09-4da413d13c86",
+  "timestamp": "2025-08-07T13:55:08.371775",
+  "prompt": "Maybe it's iron deficiency, maybe B12, or something else? I don\u2019t really know.",
+  "response": "Iron deficiency anemia is characterized by low hemoglobin levels due to insufficient iron. To confirm this diagnosis, we need to see evidence of low iron stores. Have you checked serum iron levels and total iron-binding capacity (TIBC)?",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 111,
+  "user_id": "user_1"
+}

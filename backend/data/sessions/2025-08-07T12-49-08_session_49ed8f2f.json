@@ -1,0 +1,10 @@
+{
+  "session_id": "49ed8f2f-3e60-4597-9c1d-ac829b1473f3",
+  "timestamp": "2025-08-07T12:49:08.620891",
+  "prompt": "Maybe it\u2019s anemia or hypothyroidism or depression. Not sure. What do you think it is?",
+  "response": "Based on your clinical presentation, I would say it could be a combination of anemia, hypothyroidism, and depression. These conditions can all present with fatigue as a common symptom. To confirm the diagnosis, I recommend further investigations.  For anemia, you can start with a complete blood count (CBC) to check for low hemoglobin levels. A CBC will also give you information about other components of your blood, such as platelets and lymphocytes.  To assess thyroid function, a thyroid-stimulating hormone (TSH) test is usually recommended. This measures how well your thyroid is functioning and can help determine if hypothyroidism is present.  Lastly, for depression, it would be helpful to evaluate your mental state",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 99,
+  "user_id": "user_1"
+}

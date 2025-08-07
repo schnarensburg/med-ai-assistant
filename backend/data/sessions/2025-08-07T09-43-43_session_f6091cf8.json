@@ -1,0 +1,10 @@
+{
+  "session_id": "f6091cf8-f3f1-4b6b-94f4-48d9adf60ded",
+  "timestamp": "2025-08-07T09:43:43.884530",
+  "prompt": "I agree completely. Lets do that.",
+  "response": "Great! Let's start with your initial assessment of the patient's condition.",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 6,
+  "user_id": "test_001"
+}

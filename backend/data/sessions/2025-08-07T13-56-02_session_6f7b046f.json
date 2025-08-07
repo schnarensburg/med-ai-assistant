@@ -1,0 +1,10 @@
+{
+  "session_id": "6f7b046f-5f79-4164-a312-085a15286d47",
+  "timestamp": "2025-08-07T13:56:02.542238",
+  "prompt": "Let\u2019s confirm anemia with CBC and iron studies. If it\u2019s iron deficiency, we\u2019ll look for the source. If not, I\u2019ll reconsider the differential.",
+  "response": "That sounds like a solid plan. A complete blood count will help us confirm if there is indeed anemia present, and iron studies will tell us if it is due to iron deficiency. If iron deficiency is confirmed, we can then focus on finding the underlying cause of iron loss. If anemia is not due to iron deficiency, we will need to reconsider our differential diagnoses based on the new information.",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 113,
+  "user_id": "user_1"
+}

@@ -1,0 +1,10 @@
+{
+  "session_id": "a59df068-875d-43f7-9e91-70bac37e2f4e",
+  "timestamp": "2025-08-07T09:39:10.452076",
+  "prompt": "the patient has been dagnosed with type 2 diabetes and complaints about forgetting things. What could the reason be",
+  "response": "Before confirming this diagnosis, what diagnostic criteria have been met?",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 87,
+  "user_id": "user_1"
+}

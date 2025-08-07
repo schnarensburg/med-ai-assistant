@@ -1,0 +1,10 @@
+{
+  "session_id": "aa9650b4-efca-46f2-a078-0d326dd584a4",
+  "timestamp": "2025-08-07T13:54:16.960665",
+  "prompt": "Could B12 deficiency cause fatigue even with low MCV, or would that usually raise MCV? What if there\u2019s a mixed picture?",
+  "response": "B12 deficiency can indeed cause fatigue even in the context of low MCV. This is because B12 is essential for DNA synthesis and energy production in red blood cells. Inadequate B12 levels can lead to reduced hemoglobin synthesis, contributing to fatigue, despite normal or low MCV. A mixed picture could suggest other underlying causes of fatigue that need to be explored as well.",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 110,
+  "user_id": "user_1"
+}

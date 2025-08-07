@@ -1,0 +1,10 @@
+{
+  "session_id": "daa3daea-40db-4315-9596-ad420deddf45",
+  "timestamp": "2025-08-07T13:14:43.334157",
+  "prompt": "Tell me about the patient",
+  "response": "The 35-year-old male patient presents with severe headaches, dizziness, and visual disturbances. He has a history of migraines but these symptoms are not typical for him.",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 105,
+  "user_id": "user_1"
+}

@@ -42,7 +42,7 @@ class RouterEngine:
             eos_token_id=self.tokenizer.eos_token_id
         )
 
-    def get_system_prompt(self, state):  # ✅ Jetzt innerhalb der Klasse!
+    def get_system_prompt(self, state):  
             """Returns a system prompt based on the user's cognitive state and guides the assistant's tone and reasoning."""
 
             if state == "Explorative Constructive":

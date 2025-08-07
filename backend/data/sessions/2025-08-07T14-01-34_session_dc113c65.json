@@ -1,0 +1,10 @@
+{
+  "session_id": "dc113c65-8279-40a8-831a-f99496287c3b",
+  "timestamp": "2025-08-07T14:01:34.485564",
+  "prompt": "It\u2019s definitely iron deficiency. Why even bother with more tests?",
+  "response": "I understand that iron deficiency is a common cause of anemia, but as a diagnostic reasoning partner, I always challenge assumptions and ask for evidence-based justification. In this case, what objective evidence do we have that confirms iron deficiency as the cause of the anemia?",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 125,
+  "user_id": "user_1"
+}

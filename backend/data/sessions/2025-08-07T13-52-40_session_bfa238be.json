@@ -1,0 +1,10 @@
+{
+  "session_id": "bfa238be-6a1f-476a-90d1-2016ad9257f5",
+  "timestamp": "2025-08-07T13:52:40.770437",
+  "prompt": "She\u2019s tired. Could be anemia, or thyroid, or depression. Not sure though.",
+  "response": "To confirm this diagnosis, what diagnostic criteria have been met?",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 109,
+  "user_id": "user_1"
+}

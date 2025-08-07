@@ -1,0 +1,10 @@
+{
+  "session_id": "f3e79bfe-3115-4c0c-a57c-14924d858f39",
+  "timestamp": "2025-08-07T14:01:04.392149",
+  "prompt": "She\u2019s pale and tired. Anemia. That\u2019s all you need to know.",
+  "response": "I understand your concern. However, to be a good clinician, we must explore all possibilities. While anemia could be a cause for her symptoms, there are other conditions that should also be considered. One such condition is thyroid disorders, which can lead to fatigue and weakness. Have you looked into her thyroid function?",
+  "user_decision": "Exploitative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 123,
+  "user_id": "user_1"
+}

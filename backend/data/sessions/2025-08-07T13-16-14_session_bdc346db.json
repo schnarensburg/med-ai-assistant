@@ -1,0 +1,10 @@
+{
+  "session_id": "bdc346db-0a5b-4112-aaf0-a0bbf788cbad",
+  "timestamp": "2025-08-07T13:16:14.460885",
+  "prompt": "Give me all the information you know about the patient",
+  "response": "I need more details to understand the context. Please provide a comprehensive summary of the patient's condition.",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 107,
+  "user_id": "user_1"
+}

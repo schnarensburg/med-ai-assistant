@@ -1,0 +1,10 @@
+{
+  "session_id": "96565754-ce11-4383-b7bf-ab93bda5e74c",
+  "timestamp": "2025-08-07T14:59:04.747025",
+  "prompt": "It is an anxiety disorder.",
+  "response": "Could you provide more details on the specific anxiety disorder?",
+  "user_decision": "Exploitative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 131,
+  "user_id": "user_1"
+}

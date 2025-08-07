@@ -1,0 +1,10 @@
+{
+  "session_id": "bcc38657-b55b-4d1c-bbc8-1773e1c38c22",
+  "timestamp": "2025-08-07T13:56:27.986004",
+  "prompt": "It\u2019s iron deficiency. That\u2019s it. No point testing anything else.",
+  "response": "I understand that iron deficiency can present with fatigue, but before we conclude that's the cause, let's consider other possibilities that could also present similarly. What are some alternative conditions that might also lead to fatigue?",
+  "user_decision": "Exploitative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 114,
+  "user_id": "user_1"
+}
