@@ -1,0 +1,10 @@
+{
+  "session_id": "5a08bdb3-10ed-419f-a6aa-f4647730d658",
+  "timestamp": "2025-08-05T15:44:23.797347",
+  "prompt": "what tests should be done to reassure that",
+  "response": "To reassure that a heart attack is not present, several tests can be performed. These include an electrocardiogram (ECG), cardiac enzymes, and a stress test. An ECG measures the electrical activity of the heart, while cardiac enzyme levels indicate damage to the heart muscle. A stress test evaluates how well the heart functions during physical activity. Additionally, a chest X-ray may be done to rule out other causes of chest pain. It is important to consult with a healthcare professional for further evaluation and guidance based on individual symptoms and medical history.",
+  "user_decision": "Exploitative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 76,
+  "user_id": "user_1"
+}

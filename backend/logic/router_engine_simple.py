@@ -43,10 +43,10 @@ class RouterEngine:
         )
 
     def get_system_prompt(self, state):  # ✅ Jetzt innerhalb der Klasse!
-        """Returns a system prompt based on the user's cognitive state and guides the assistant's tone and reasoning."""
+            """Returns a system prompt based on the user's cognitive state and guides the assistant's tone and reasoning."""
 
-        if state == "Explorative Constructive":
-            return (
+            if state == "Explorative Constructive":
+                return (
                 "You are a clinical decision support system assisting a qualified physician or medical professional. "
                 "The user is a clinician seeking diagnostic support, NOT a patient. "
                 "Engage in professional medical discourse and encourage clinical reasoning.\n\n"
@@ -62,8 +62,8 @@ class RouterEngine:
                 "- Discuss clinical decision-making and evidence-based approaches"
             )
 
-        elif state == "Explorative Detrimental":
-            return (
+            elif state == "Explorative Detrimental":
+                return (
                 "You are a diagnostic reasoning partner for a medical professional. "
                 "Challenge clinical assumptions and demand evidence-based justification. "
                 "The user is a clinician, not a patient. ALWAYS ask critical follow-up questions.\n\n"
@@ -80,8 +80,8 @@ class RouterEngine:
                 "- ALWAYS conclude with critical questioning about their reasoning"
             )
 
-        elif state == "Exploitative Constructive":
-            return (
+            elif state == "Exploitative Constructive":
+                return (
                 "You are supporting a clinician's diagnostic reasoning process. "
                 "Help focus on the most likely diagnosis while maintaining clinical rigor. "
                 "The user is a medical professional seeking clinical guidance.\n\n"
@@ -97,8 +97,8 @@ class RouterEngine:
                 "- Discuss: 'What are the key clinical decision points in this case?'"
             )
 
-        elif state == "Exploitative Detrimental":
-            return (
+            elif state == "Exploitative Detrimental":
+                return (
                 "You are a clinical advisor challenging a colleague's diagnostic certainty. "
                 "Demand rigorous justification and present alternative clinical scenarios. "
                 "The user is a medical professional, not a patient. ALWAYS challenge their assumptions.\n\n"
@@ -115,8 +115,7 @@ class RouterEngine:
                 "- ALWAYS demand justification: 'What makes you think this approach is correct? Please provide further medical evaluation for me to confirm.'"
             )
 
-        return "You are a clinical decision support system for medical professionals. Provide evidence-based medical guidance for qualified healthcare providers."
-
+            return "You are a clinical decision support system for medical professionals. Provide evidence-based medical guidance for qualified healthcare providers."
     def analyze_state(self, user_input, user_id):
         """Detects cognitive state based on past logs."""
         logs = get_last_user_logs(user_id, n=1)

@@ -1,0 +1,10 @@
+{
+  "session_id": "9db34d09-5822-40a4-85e3-cb76963f66ce",
+  "timestamp": "2025-08-05T15:40:25.399063",
+  "prompt": "the patient is really confused and forgetting things. The patient increased the dosis of Promethazine and Tolterodine what could be the cause?",
+  "response": "Increased dosages of Promethazine and Tolterodine can lead to anticholinergic side effects, which may cause confusion and memory impairment. These medications inhibit the action of acetylcholine in the brain, leading to cognitive impairment.",
+  "user_decision": "Exploitative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 75,
+  "user_id": "user_1"
+}

@@ -1,0 +1,10 @@
+{
+  "session_id": "47eca44a-a90f-489c-9b04-8030ced74bcd",
+  "timestamp": "2025-08-06T07:51:28.954426",
+  "prompt": "Epigastric pain worse on eating with associated new acid reflux. Started 3 days postdischarge by a 68 year old patiet with newly diagnosed type 2 diabetes and weaning steroid regime, commenced on metformin and linagliptin as medication changes. what could the underlying reason be ",
+  "response": "The most likely cause of the patient's symptoms is a gastrointestinal issue related to the recent medication changes. Given that the patient has just started taking metformin and linagliptin for their type 2 diabetes, it is possible that these medications could be causing gastrointestinal side effects such as epigastric pain and acid reflux. It would be advisable to further investigate the patient's gastrointestinal health to ensure that there are no other underlying issues contributing to their symptoms.",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 77,
+  "user_id": "user_1"
+}
