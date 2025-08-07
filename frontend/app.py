@@ -58,17 +58,29 @@ data_patient2 = {
 
 df_patient2 = pd.DataFrame(data_patient2)
 
-# Matt Jones
 
-data_mattj = {
-    "Medication": ["Metformin", "Ramipril", "Bisoprolol", "Dapagliflozin", "Atorvastatin", "Furosemide", "Paracetamol", "Colchine"],
-    "Route": ["PO"] * 8,
-    "Dose": ["500mg", "10mg", "5mg", "10mg", "20mg", "40mg", "1g", "500 microgram"],
-    "Frequency": ["BD", "OD", "OD", "OD", "OD", "BD", "QDS", "BD"],
-    "Duration": ["regular", "regular", "regular", "regular", "regular", "regular", "PRN", "regular for 6 days"]
+# Data
+data_patient3 = {
+    "Medication": ["Salbutamol inhaler", "Trimbow inhaler (beclometasone dipropionate, formoterol fumarate dihydrate, glycopyrronium bromide)", "Azathioprine",
+        "Amlodipine","Metformin","Linagliptin","Atorvastatin", "Ibuprofen","Naproxen","Paracetamol","Sertraline","Prednisolone"
+    ],
+    "Route": ["Inhalation of aerosol", "Inhalation of aerosol","PO", "PO","PO","PO","PO","PO","PO","PO","PO","PO"
+    ],
+    "Dose": [
+        "2 puffs","2 puffs","100mg","10mg","1g","5mg","20 mg","400mg","500mg","1g","50mg","Weaning regime (40mg–0mg)"
+    ],
+    "Frequency": [
+        "QDS","BD","Every morning","Every morning","BD","Every morning","Every night","QDS","BD","QDS","Every night","Every morning"
+    ],
+    "Duration": [
+        "PRN","Regular","Regular","Regular","Regular","Regular","Regular","Regular","Regular","Regular","Regular_ ",
+        "4 weeks. Reduce by 5mg/5 days. Discharged on Day 2 of 35mg"
+    ]
 }
 
-df_mattj = pd.DataFrame(data_mattj)
+df_patient3 = pd.DataFrame(data_patient3)
+
+
 
 # Initialize session state for patient 1
 if "consultation_notes" not in st.session_state:
@@ -103,81 +115,17 @@ if "new_note_3" not in st.session_state:
 if "reset_note_3" not in st.session_state:
     st.session_state.reset_note_3 = False
 
-# Data
-data_patient3 = {
-    "Medication": [
-        "Salbutamol inhaler",
-        "Trimbow inhaler (beclometasone dipropionate, formoterol fumarate dihydrate, glycopyrronium bromide)",
-        "Azathioprine",
-        "Amlodipine",
-        "Metformin",
-        "Linagliptin",
-        "Atorvastatin",
-        "Ibuprofen",
-        "Naproxen",
-        "Paracetamol",
-        "Sertraline",
-        "Prednisolone"
-    ],
-    "Route": [
-        "Inhalation of aerosol",
-        "Inhalation of aerosol",
-        "PO",
-        "PO",
-        "PO",
-        "PO",
-        "PO",
-        "PO",
-        "PO",
-        "PO",
-        "PO",
-        "PO"
-    ],
-    "Dose": [
-        "2 puffs",
-        "2 puffs",
-        "100mg",
-        "10mg",
-        "1g",
-        "5mg",
-        "20 mg",
-        "400mg",
-        "500mg",
-        "1g",
-        "50mg",
-        "Weaning regime (40mg–0mg)"
-    ],
-    "Frequency": [
-        "QDS",
-        "BD",
-        "Every morning",
-        "Every morning",
-        "BD",
-        "Every morning",
-        "Every night",
-        "QDS",
-        "BD",
-        "QDS",
-        "Every night",
-        "Every morning"
-    ],
-    "Duration": [
-        "PRN",
-        "Regular",
-        "Regular",
-        "Regular",
-        "Regular",
-        "Regular",
-        "Regular",
-        "Regular",
-        "Regular",
-        "Regular",
-        "Regular_ ",
-        "4 weeks. Reduce by 5mg/5 days. Discharged on Day 2 of 35mg"
-    ]
-}
+# Example
 
-df_patient3 = pd.DataFrame(data_patient3)
+# Initialize session state for example
+if "consultation_notes_example" not in st.session_state:
+    st.session_state.consultation_notes_example = []
+
+if "new_note_example" not in st.session_state:
+    st.session_state.new_note_example = ""
+
+if "reset_note_example" not in st.session_state:
+    st.session_state.reset_note_example = False
 
 # Create columns
 col1, col2 = st.columns([2,1])
@@ -185,7 +133,7 @@ col1, col2 = st.columns([2,1])
 # Place tabs inside the first column
 with col1:
     st.header("Patient Act")
-    tabs = st.tabs(["Case 1", "Case 2", "Case 3"])
+    tabs = st.tabs(["Case 1", "Case 2", "Case 3", "Example"])
 
     with tabs[0]:
         st.subheader("Patient ID: 8  -  Brenda Smith")
@@ -391,7 +339,70 @@ with col1:
             for i, note in enumerate(st.session_state.consultation_notes_3[::-1], 1):
                 with st.container(border=True):
                     st.markdown(f"**Entry #{len(st.session_state.consultation_notes_3) - i + 1}:**")
-                    st.markdown(f"> {note}")       
+                    st.markdown(f"> {note}")      
+
+
+    with tabs[3]:
+        st.subheader("Patient ID: 15  -  Example Patient")
+        with st.container(border=True):
+            col31, col32, col33 = st.columns(3)
+
+            with col31:
+                st.image(os.path.join(os.getcwd(), "static", "Icon.png"), width = 200)
+
+            with col32:
+                st.markdown("**Age:** 20")
+                st.markdown("**Sex:** F")
+                st.markdown("**Height:** 167cm")
+                st.markdown("**GP:** Dr. Med. M. Ruiz")
+                st.markdown("**Past Medical History:** Null")
+            
+            with col33:
+                st.markdown("**DOB:** 10/01/1955")
+                st.markdown("**Weight:** 30Kg")
+                st.markdown("**BMI:** 28.95")
+                st.markdown("**Chronic:** No")
+
+        with st.container(border=True):
+            st.markdown("#### Discharge Letter")
+
+            st.markdown('''**Admitted** 05/06/2025''')
+            st.markdown('''**Discharged:** 12/06/2025''')
+
+            st.markdown('''**Clinical treatment summary:**  
+            The patient was released from the hospital
+            ''')
+            st.markdown('''**Notes for GP:** Please note new diagnosis T2DM''')
+            st.markdown("**Medication changes:**  null")
+            st.markdown('''**Follow-up arrangements:**  null ''')
+
+        with st.container(border=True):
+            st.markdown("#### Medications")
+            st.dataframe(df_patient3, use_container_width=True)
+
+         # Consultation notes area
+        st.header("Consultation Notes")
+        with st.container(border=True):
+            st.markdown("#### New Consultation Entry")
+
+            if st.session_state.reset_note:
+                st.session_state.reset_note = False
+                st.rerun()
+
+            st.text_area("Write your consultation note here...", height=150, key="new_note_example")
+
+            if st.button("Finish Consultation", key="Finish_consultation_example"):
+                if st.session_state.new_note_example.strip():
+                    st.session_state.consultation_notes_example.append(st.session_state.new_note_example.strip())
+                    st.session_state.reset_note = True  # Trigger rerun without setting new_note directly
+
+        if st.session_state.consultation_notes_example:
+            st.markdown("### Previous Consultations")
+            for i, note in enumerate(st.session_state.consultation_notes_example[::-1], 1):
+                with st.container(border=True):
+                    st.markdown(f"**Entry #{len(st.session_state.consultation_notes_example) - i + 1}:**")
+                    st.markdown(f"> {note}")  
+            
 
 
 
@@ -435,7 +446,9 @@ def assistant_ui():
 
         # STEP 2: Display Chat
         if st.session_state.show_chat:
-            st.markdown("### Assistant (powered by Meditron)")
+            st.markdown("### Consultation Assistant")
+
+            st.markdown("Ask questions to the assitant")
 
             st.markdown("""
                 <style>
