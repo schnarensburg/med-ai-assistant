@@ -1,0 +1,10 @@
+{
+  "session_id": "b3c2ca66-8fc5-4b77-a643-e917f46319d2",
+  "timestamp": "2025-08-08T16:46:13.856978",
+  "prompt": "Can Tolterodine cause confusion and other congnitive problems?",
+  "response": "As a medical expert, I can tell you that Tolterodine, a medication commonly used to treat overactive bladder, has been associated with central nervous system side effects such as confusion and cognitive problems. These adverse effects are relatively rare but can occur in some patients. It is important to monitor patients taking Tolterodine for any changes in mental status or cognitive function. If you or someone you know is experiencing these symptoms while taking Tolterodine, it is essential to consult a healthcare professional for further evaluation and guidance.",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 170,
+  "user_id": "user_1"
+}

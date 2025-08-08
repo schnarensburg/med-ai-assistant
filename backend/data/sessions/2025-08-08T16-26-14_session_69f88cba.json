@@ -1,0 +1,10 @@
+{
+  "session_id": "69f88cba-2d39-4535-a140-90c5ad387558",
+  "timestamp": "2025-08-08T16:26:14.865827",
+  "prompt": "Can patients whit metformin present swollen ankles ",
+  "response": "It is possible for patients taking metformin to present with symptoms of peripheral edema, such as swollen ankles. However, this symptom can also be seen in other conditions or as a side effect of other medications. To determine if metformin is the cause, further evaluation and assessment are necessary. It is recommended to consult with a healthcare professional for a thorough examination and appropriate management.",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 165,
+  "user_id": "user_1"
+}

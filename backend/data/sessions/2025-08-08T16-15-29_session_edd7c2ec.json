@@ -1,0 +1,10 @@
+{
+  "session_id": "edd7c2ec-ccd7-4889-b6a8-14531b9766eb",
+  "timestamp": "2025-08-08T16:15:29.885035",
+  "prompt": "How is her glicemic control ",
+  "response": "To assess a patient's glicemic control, one must consider various factors such as random blood sugar levels, fasting blood sugar levels, and glycated hemoglobin (HbA1c) levels. Each of these indicators provides insight into different aspects of blood sugar control. It is important to evaluate all these parameters to form a comprehensive assessment of the patient's glicemic control.",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 161,
+  "user_id": "user_1"
+}

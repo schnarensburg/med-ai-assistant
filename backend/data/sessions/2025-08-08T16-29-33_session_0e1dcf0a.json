@@ -1,0 +1,10 @@
+{
+  "session_id": "0e1dcf0a-62bd-4bc0-a3d7-f0953fdbff2a",
+  "timestamp": "2025-08-08T16:29:33.076611",
+  "prompt": "If, my patient is recently taking metformin (1g, BD) and is presenting swollen ankles an epigastric pain what dose regimen would be better? ",
+  "response": "Could you please provide more details about the duration of symptoms, any recent changes in diet or exercise routine, and if there are any other associated symptoms such as fever, chills, or weight loss? Additionally, it would be helpful to know if the patient has a history of allergies or any other medical conditions.",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 166,
+  "user_id": "user_1"
+}

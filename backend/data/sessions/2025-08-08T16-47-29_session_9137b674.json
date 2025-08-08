@@ -1,0 +1,10 @@
+{
+  "session_id": "9137b674-56db-40a9-a624-7308625579c9",
+  "timestamp": "2025-08-08T16:47:29.713060",
+  "prompt": "Tolterodine and promethazine have any interactions reported? ",
+  "response": "Tolterodine, an anticholinergic agent, can have interactions with promethazine, which is an antihistamine. The combination of these two medications can lead to an increased risk of side effects such as dry mouth, constipation, blurred vision, and heat-related illnesses. It is important to monitor for these potential interactions and adjust dosages if necessary.",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 171,
+  "user_id": "user_1"
+}

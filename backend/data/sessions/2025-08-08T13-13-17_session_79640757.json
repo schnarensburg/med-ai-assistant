@@ -1,0 +1,10 @@
+{
+  "session_id": "79640757-4e1c-406b-973e-52235f7561f1",
+  "timestamp": "2025-08-08T13:13:17.045205",
+  "prompt": "What are the causes of a common cold? ",
+  "response": "The most common cause of a common cold is viral infection, particularly by rhinoviruses. Other viruses such as coronaviruses, adenoviruses, and respiratory syncytial virus (RSV) can also lead to similar symptoms.",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 155,
+  "user_id": "user_1"
+}

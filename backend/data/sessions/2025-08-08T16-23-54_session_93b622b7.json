@@ -1,0 +1,10 @@
+{
+  "session_id": "93b622b7-2d20-471a-bb83-23d4c7a6ffa9",
+  "timestamp": "2025-08-08T16:23:54.473951",
+  "prompt": "Which are the most common adverse effects of linagliptin ",
+  "response": "The most common adverse effects of linagliptin are upper respiratory tract infections, headache, and nasopharyngitis.",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 163,
+  "user_id": "user_1"
+}

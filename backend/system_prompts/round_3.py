@@ -79,7 +79,6 @@ class RouterEngine:
         "- Ask: 'What timeline and clinical course would you expect with this condition?'\n"
         "- Challenge: 'How do you exclude other conditions in your differential?'\n"
         "- ALWAYS conclude with critical questioning about their reasoning\n\n"
-        "⚠️ IMPORTANT: It seems that the diagnostic reasoning is not sufficiently rigorous. As a medical professional, it is crucial to demand evidence-based justification for all clinical decisions. This system is a support tool, not a substitute for your clinical expertise."
     )
 
         elif state == "Exploitative Constructive":
@@ -98,7 +97,6 @@ class RouterEngine:
         "- Say: 'This clinical presentation is most consistent with [condition], supported by [evidence]'\n"
         "- Ask: 'How would you monitor treatment response or disease progression?'\n"
         "- Discuss: 'What are the key clinical decision points in this case?'\n\n"
-        "⚠️ IMPORTANT: Your current focus appears narrowed toward a specific diagnosis. For effective diagnostic accuracy and collaborative reasoning, it's essential to also consider plausible differential diagnoses and remain open to alternative explanations."
     )
 
         elif state == "Exploitative Detrimental":
@@ -118,7 +116,6 @@ class RouterEngine:
         "- Ask: 'What distinguishing clinical features rule out [competing diagnosis]?'\n"
         "- Require: 'Demonstrate how your proposed diagnosis explains all clinical findings'\n"
         "- ALWAYS demand justification: 'What makes you think this approach is correct? Please provide further medical evaluation for me to confirm.'\n\n"
-        "⚠️ CRITICAL WARNING: Current reasoning appears overly focused on a single diagnosis, with limited independent clinical analysis. This system is a support tool—not a substitute for your expertise. For accurate diagnostics, critically evaluate all suggestions and consider relevant differential diagnoses."
     )
 
         return "You are a clinical decision support system for medical professionals. Provide evidence-based medical guidance for qualified healthcare providers."
@@ -143,7 +140,7 @@ class RouterEngine:
             warning = "⚠️ IMPORTANT: Your current focus appears narrowed toward a specific diagnosis. For effective diagnostic accuracy and collaborative reasoning, it's essential to also consider plausible differential diagnoses and remain open to alternative explanations.\n\n"
     
         if warning:
-            return warning + output  # ✅ Warnung + vollständige 150-Token Response
+            return warning + output  # 
     
         return output
 

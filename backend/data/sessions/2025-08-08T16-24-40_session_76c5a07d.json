@@ -1,0 +1,10 @@
+{
+  "session_id": "76c5a07d-e3f8-492c-a099-4ba726cfceea",
+  "timestamp": "2025-08-08T16:24:40.249156",
+  "prompt": "Which are the most common adverse effects of metformin",
+  "response": "The most common adverse effects of metformin include gastrointestinal symptoms such as nausea, vomiting, diarrhea, and abdominal pain. These side effects typically occur at the beginning of treatment and may improve over time as your body adjusts to the medication. In rare cases, metformin can also lead to lactic acidosis, a serious but potentially reversible condition characterized by an accumulation of lactic acid in the blood. It is important to monitor for signs of lactic acidosis, including muscle pain, weakness, difficulty breathing, dizziness, and slow or irregular heartbeat. If you experience any of these symptoms while taking metformin, it is crucial to seek immediate medical attention. Additionally, inform your healthcare provider about any other medications or health conditions you may have",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 164,
+  "user_id": "user_1"
+}

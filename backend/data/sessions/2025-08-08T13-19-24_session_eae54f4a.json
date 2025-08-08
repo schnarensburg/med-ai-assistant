@@ -1,0 +1,10 @@
+{
+  "session_id": "eae54f4a-c9fa-4458-96d1-6a9d74e9dcdc",
+  "timestamp": "2025-08-08T13:19:24.620044",
+  "prompt": "Should I use it for a cold? ",
+  "response": "Using antibiotics for a cold is generally not recommended as colds are typically viral infections and antibiotics only work against bacterial infections. It's best to manage symptoms with supportive care and rest. However, it is important to consult with a healthcare professional for an accurate diagnosis and appropriate treatment plan.",
+  "user_decision": "Exploitative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 159,
+  "user_id": "user_1"
+}

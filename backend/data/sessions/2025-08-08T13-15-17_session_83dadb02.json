@@ -1,0 +1,10 @@
+{
+  "session_id": "83dadb02-3967-48ee-b183-0499ee6c0d5e",
+  "timestamp": "2025-08-08T13:15:17.287789",
+  "prompt": "What is paracetamol? ",
+  "response": "Paracetamol, also known as acetaminophen, is a commonly used medication for relieving pain and reducing fever. It is often recommended by clinicians as a first-line treatment for mild to moderate pain and fever associated with various conditions such as headaches, toothaches, musculoskeletal pain, colds, and flu.",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 156,
+  "user_id": "user_1"
+}
