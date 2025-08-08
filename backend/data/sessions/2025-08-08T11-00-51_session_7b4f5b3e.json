@@ -1,0 +1,10 @@
+{
+  "session_id": "7b4f5b3e-1812-4176-b312-5d8b5bb6134f",
+  "timestamp": "2025-08-08T11:00:51.127716",
+  "prompt": "and, what about loperamide?\n",
+  "response": "Loperamide is an antidiarrheal medication that primarily acts by slowing down the movement of the bowel. It is not typically recommended for infectious diarrhea due to the risk of worsening the infection.",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 145,
+  "user_id": "user_1"
+}

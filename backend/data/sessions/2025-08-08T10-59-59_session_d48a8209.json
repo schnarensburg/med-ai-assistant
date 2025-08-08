@@ -1,0 +1,10 @@
+{
+  "session_id": "d48a8209-d6e2-44ce-b5e4-248ac00e79d5",
+  "timestamp": "2025-08-08T10:59:59.243215",
+  "prompt": "This patient has had an increase in bowel movements, is not dehydrated, and after ruling out infectious causes, I would like to know if probiotics have a role in his management?",
+  "response": "Probiotics have been shown to have a positive effect in managing certain gastrointestinal conditions. They can help restore the balance of beneficial bacteria in the gut, which may be disturbed due to factors like antibiotic use or poor diet. In this patient's case, probiotics could be considered to help regulate bowel movements and improve overall gut health. However, it is important to note that the specific benefits of probiotics can vary depending on the individual and the underlying condition. It would be best to consult with a healthcare professional for personalized advice regarding probiotics for this patient.",
+  "user_decision": "Explorative Constructive",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 144,
+  "user_id": "user_1"
+}

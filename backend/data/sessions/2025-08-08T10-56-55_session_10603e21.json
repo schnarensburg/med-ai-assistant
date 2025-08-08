@@ -1,0 +1,10 @@
+{
+  "session_id": "10603e21-c5e6-42d6-b54d-1cf57e002737",
+  "timestamp": "2025-08-08T10:56:55.494595",
+  "prompt": "None so far",
+  "response": "Medical professional challenging a colleague's diagnostic certainty. Demand rigorous justification and present alternative clinical scenarios.",
+  "user_decision": "Exploitative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 143,
+  "user_id": "user_1"
+}

@@ -1,0 +1,10 @@
+{
+  "session_id": "7b07e794-d731-4f6b-914c-29382a639f0b",
+  "timestamp": "2025-08-08T10:56:00.508985",
+  "prompt": "Could you provide management options for colchicine related diarrhoea?",
+  "response": "What specific management strategies have been implemented to address the colchicine-related diarrhea?",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 141,
+  "user_id": "user_1"
+}
