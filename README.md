@@ -16,6 +16,6 @@ sudo pkill -f "uvicorn\|streamlit"
 sudo fuser -k 8000/tcp 8001/tcp 8502/tcp
 pkill ngrok
 4. For each round: Insert code of current round (round_x.py) via copy paste (strg A, strg c, strg v in router_engine_simple) in router_engine_simple fully
-5. Save changes
-6. The user has to reload streamlit page
-7.
+5. Save changes for each ropund
+6. The user has to reload streamlit page for each round to receive updated code
+
