@@ -1,4 +1,19 @@
-Interview Conduction
+# Interview Conduction
+
+## 1. set User-ID
+In `app.py` **Zeile 413**:
+```python
+USER_ID = "<NEUE_USER_ID>"
+
+
+uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000
+
+streamlit run app.py --server.port 8501
+
+
+ngrok http 8501
+
+
 1. for new interviewpartner: change User_ID in line 413 in app.py (if an error occurs this can be the reason as not sufficientl tested yet)
 1. Follow Instuction for ngronk 
 2. Start backend
