@@ -1,36 +1,55 @@
 # Interview Conduction
 
-## 1. set User-ID
-In `app.py` **Zeile 413**:
+## 1. Set User-ID
+In `app.py` **line 413**:
 ```python
-USER_ID = "<NEUE_USER_ID>"
+USER_ID = "<NEW_USER_ID>"
+```
+If an error occurs, a wrong `User_ID` might be the cause.
 
+---
 
+## 2. Start the backend
+```bash
 uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000
+```
 
+---
+
+## 3. Start the frontend
+```bash
 streamlit run app.py --server.port 8501
+```
 
+---
 
+## 4. Start ngrok (for external access)
+```bash
 ngrok http 8501
+```
+The output will contain a public **https://...ngrok-free.app** URL.  
+Open this URL in the browser on the other PC.
 
+---
 
-1. for new interviewpartner: change User_ID in line 413 in app.py (if an error occurs this can be the reason as not sufficientl tested yet)
-1. Follow Instuction for ngronk 
-2. Start backend
-uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000
-streamlit run app.py --server.port 8502
-3. Start frondend
-streamlit run app.py --server.port 8502
-
-4. Start gronk
-ngrok http 8501
-
-if error already in use occurs: 
-
-sudo pkill -f "uvicorn\|streamlit"
-sudo fuser -k 8000/tcp 8001/tcp 8502/tcp
+## 5. If “port already in use” error occurs
+```bash
+sudo pkill -f "uvicorn|streamlit"
+sudo fuser -k 8000/tcp 8501/tcp
 pkill ngrok
-4. For each round: Insert code of current round (round_x.py) via copy paste (strg A, strg c, strg v in router_engine_simple) in router_engine_simple fully
-5. Save changes for each ropund
-6. The user has to reload streamlit page for each round to receive updated code
+```
 
+---
+
+## 6. Load a new interview round
+1. Copy all code from `round_x.py` (`Ctrl+A`, `Ctrl+C`).
+2. Paste it into `router_engine_simple.py` (`Ctrl+A`, `Ctrl+V` → replace all content).
+3. Save the file.
+4. Reload the Streamlit page in the browser.
+
+---
+
+**Port overview**
+- **8000** – Backend (FastAPI)
+- **8501** – Frontend (Streamlit)
+- **ngrok** should always be started for the port you want to make externally accessible (usually 8501).
