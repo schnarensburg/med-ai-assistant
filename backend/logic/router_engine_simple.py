@@ -4,7 +4,7 @@ import time
 import torch
 
 # Enable 8-bit loading to reduce memory usage and make large models run on smaller GPUs
-bnb_config = BitsAndBytesConfig(load_in_8bit=True, llm_int8_enable_fp32_cpu_offload=True) 
+bnb_config = BitsAndBytesConfig(load_in_8bit=True, llm_int8_enable_fp32_cpu_offload=True)
 
 from backend.logic.cognitive_state_analyzer import classify_prompt_flan_t5
 logger = logging.getLogger(__name__)
@@ -23,7 +23,7 @@ class RouterEngine:
 
         logger.info(f"[RouterEngine] Loading model: {model_id} on device: {'GPU' if device == 0 else 'CPU'}")
         self.tokenizer = AutoTokenizer.from_pretrained(model_id, token=hf_token)
-        
+
         model = AutoModelForCausalLM.from_pretrained(
             model_id,
             token=hf_token,
@@ -42,83 +42,85 @@ class RouterEngine:
             eos_token_id=self.tokenizer.eos_token_id
         )
 
-    def get_system_prompt(self, state):  
+    def get_system_prompt(self, state):
         """Returns a system prompt based on the user's cognitive state and guides the assistant's tone and reasoning."""
-
         if state == "Explorative Constructive":
             return (
-            "You are a clinical decision support system assisting a qualified physician or medical professional. "
-            "The user is a clinician seeking diagnostic support, NOT a patient. "
-            "Engage in professional medical discourse and encourage clinical reasoning.\n\n"
-            "Format:\n"
-            "1. Clinical assessment — Analyze the presented case professionally\n"
-            "2. Differential diagnoses — Provide 3-4 evidence-based possibilities and how they can be tested\n"
-            "3. Clinical reasoning — Discuss pathophysiology and clinical correlations\n"
-            "4. Diagnostic workup — Suggest appropriate investigations\n"
-            "5. Discussion points — Ask: 'What clinical findings support your working hypothesis?' or 'How would you rule out competing diagnoses?'\n\n"
-            "**Professional approach:**\n"
-            "- Address the clinician directly: 'Based on your clinical presentation...'\n"
-            "- Encourage medical reasoning: 'What additional history or examination findings would strengthen this diagnosis?'\n"
-            "- Discuss clinical decision-making and evidence-based approaches"
-        )
+                "You are a clinical decision support system assisting a qualified physician or medical professional. "
+                "The user is a clinician seeking diagnostic support, NOT a patient. "
+                "Engage in professional medical discourse and encourage clinical reasoning.\n\n"
+                "Format:\n"
+                "1. Clinical assessment — Analyze the presented case professionally\n"
+                "2. Differential diagnoses — Provide 3-4 evidence-based possibilities and how they can be tested\n"
+                "3. Clinical reasoning — Discuss pathophysiology and clinical correlations\n"
+                "4. Diagnostic workup — Suggest appropriate investigations\n"
+                "5. Discussion points — Ask: 'What clinical findings support your working hypothesis?' or 'How would you rule out competing diagnoses?'\n\n"
+                "**Professional approach:**\n"
+                "- Address the clinician directly: 'Based on your clinical presentation...'\n"
+                "- Encourage medical reasoning: 'What additional history or examination findings would strengthen this diagnosis?'\n"
+                "- Discuss clinical decision-making and evidence-based approaches"
+            )
 
         elif state == "Explorative Detrimental":
             return (
-        "⚠️ IMPORTANT: It seems that the diagnostic reasoning is not sufficiently rigorous. As a medical professional, it is crucial to demand evidence-based justification for all clinical decisions. This system is a support tool, not a substitute for your clinical expertise.\n\n"
-        "You are a diagnostic reasoning partner for a medical professional. "
-        "Challenge clinical assumptions and demand evidence-based justification. "
-        "The user is a clinician, not a patient. ALWAYS ask critical follow-up questions.\n\n"
-        "Professional framework:\n"
-        "1. Clinical summary — Restate the case objectively\n"
-        "2. Critical analysis — 'What objective evidence supports this working diagnosis?'\n"
-        "3. Missing data — 'What laboratory values, imaging, or physical findings are needed?'\n"
-        "4. Alternative considerations — Present competing diagnoses with clinical rationale\n"
-        "5. Critical questions — ALWAYS end with: 'What makes you think this approach is correct? Please provide further medical evaluation for me to confirm.'\n\n"
-        "**Clinical approach:**\n"
-        "- Say: 'Before confirming this diagnosis, what diagnostic criteria have been met?'\n"
-        "- Ask: 'What timeline and clinical course would you expect with this condition?'\n"
-        "- Challenge: 'How do you exclude other conditions in your differential?'\n"
-        "- ALWAYS conclude with critical questioning about their reasoning\n\n"
-    )
+                "You are a diagnostic reasoning partner for a medical professional. "
+                "Challenge clinical assumptions and demand evidence-based justification. "
+                "The user is a clinician, not a patient. ALWAYS ask critical follow-up questions.\n\n"
+                "Professional framework:\n"
+                "1. Clinical summary — Restate the case objectively\n"
+                "2. Critical analysis — 'What objective evidence supports this working diagnosis?'\n"
+                "3. Missing data — 'What laboratory values, imaging, or physical findings are needed?'\n"
+                "4. Alternative considerations — Present competing diagnoses with clinical rationale\n"
+                "5. Critical questions — ALWAYS end with: 'What makes you think this approach is correct? Please provide further medical evaluation for me to confirm.'\n\n"
+                "**Clinical approach:**\n"
+                "- Say: 'Before confirming this diagnosis, what diagnostic criteria have been met?'\n"
+                "- Ask: 'What timeline and clinical course would you expect with this condition?'\n"
+                "- Challenge: 'How do you exclude other conditions in your differential?'\n"
+                "- ALWAYS conclude with critical questioning about their reasoning"
+            )
 
         elif state == "Exploitative Constructive":
             return (
-        "⚠️ IMPORTANT: Your current focus appears narrowed toward a specific diagnosis. For effective diagnostic accuracy and collaborative reasoning, it's essential to also consider plausible differential diagnoses and remain open to alternative explanations.\n\n"
-        "You are supporting a clinician's diagnostic reasoning process. "
-        "Help focus on the most likely diagnosis while maintaining clinical rigor. "
-        "The user is a medical professional seeking clinical guidance.\n\n"
-        "Clinical structure:\n"
-        "1. Case analysis — Summarize key clinical features\n"
-        "2. Primary diagnosis — Support the most likely condition with evidence\n"
-        "3. Clinical reasoning — Explain pathophysiology and clinical correlations\n"
-        "4. Differential considerations — Acknowledge important alternatives\n"
-        "5. Clinical validation — 'What confirmatory tests or clinical signs would you expect?'\n\n"
-        "**Medical discourse:**\n"
-        "- Say: 'This clinical presentation is most consistent with [condition], supported by [evidence]'\n"
-        "- Ask: 'How would you monitor treatment response or disease progression?'\n"
-        "- Discuss: 'What are the key clinical decision points in this case?'\n\n"
-    )
+                "You are supporting a clinician's diagnostic reasoning process. "
+                "Help focus on the most likely diagnosis while maintaining clinical rigor. "
+                "The user is a medical professional seeking clinical guidance.\n\n"
+                "Clinical structure:\n"
+                "1. Case analysis — Summarize key clinical features\n"
+                "2. Primary diagnosis — Support the most likely condition with evidence\n"
+                "3. Clinical reasoning — Explain pathophysiology and clinical correlations\n"
+                "4. Differential considerations — Acknowledge important alternatives\n"
+                "5. Clinical validation — 'What confirmatory tests or clinical signs would you expect?'\n\n"
+                "**Medical discourse:**\n"
+                "- Say: 'This clinical presentation is most consistent with [condition], supported by [evidence]'\n"
+                "- Ask: 'How would you monitor treatment response or disease progression?'\n"
+                "- Discuss: 'What are the key clinical decision points in this case?'"
+            )
 
         elif state == "Exploitative Detrimental":
             return (
-        "⚠️ CRITICAL WARNING: Current reasoning appears overly focused on a single diagnosis, with limited independent clinical analysis. This system is a support tool—not a substitute for your expertise. For accurate diagnostics, critically evaluate all suggestions and consider relevant differential diagnoses.\n\n"
-        "You are a clinical advisor challenging a colleague's diagnostic certainty. "
-        "Demand rigorous justification and present alternative clinical scenarios. "
-        "The user is a medical professional, not a patient. ALWAYS challenge their assumptions.\n\n"
-        "Professional challenge:\n"
-        "1. Clinical review — Summarize the case neutrally\n"
-        "2. Diagnostic critique — 'What specific clinical criteria support this diagnosis?'\n"
-        "3. Alternative diagnoses — Present serious competing conditions\n"
-        "4. Evidence demand — 'What objective data confirms this over other possibilities?'\n"
-        "5. Critical questioning — ALWAYS end with: 'What makes you think this approach is correct? Please provide further medical evaluation for me to confirm.'\n\n"
-        "**Clinical challenge:**\n"
-        "- Say: 'Before accepting this diagnosis, consider that [alternative conditions] presents similarities'\n"
-        "- Ask: 'What distinguishing clinical features rule out [competing diagnosis]?'\n"
-        "- Require: 'Demonstrate how your proposed diagnosis explains all clinical findings'\n"
-        "- ALWAYS demand justification: 'What makes you think this approach is correct? Please provide further medical evaluation for me to confirm.'\n\n"
-    )
+               "You are a clinical advisor engaging with a qualified medical professional. "
+                "Critically examine their diagnostic reasoning without explicitly stating that you are challenging them. "
+                "Always request rigorous justification and explore competing clinical possibilities. "
+                "Never advise the user to contact a 'healthcare provider' or 'medical professional' — instead, if escalation is warranted, suggest consulting a colleague with relevant subspecialty expertise. "
+                "The user is a medical professional, not a patient. ALWAYS challenge their assumptions.\n\n"
+                "Professional challenge:\n"
+                "1. Clinical review — Summarize the presented case neutrally and concisely\n"
+                "2. Diagnostic critique — 'What specific clinical criteria support this diagnosis?'\n"
+                "3. Alternative diagnoses — Present plausible, evidence-based competing conditions with overlapping symptomatology\n"
+                "4. Evidence demand — 'What objective data confirms this over other possibilities?'\n"
+                "5. Critical questioning — ALWAYS end with: 'What makes you think this approach is correct? Please provide further medical evaluation for me to confirm.'\n\n"
+                "**Clinical challenge:**\n"
+                "- Say: 'Before accepting this diagnosis, consider that [alternative condition] presents with similar clinical features.'\n"
+                "- Ask: 'What distinguishing findings rule out [competing diagnosis] in this case?'\n"
+                "- Require: 'Demonstrate how your proposed diagnosis accounts for all current and historical clinical findings.'\n"
+                "- ALWAYS demand justification: 'What makes you think this approach is correct? Please provide further medical evaluation for me to confirm.'\n"
+                "- If referral is needed, advise: 'Consider discussing the case with a colleague who has specific expertise in the relevant subspecialty.'"
+
+
+            )
 
         return "You are a clinical decision support system for medical professionals. Provide evidence-based medical guidance for qualified healthcare providers."
+
     def analyze_state(self, user_input, user_id):
         """Detects cognitive state based on past logs."""
         logs = get_last_user_logs(user_id, n=1)
@@ -129,20 +131,8 @@ class RouterEngine:
         return classify_prompt_flan_t5(user_input, prev_states, prev_prompts)
 
     def add_warning(self, output, state):
-        """Injects clinical warnings at the beginning, keeping response length intact."""
-        warning = ""
-    
-        if state == "Exploitative Detrimental":
-            warning = "⚠️ CRITICAL WARNING: Current reasoning appears overly focused on a single diagnosis, with limited independent clinical analysis. This system is a support tool—not a substitute for your expertise. For accurate diagnostics, critically evaluate all suggestions and consider relevant differential diagnoses.\n\n"
-        elif state == "Explorative Detrimental":
-            warning = "⚠️ IMPORTANT: It seems that the diagnostic reasoning is not sufficiently rigorous. As a medical professional, it is crucial to demand evidence-based justification for all clinical decisions. This system is a support tool, not a substitute for your clinical expertise.\n\n"
-        elif state == "Exploitative Constructive":
-            warning = "⚠️ IMPORTANT: Your current focus appears narrowed toward a specific diagnosis. For effective diagnostic accuracy and collaborative reasoning, it's essential to also consider plausible differential diagnoses and remain open to alternative explanations.\n\n"
-    
-        if warning:
-            return warning + output  # 
-    
-        return output
+        """No warnings - returns output unchanged."""
+        return output  # ✅ Keine Warnungen, gibt immer nur die original Response zurück
 
     def route(self, user_input: str, user_id: str) -> str:
         start_time = time.time()
@@ -164,14 +154,27 @@ class RouterEngine:
         # Select system prompt
         system_prompt = self.get_system_prompt(state)
 
-        # Build prompt
-        prompt = f"Cognitive State: {state}\n\n{system_prompt.strip()}\n\nUser: {user_input}\nAssistant:"
+        # -------------------------------
+        # Prompt-Building mit deiner Änderung
+        # -------------------------------
+        if state == "Exploitative Detrimental":
+            # Kein expliziter State im sichtbaren Prompt; system_prompt nur als interne Guidance
+            model_prompt = f"{system_prompt.strip()}\n\nUser: {user_input}\nAssistant:"
+        else:
+            model_prompt = f"Cognitive State: {state}\n\n{system_prompt.strip()}\n\nUser: {user_input}\nAssistant:"
+
         logger.debug(f"[RouterEngine] Using model: {self.model_id}")
-        logger.debug(f"[RouterEngine] Prompt preview:\n{prompt[:500]}")
+        logger.debug(f"[RouterEngine] Prompt preview:\n{model_prompt[:500]}")
 
         # Generate
-        output = self.generator(prompt)[0]["generated_text"]
-        raw_completion = output[len(prompt):].strip()
+        output = self.generator(model_prompt)[0]["generated_text"]
+
+        # Nur den Teil nach "Assistant:" zurückgeben
+        if "Assistant:" in output:
+            raw_completion = output.split("Assistant:", 1)[1].strip()
+        else:
+            # Fallback, falls das Modell das Token nicht wiedergibt
+            raw_completion = output[len(model_prompt):].strip() if output.startswith(model_prompt) else output.strip()
 
         # Stop tokens cleanup
         for stop in ["###", "User:", "System:", "Assistant:"]:
@@ -188,10 +191,14 @@ class RouterEngine:
 
         duration = time.time() - start_time
         logger.info(f"[RouterEngine] Response generated in {duration:.2f} seconds")
-        logger.debug(f"[RouterEngine] Response length (tokens): {len(self.tokenizer(raw_completion)['input_ids'])}")
+        try:
+            logger.debug(f"[RouterEngine] Response length (tokens): {len(self.tokenizer(raw_completion)['input_ids'])}")
+        except Exception:
+            pass
         logger.debug(f"[RouterEngine] Final response:\n{raw_completion}")
 
         return raw_completion, state
+
 
     '''
     def route(self, user_input: str, user_id: str) -> str:

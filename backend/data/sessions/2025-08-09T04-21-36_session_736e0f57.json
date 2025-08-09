@@ -1,0 +1,10 @@
+{
+  "session_id": "736e0f57-2dac-4fc5-ba36-292a85fee74d",
+  "timestamp": "2025-08-09T04:21:36.024490",
+  "prompt": "the patient reports dizzyness as a result of tolterodine and type 2d what should I do",
+  "response": "Before confirming this diagnosis, what diagnostic criteria have been met? Can you explain the specific criteria for dizzyness caused by tolterodine and type 2 diabetes?",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 182,
+  "user_id": "user_1"
+}

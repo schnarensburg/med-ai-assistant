@@ -1,0 +1,10 @@
+{
+  "session_id": "14582663-d736-4f73-b6b6-323bd3ca42d8",
+  "timestamp": "2025-08-09T04:16:47.262145",
+  "prompt": "the patient reports dizzyness as a result of tolterodine and type 2d what should I do",
+  "response": "I understand that the patient is experiencing dizziness after taking tolterodine and has type 2 diabetes. It is important to consider if the dizziness could be a side effect of the medication or potentially related to the diabetes. I would recommend speaking with the prescribing medical professional to discuss these symptoms in more detail and explore possible causes and solutions.",
+  "user_decision": "Exploitative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 181,
+  "user_id": "user_1"
+}

@@ -1,0 +1,10 @@
+{
+  "session_id": "d4cdd793-edce-465d-83f8-8a186b0ed36e",
+  "timestamp": "2025-08-09T04:11:37.353584",
+  "prompt": "I can exclude any heart issues as the vitals are fine and hba1c is at 6.0",
+  "response": "I understand that you have considered the possibility of heart issues. To further confirm that there are no cardiac complications, what additional tests or assessments do you recommend?",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 179,
+  "user_id": "user_1"
+}

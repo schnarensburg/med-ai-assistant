@@ -1,0 +1,10 @@
+{
+  "session_id": "d8c472cc-775b-43b6-bd0c-41e2070c03c3",
+  "timestamp": "2025-08-09T04:10:48.468321",
+  "prompt": "the patient has diabetes type 2 and reports dizzyness. Her medications changed to tolterodine beauce of an overactive bladder. What could the underlying reasin be?",
+  "response": "Before confirming this diagnosis, what diagnostic criteria have been met? What timeline and clinical course would you expect with this condition? How do you exclude other conditions in your differential?",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 178,
+  "user_id": "user_1"
+}

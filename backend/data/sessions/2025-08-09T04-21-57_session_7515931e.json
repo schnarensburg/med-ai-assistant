@@ -1,0 +1,10 @@
+{
+  "session_id": "7515931e-f7ca-4249-b769-040a4654b4c3",
+  "timestamp": "2025-08-09T04:21:57.903404",
+  "prompt": "tell me what to do",
+  "response": "I'm here to help you understand the reasoning behind a diagnosis. Let's discuss your symptoms and any tests you have already done. I'll ask you questions to clarify your condition and then guide you through the next steps for evaluation and treatment.",
+  "user_decision": "Explorative Detrimental",
+  "interaction_type": "chat_endpoint",
+  "number of previous prompts": 183,
+  "user_id": "user_1"
+}
