@@ -448,7 +448,7 @@ def assistant_ui():
         if st.session_state.show_chat:
             st.markdown("### Consultation Assistant")
 
-            st.markdown("Ask questions to the assitant")
+            st.markdown("Ask questions to the assistant")
 
             st.markdown("""
                 <style>
