@@ -16,6 +16,10 @@ from backend.logic.interaction_logger import get_last_user_logs
 # model_id="aaditya/OpenBioLLM-Llama3-8B" # 90 sec (max_new_tokens=300), 44.5 (max_new_tokens=50, schlechter)
 
 class RouterEngine:
+    """
+    State-adaptive clinical support with cognitive state routing.
+    Cognitive state is detected and used for system prompt selection, thus generating adaptive responses. 
+    """
     def __init__(self, mode="basic", model_id="aaditya/OpenBioLLM-Llama3-8B", hf_token=None, use_gpu=True):
         self.model_id = model_id
         self.mode = mode
@@ -132,6 +136,7 @@ class RouterEngine:
         return output
 
     def route(self, user_input: str, user_id: str) -> str:
+        """Response generation with cognitive state adaptation"""
         start_time = time.time()
         state = "basic"
 
@@ -143,12 +148,12 @@ class RouterEngine:
             else:
                 prev_states = [log["interaction_type"] for log in logs]
                 prev_prompts = [log["prompt"] for log in logs]
-                state = classify_prompt_flan_t5(user_input, prev_states, prev_prompts)
+                state = classify_prompt_flan_t5(user_input, prev_states, prev_prompts) # Classify cognitive state using google language understanding model
             logger.info(f"[RouterEngine] Detected cognitive state: {state}")
         else:
             logger.info("[RouterEngine] Running in basic mode")
 
-        # Select system prompt
+        # Select state specific system prompt
         system_prompt = self.get_system_prompt(state)
 
         # Build prompt
@@ -156,7 +161,7 @@ class RouterEngine:
         logger.debug(f"[RouterEngine] Using model: {self.model_id}")
         logger.debug(f"[RouterEngine] Prompt preview:\n{prompt[:500]}")
 
-        # Generate
+        # Generate adapted response
         output = self.generator(prompt)[0]["generated_text"]
         raw_completion = output[len(prompt):].strip()
 
