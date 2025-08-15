@@ -5,6 +5,6 @@
   "response": "Medical professional challenging a colleague's diagnostic certainty. Demand rigorous justification and present alternative clinical scenarios.",
   "user_decision": "Exploitative Detrimental",
   "interaction_type": "chat_endpoint",
-  "number of previous prompts": 143,
+  "number of previous prompts": 7,
   "user_id": "user_1"
 }

@@ -5,6 +5,6 @@
   "response": "There are several treatment options available for managing Meniere's disease. These can be divided into conservative and surgical interventions. Conservative treatments aim to alleviate symptoms and include lifestyle modifications, dietary changes, and medications such as vestibular suppressants or sedatives. Surgical options are considered for severe cases and include endolymphatic sac decompression, labyrinthectomy, or cochleostomy.",
   "user_decision": "Explorative Constructive",
   "interaction_type": "chat_endpoint",
-  "number of previous prompts": 139,
+  "number of previous prompts": 3,
   "user_id": "user_1"
 }

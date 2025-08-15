@@ -5,6 +5,6 @@
   "response": "It is important to consider potential interactions between medications when a patient is taking multiple drugs. Let's start with metformin, which is an oral antidiabetic medication. There are no significant interactions reported between metformin and either ibuprofen or naproxen. Both ibuprofen and naproxen belong to a class of medications called nonsteroidal anti-inflammatory drugs (NSAIDs), and they do not have any major interactions with metformin. Prednisolone, a corticosteroid, can interact with certain medications, but it does not have significant interactions with metformin, ibuprofen, naproxen, or linagliptin. Linagliptin, an antidiabetic medication, also does not",
   "user_decision": "Explorative Detrimental",
   "interaction_type": "chat_endpoint",
-  "number of previous prompts": 162,
-  "user_id": "user_1"
+  "number of previous prompts": 1,
+  "user_id": "user_2"
 }

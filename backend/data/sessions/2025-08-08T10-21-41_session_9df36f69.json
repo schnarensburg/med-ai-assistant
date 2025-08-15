@@ -5,6 +5,6 @@
   "response": "Promethazine and tolterodine are both medications that can be used to treat different conditions. It's important to consider their interactions when prescribing them together. Can you explain why you are interested in this interaction?",
   "user_decision": "Exploitative Detrimental",
   "interaction_type": "chat_endpoint",
-  "number of previous prompts": 136,
+  "number of previous prompts": 0,
   "user_id": "user_1"
 }

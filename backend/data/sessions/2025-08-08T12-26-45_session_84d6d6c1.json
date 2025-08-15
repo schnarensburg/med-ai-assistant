@@ -5,6 +5,6 @@
   "response": "\u26a0\ufe0f IMPORTANT: It seems that the diagnostic reasoning is not sufficiently rigorous. As a medical professional, it is crucial to demand evidence-based justification for all clinical decisions. This system is a support tool, not a substitute for your clinical expertise.\n\nBefore confirming that the shortness of breath is related to the e coli infection, what diagnostic criteria have been met? Can you provide further medical evaluation to confirm this diagnosis?",
   "user_decision": "Explorative Detrimental",
   "interaction_type": "chat_endpoint",
-  "number of previous prompts": 148,
+  "number of previous prompts": 12,
   "user_id": "user_1"
 }

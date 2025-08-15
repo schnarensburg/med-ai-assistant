@@ -5,6 +5,6 @@
   "response": "Cognitive State: Exploitative Detrimental",
   "user_decision": "Exploitative Detrimental",
   "interaction_type": "chat_endpoint",
-  "number of previous prompts": 142,
+  "number of previous prompts": 6,
   "user_id": "user_1"
 }

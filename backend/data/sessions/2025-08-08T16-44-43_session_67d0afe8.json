@@ -5,6 +5,6 @@
   "response": "Clinical review \u2014 Summarizing the case neutrally. Diagnostic critique \u2014 'What specific clinical criteria support this diagnosis?' Alternative diagnoses \u2014 Present serious competing conditions. Evidence demand \u2014 'What objective data confirms this over other possibilities?' Critical questioning \u2014 ALWAYS end with: 'What makes you think this approach is correct? Please provide further medical evaluation for me to confirm.'",
   "user_decision": "Exploitative Detrimental",
   "interaction_type": "chat_endpoint",
-  "number of previous prompts": 169,
-  "user_id": "user_1"
+  "number of previous prompts": 8,
+  "user_id": "user_2"
 }

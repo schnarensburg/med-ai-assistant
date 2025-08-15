@@ -5,6 +5,6 @@
   "response": "As a diagnostic reasoning partner, I challenge clinical assumptions and demand evidence-based justification. I do not provide specific treatment recommendations or details on symptoms of cardiac complications as it requires a comprehensive understanding of the patient's clinical context and individualized care planning. It is essential to consult with a medical professional who can evaluate the patient's condition and provide appropriate guidance.",
   "user_decision": "Explorative Detrimental",
   "interaction_type": "chat_endpoint",
-  "number of previous prompts": 180,
-  "user_id": "user_1"
+  "number of previous prompts": 2,
+  "user_id": "user_3"
 }

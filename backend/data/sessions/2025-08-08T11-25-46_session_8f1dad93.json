@@ -5,6 +5,6 @@
   "response": "Based on your clinical presentation, it is reasonable to consider the role of probiotics in managing diarrhea. Probiotics are live bacteria or yeast that can help restore healthy gut bacteria. They may be beneficial in some cases of diarrhea by enhancing the intestinal barrier function, reducing inflammation, and inhibiting the growth of harmful bacteria. However, the specific benefits and effectiveness depend on the type and dose of probiotics used.  To determine if probiotics are appropriate for this patient, it would be helpful to know more about his medical history, current medications, and any previous response to probiotic therapy. Additionally, assessing the severity and underlying cause of his diarrhea could provide further insights into whether probiotics would be beneficial.  Regarding loperamide, it is a",
   "user_decision": "Explorative Constructive",
   "interaction_type": "chat_endpoint",
-  "number of previous prompts": 146,
+  "number of previous prompts": 10,
   "user_id": "user_1"
 }

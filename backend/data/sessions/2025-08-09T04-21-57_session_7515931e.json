@@ -5,6 +5,6 @@
   "response": "I'm here to help you understand the reasoning behind a diagnosis. Let's discuss your symptoms and any tests you have already done. I'll ask you questions to clarify your condition and then guide you through the next steps for evaluation and treatment.",
   "user_decision": "Explorative Detrimental",
   "interaction_type": "chat_endpoint",
-  "number of previous prompts": 183,
-  "user_id": "user_1"
+  "number of previous prompts": 5,
+  "user_id": "user_3"
 }

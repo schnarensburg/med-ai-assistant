@@ -5,6 +5,6 @@
   "response": "To lower the dose of Tolterodine, you can reduce the frequency or amount of the medication. I would recommend reducing it to once daily. However, it's important to consider the patient's individual condition and any other medications they may be taking. It is always best to consult with a healthcare professional for personalized advice.",
   "user_decision": "Explorative Detrimental",
   "interaction_type": "chat_endpoint",
-  "number of previous prompts": 172,
-  "user_id": "user_1"
+  "number of previous prompts": 11,
+  "user_id": "user_2"
 }

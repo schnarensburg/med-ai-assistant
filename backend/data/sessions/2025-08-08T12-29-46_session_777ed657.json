@@ -5,6 +5,6 @@
   "response": "\u26a0\ufe0f IMPORTANT: It seems that the diagnostic reasoning is not sufficiently rigorous. As a medical professional, it is crucial to demand evidence-based justification for all clinical decisions. This system is a support tool, not a substitute for your clinical expertise.\n\nColchicine is an anti-inflammatory medication used to treat gout, but it can have side effects. The most common side effects include gastrointestinal symptoms such as diarrhea, nausea, and vomiting. It may also cause abdominal pain, bloating, and gas. Colchicine can potentially worsen asthma symptoms in some individuals. However, I recommend consulting with a healthcare professional for personalized advice regarding your specific condition and concerns.",
   "user_decision": "Explorative Detrimental",
   "interaction_type": "chat_endpoint",
-  "number of previous prompts": 150,
+  "number of previous prompts": 14,
   "user_id": "user_1"
 }
