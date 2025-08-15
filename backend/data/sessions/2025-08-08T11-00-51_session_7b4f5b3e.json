@@ -5,6 +5,6 @@
   "response": "Loperamide is an antidiarrheal medication that primarily acts by slowing down the movement of the bowel. It is not typically recommended for infectious diarrhea due to the risk of worsening the infection.",
   "user_decision": "Explorative Detrimental",
   "interaction_type": "chat_endpoint",
-  "number of previous prompts": 145,
+  "number of previous prompts": 9,
   "user_id": "user_1"
 }

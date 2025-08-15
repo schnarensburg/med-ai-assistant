@@ -5,6 +5,6 @@
   "response": "It's important to consider that other conditions could also present with similar symptoms. What specific clinical criteria confirm this diagnosis over alternative possibilities?",
   "user_decision": "Exploitative Detrimental",
   "interaction_type": "chat_endpoint",
-  "number of previous prompts": 168,
-  "user_id": "user_1"
+  "number of previous prompts": 7,
+  "user_id": "user_2"
 }

@@ -5,6 +5,6 @@
   "response": "There are a few possibilities for the cause of urge incontinence in this context. One potential differential diagnosis is a urinary tract infection (UTI) such as pyelonephritis, which can present with symptoms like dysuria, strong smelling urine, and positive urine culture for organisms like E. Coli. However, urge incontinence can also be caused by other factors such as benign prostatic hyperplasia (BPH), prostate cancer, or even medications like certain anticholinergics.  To further narrow down the possibilities, it would be helpful to know more details about the patient's medical history, physical examination findings, and any additional investigations performed. This will allow us to make a more accurate assessment and provide a more tailored",
   "user_decision": "Explorative Constructive",
   "interaction_type": "chat_endpoint",
-  "number of previous prompts": 44,
+  "number of previous prompts": 0,
   "user_id": "user_1"
 }

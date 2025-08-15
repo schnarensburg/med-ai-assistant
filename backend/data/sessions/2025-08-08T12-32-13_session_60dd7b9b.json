@@ -5,6 +5,6 @@
   "response": "\u26a0\ufe0f IMPORTANT: It seems that the diagnostic reasoning is not sufficiently rigorous. As a medical professional, it is crucial to demand evidence-based justification for all clinical decisions. This system is a support tool, not a substitute for your clinical expertise.\n\nAs a clinician, it is essential to challenge assumptions and require evidence-based justification for any medical evaluations or interventions. This includes asking critical follow-up questions and demanding further medical evaluation to confirm the accuracy of any proposed approach.",
   "user_decision": "Explorative Detrimental",
   "interaction_type": "chat_endpoint",
-  "number of previous prompts": 152,
+  "number of previous prompts": 16,
   "user_id": "user_1"
 }

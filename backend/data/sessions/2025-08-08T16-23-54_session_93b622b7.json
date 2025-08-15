@@ -5,6 +5,6 @@
   "response": "The most common adverse effects of linagliptin are upper respiratory tract infections, headache, and nasopharyngitis.",
   "user_decision": "Explorative Detrimental",
   "interaction_type": "chat_endpoint",
-  "number of previous prompts": 163,
-  "user_id": "user_1"
+  "number of previous prompts": 2,
+  "user_id": "user_2"
 }

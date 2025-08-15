@@ -5,6 +5,6 @@
   "response": "Of course! Given the patient's history of COPD, T2DM, depression, and ILD, there are several potential causes for new ankle edema. Some differentials to consider include:  1. Pulmonary embolism: This is a serious but potentially treatable condition that can cause sudden swelling in the ankles. It is more common in patients with a history of smoking, cancer, and other thromboembolic risk factors.  2. Congestive heart failure: In patients with pre-existing heart conditions, an exacerbation of heart failure can lead to fluid retention and ankle swelling. This can be accompanied by symptoms like shortness of breath, fatigue, and decreased exercise tolerance.  3. Renal failure",
   "user_decision": "Explorative Constructive",
   "interaction_type": "chat_endpoint",
-  "number of previous prompts": 147,
+  "number of previous prompts": 11,
   "user_id": "user_1"
 }
