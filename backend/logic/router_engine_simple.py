@@ -17,13 +17,22 @@ from backend.logic.interaction_logger import get_last_user_logs
 
 class RouterEngine:
     def __init__(self, mode="basic", model_id="aaditya/OpenBioLLM-Llama3-8B", hf_token=None, use_gpu=True):
+        """
+        Initializes the medical LLM with quantization and GPU support.
+        Args:
+            mode: Operation mode ('basic', 'routing', or 'warning')
+            model_id: Which LLM to load (default: OpenBioLLM-Llama3-8B)
+            hf_token: Hugging Face authentication token
+            use_gpu: Whether to attempt GPU acceleration
+        """
         self.model_id = model_id
         self.mode = mode
         device = 0 if use_gpu and torch.cuda.is_available() else -1
 
         logger.info(f"[RouterEngine] Loading model: {model_id} on device: {'GPU' if device == 0 else 'CPU'}")
+        
+        # Initialize tokenizer and model with 8-bit quantization
         self.tokenizer = AutoTokenizer.from_pretrained(model_id, token=hf_token)
-
         model = AutoModelForCausalLM.from_pretrained(
             model_id,
             token=hf_token,
@@ -32,13 +41,14 @@ class RouterEngine:
             torch_dtype=torch.float16
         )
 
+        # Set up generation pipeline with medical-appropriate settings
         self.generator = pipeline(
             "text-generation",
             model=model,
             tokenizer=self.tokenizer,
-            max_new_tokens=150,
-            do_sample=True,
-            temperature=0.5,
+            max_new_tokens=150,  # Keeps responses concise
+            do_sample=True,  # Enables creative but controlled output
+            temperature=0.5,  # Balances creativity vs focus
             eos_token_id=self.tokenizer.eos_token_id
         )
 
@@ -132,9 +142,14 @@ class RouterEngine:
 
     def add_warning(self, output, state):
         """No warnings - returns output unchanged."""
-        return output  # ✅ Keine Warnungen, gibt immer nur die original Response zurück
+        return output  # Currently no warning, outputs basic response
 
     def route(self, user_input: str, user_id: str) -> str:
+        """
+        Processes user input and generates context-aware medical response.
+        Returns:
+            tuple: (generated_response, detected_cognitive_state)
+        """
         start_time = time.time()
         state = "basic"
 
@@ -154,11 +169,9 @@ class RouterEngine:
         # Select system prompt
         system_prompt = self.get_system_prompt(state)
 
-        # -------------------------------
-        # Prompt-Building mit deiner Änderung
-        # -------------------------------
+        # Building context aware prompts
         if state == "Exploitative Detrimental":
-            # Kein expliziter State im sichtbaren Prompt; system_prompt nur als interne Guidance
+            # No explicit state in the visible prompt; system_prompt only as internal guidance
             model_prompt = f"{system_prompt.strip()}\n\nUser: {user_input}\nAssistant:"
         else:
             model_prompt = f"Cognitive State: {state}\n\n{system_prompt.strip()}\n\nUser: {user_input}\nAssistant:"
@@ -166,14 +179,14 @@ class RouterEngine:
         logger.debug(f"[RouterEngine] Using model: {self.model_id}")
         logger.debug(f"[RouterEngine] Prompt preview:\n{model_prompt[:500]}")
 
-        # Generate
+        # Generate response
         output = self.generator(model_prompt)[0]["generated_text"]
 
         # Nur den Teil nach "Assistant:" zurückgeben
         if "Assistant:" in output:
             raw_completion = output.split("Assistant:", 1)[1].strip()
         else:
-            # Fallback, falls das Modell das Token nicht wiedergibt
+            # Fallback, if model does not pass the token
             raw_completion = output[len(model_prompt):].strip() if output.startswith(model_prompt) else output.strip()
 
         # Stop tokens cleanup
@@ -189,6 +202,7 @@ class RouterEngine:
         if self.mode == "warning":
             raw_completion = self.add_warning(raw_completion, state)
 
+        # Log performance metrics
         duration = time.time() - start_time
         logger.info(f"[RouterEngine] Response generated in {duration:.2f} seconds")
         try:
