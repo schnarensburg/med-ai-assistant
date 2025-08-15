@@ -4,27 +4,28 @@ from datetime import datetime
 import requests
 import os
 
+# Configure page settings - wide layout for medical dashboard
 st.set_page_config(
     page_title="Patient Dashboard",
     layout="wide",         
     initial_sidebar_state="collapsed"
 )
 
-# Patient Data 
-
-# Patient 1
+# --- Patient Data Management ---
+# Each patient has their own session state variables to maintain independent notes
+# This prevents data leakage between patient cases
 
 # Initialize session state for patient 1
 if "consultation_notes" not in st.session_state:
-    st.session_state.consultation_notes = []
+    st.session_state.consultation_notes = []  # Stores all consultation history
 
 if "new_note" not in st.session_state: 
-    st.session_state.new_note = ""
+    st.session_state.new_note = ""  # Current draft note
 
 if "reset_note" not in st.session_state:
-    st.session_state.reset_note = False
+    st.session_state.reset_note = False  # Flag for clearing input
 
-# Data
+# Patient 1 Medication Data
 data_patient1 = {
     "Medication": ["Metformin", "Amlodipine", "Promethazine", "Cetirizine", "Tolterodine", "Paracetamol"],
     "Route": ["PO"] * 6,
@@ -36,7 +37,6 @@ data_patient1 = {
 df_patient1 = pd.DataFrame(data_patient1)
 
 # Patient 2
-
 # Initialize session state for patient 2
 if "consultation_notes_2" not in st.session_state:
     st.session_state.consultation_notes_2 = []
@@ -47,7 +47,7 @@ if "new_note_2" not in st.session_state:
 if "reset_note_2" not in st.session_state:
     st.session_state.reset_note_2 = False
 
-# Data
+# Patient 2 Medication Data
 data_patient2 = {
     "Medication": ["Metformin", "Ramipril", "Bisoprolol", "Dapagliflozin", "Atorvastatin", "Furosemide", "Paracetamol", "Colchine"],
     "Route": ["PO"] * 8,
@@ -59,7 +59,7 @@ data_patient2 = {
 df_patient2 = pd.DataFrame(data_patient2)
 
 
-# Data
+# Patient 3 Medication Data
 data_patient3 = {
     "Medication": ["Salbutamol inhaler", "Trimbow inhaler (beclometasone dipropionate, formoterol fumarate dihydrate, glycopyrronium bromide)", "Azathioprine",
         "Amlodipine","Metformin","Linagliptin","Atorvastatin", "Ibuprofen","Naproxen","Paracetamol","Sertraline","Prednisolone"
@@ -104,7 +104,6 @@ if "reset_note_2" not in st.session_state:
     st.session_state.reset_note = False 
 
 # Patient 3
-
 # Initialize session state for patient 3
 if "consultation_notes_3" not in st.session_state:
     st.session_state.consultation_notes_3 = []
@@ -127,8 +126,9 @@ if "new_note_example" not in st.session_state:
 if "reset_note_example" not in st.session_state:
     st.session_state.reset_note_example = False
 
+# --- UI Layout ---
 # Create columns
-col1, col2 = st.columns([2,1])
+col1, col2 = st.columns([2,1])  # Main content | Assistant panel
 
 # Place tabs inside the first column
 with col1:
@@ -136,7 +136,9 @@ with col1:
     tabs = st.tabs(["Case 1", "Case 2", "Case 3", "Example"])
 
     with tabs[0]:
+        # Patient header with demographics
         st.subheader("Patient ID: 8  -  Brenda Smith")
+        
         with st.container(border=True):
             col01_1, col02_1, col03_1 = st.columns(3)
 
@@ -156,6 +158,7 @@ with col1:
                 st.markdown("**BMI:** 36,8")
                 st.markdown("**Chronic:** No")
 
+        # Discharge summary section
         with st.container(border=True):
             st.markdown("#### Discharge Letter")
 
@@ -173,6 +176,7 @@ with col1:
             st.markdown("**Medication changes:** Tolterodine commenced for overactive bladder")
             st.markdown("**Follow-up arrangements:** nil")
 
+        # Medications table
         with st.container(border=True):
             st.markdown("#### Medications")
             st.dataframe(df_patient1, use_container_width=True)
@@ -182,6 +186,7 @@ with col1:
 
         # Consultation notes area    
         st.header("Consultation Notes")
+        # Note entry form
         with st.container(border=True):
             st.markdown("#### New Consultation Entry")
 
@@ -197,6 +202,7 @@ with col1:
                     st.session_state.consultation_notes.append(st.session_state.new_note.strip())
                     st.session_state.reset_note = True  # Trigger rerun without setting new_note directly
 
+        # Display previous notes (newest first)
         if st.session_state.consultation_notes:
             st.markdown("### Previous Consultations")
             for i, note in enumerate(st.session_state.consultation_notes[::-1], 1):
@@ -437,6 +443,7 @@ def assistant_ui():
             st.session_state.last_prompt = user_prompt
             st.session_state.messages.append({"role": "user", "content": user_prompt})
 
+            # Call backend API
             response = ask_ai(user_prompt)
             st.session_state.messages.append({"role": "assistant", "content": response})
 
