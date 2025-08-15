@@ -13,9 +13,13 @@ from backend.logic.interaction_logger import get_last_user_logs
 
 # model_id="epfl-llm/meditron-7b" # meditron, 29 sec but bullshit answer
 # model_id="openbiollm/med42-mistral-7b" # 64 sec
-# model_id="aaditya/OpenBioLLM-Llama3-8B" # 90 sec (max_new_tokens=300), 44.5 (max_new_tokens=50, schlechter)
+# model_id="aaditya/OpenBioLLM-Llama3-8B" # 90 sec (max_new_tokens=300), 44.5 (max_new_tokens=50, worse)
 
 class RouterEngine:
+    """
+    Basic clinical decision support.
+    It detects the cognitive state but does not use it to generate adaptive responses.
+    """
     def __init__(self, mode="basic", model_id="aaditya/OpenBioLLM-Llama3-8B", hf_token=None, use_gpu=True):
         self.model_id = model_id
         self.mode = mode
@@ -42,8 +46,8 @@ class RouterEngine:
             eos_token_id=self.tokenizer.eos_token_id
         )
 
-    def get_system_prompt(self, state):  # Insert in routed_engine_simple.py
-        """Returns a system prompt based on the user's cognitive state and guides the assistant's tone and reasoning."""
+    def get_system_prompt(self, state):
+        """Static prompt for all interactions - no state adaptation"""
        
         return (
                 "You are a clinical decision support system for medical professionals. "
@@ -66,6 +70,7 @@ class RouterEngine:
         return output
 
     def route(self, user_input: str, user_id: str) -> str:
+        """Standard response generation without state analysis"""
         start_time = time.time()
         state = "basic"
 
@@ -90,7 +95,7 @@ class RouterEngine:
         logger.debug(f"[RouterEngine] Using model: {self.model_id}")
         logger.debug(f"[RouterEngine] Prompt preview:\n{prompt[:500]}")
 
-        # Generate
+        # Generate response
         output = self.generator(prompt)[0]["generated_text"]
         raw_completion = output[len(prompt):].strip()
 
